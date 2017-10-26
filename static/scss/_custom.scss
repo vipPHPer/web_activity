@@ -1,0 +1,52 @@
+/*
+ * Base styles
+ */
+html,
+button,
+input,
+select,
+textarea {
+    color: #000;
+}
+
+body {
+    // font: 14px/1.5 arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    background: #fff;
+    // -webkit-font-smoothing: antialiased;
+}
+
+:link,
+:visited {
+    color: #ff4a00;
+    text-decoration: none;
+}
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}

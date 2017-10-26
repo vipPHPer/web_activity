@@ -1,0 +1,44 @@
+{
+  "name": "dwc",
+  "version": "1.0.0",
+  "description": "dwc（电玩城）",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipPHPer/dwc.git"
+  },
+  "author": "chenfx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipPHPer/dwc/issues"
+  },
+  "homepage": "https://github.com/vipPHPer/dwc#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-include": "^2.3.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass-china": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-static-hash": "^0.1.4",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "imagemin-pngquant": "^5.0.1",
+    "jshint": "^2.9.5",
+    "path": "^0.12.7",
+    "postcss-csssimple": "^1.1.1",
+    "stream-combiner2": "^1.1.1"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "browser": true,
+  "jquery": true,
+  "node": true,
+  "camelcase": true,
+  "eqeqeq": true,
+  "latedef": true,
+  "newcap": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "eqnull": true,
+  "devel": true,
+  "forin": true,
+  "freeze": true,
+  "immed": true,
+  "noarg": true,
+  "scripturl": true,
+  "strict": false,
+  "globals": {
+  }
+}

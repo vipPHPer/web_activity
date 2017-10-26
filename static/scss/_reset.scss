@@ -1,0 +1,49 @@
+@import '_normalize';
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+    resize: vertical;
+}
+
+/*
+ * Image replacement
+ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    text-indent: -9999px;
+    overflow: hidden;
+    _zoom: 1;
+}
+
+/*
+ * Hide from browsers.
+ */
+.hide,
+.hidden {
+    display: none;
+}
+
+/*
+ * Clearfix: contain floats
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
