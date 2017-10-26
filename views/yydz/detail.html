@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>夜夜德州扑克官网_安卓ios下载_游戏攻略礼包_吉安趣玩游戏平台</title>
+    <meta name="description" content="吉安趣玩棋牌游戏平台提供最权威的夜夜德州棋牌游戏,棋牌游戏平台,德州扑克游戏平台,致力于为用户开发最好玩,最受玩家欢迎的夜夜德州棋牌游戏.">
+    <meta name="keywords" content="夜夜德州,棋牌游戏,德州扑克下载,棋牌游戏平台,棋牌游戏排行榜,送分的棋牌游戏">
+    <link rel="shortcut icon" href="//aliyun.cdn.dl.quwannetwork.com/static_file/html/guanwang/images/yydz.ico" />
+    <link rel="stylesheet" href="../../public/css/yydz/detail.min.css?v=6d1ca3d">
+    <script>
+        //移动端跳转
+        var u = navigator.userAgent;
+        var app = navigator.appVersion;
+        var url = '//quwannetwork.com/yydz/m_index.html';
+        if (u.match(/Android/i) || (u.indexOf('iPhone') != -1) || (u.indexOf('iPod') != -1) || (u.indexOf('iPad') != -1)) {
+            window.location = url;
+        }
+    </script>
+</head>
+
+<body id="app" v-cloak>
+    <div class="section section-header">
+        <div class="container">
+            <ul class="clearfix">
+                <li class="head-list">
+                    <a href="index.html" class="link">官网首页</a>
+                </li>
+                <li class="head-list">
+                    <a href="javascript:void(0);" class="link">活动公告</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=bird_guide" class="link">新手入门</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=poker_cl" class="link">扑克策略</a>
+                </li>
+                <li class="logo">
+                    <a href="index.html">
+                        <img data-src="../../public/img/yydz/logo.png?v=58c17fc" alt="夜夜德州扑克">
+                    </a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=hot_spot" class="link">近期热点</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=chess_cl" class="link">棋牌策略</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=poker_news" class="link">行业新闻</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=anounce" class="link">扑克名人</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section section-banner"></div>
+    <div class="section section-page-nav">
+        <div class="container">
+            <div class="detail-fl fl">
+                <div class="bread-crumb">
+                    <span style="font-weight: 700; margin-right: 8px;">夜夜德州</span>
+                    <a href="index.html">首页</a>
+                    <span style="margin: 0 8px;">&gt;</span>
+                    <a href="javascript:void(0);" v-cloak v-html="zoneTitle" id="J_zone"></a>
+                    <span style="margin: 0 8px;">&gt;</span>
+                    <span v-cloak v-html="articleDetail.title" style="font-weight:700"></span>
+                </div>
+                <div class="content">
+                    <h2 class="title" v-cloak v-html="articleDetail.title"></h2>
+                    <div class="desc-box">
+                        <p class="desc" v-cloak v-html="articleDetail.content"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-fr fl">
+                <div class="poker_famous">
+                    <div class="title">
+                        <span>扑克名人</span>
+                        <a href="list.html?zone=anounce" class="more">更多<em>+</em></a>
+                    </div>
+                    <ul class="clearfix">
+                        <li v-for="todo in anounce_list" track-by="$index" v-cloak>
+                            <a href="detail.html?zone=anounce&article_id={{todo._id}}" v-cloak v-html="todo.title"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hot-spot">
+                    <div class="title">
+                        <span>近期热点</span>
+                        <a href="list.html?zone=hot_spot" class="more">更多<em>+</em></a>
+                    </div>
+                    <ul class="clearfix">
+                        <li v-for="todo in hot_spot_list" track-by="$index" v-cloak>
+                            <span>新闻</span>
+                            <a href="detail.html?zone=hot_spot&article_id={{todo._id}}" v-cloak v-html="todo.title"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-download" id="game_version">
+        <div class="container">
+            <div class="qr-code fl">
+                <img data-src="../../public/img/yydz/xiazai_10.jpg?v=62b4b75">
+            </div>
+            <div class="download-btn fl">
+                <div class="item ios">
+                    <a href="javascript:void(0);" id="ios_link">
+                        <img data-src="../../public/img/yydz/xiazai_06.jpg?v=2c90958">
+                    </a>
+                </div>
+                <div class="item android">
+                    <a href="javascript:void(0);" id="android_link">
+                        <img data-src="../../public/img/yydz/xiazai_09.jpg?v=e5750c1">
+                    </a>
+                </div>
+            </div>
+            <div class="game-version fl">
+                <div class="box">
+                    <img data-src="../../public/img/yydz/icon_144.png?v=aca8468">
+                    <div class="version-info">
+                        <h3 class="title"></h3>
+                        <div class="version-date">
+                            更新日期：<span id="J_year"></span>年<span id="J_month"></span>月<span id="J_day"></span>日
+                        </div>
+                        <div class="version">
+                            版本：<span id="J_version"></span>
+                        </div>
+                        <div class="size">
+                            大小：<span id="J_size"></span>MB
+                        </div>
+                        <div class="develop">
+                            开发商：
+                            <br>吉安趣玩网络科技有限公司
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="javascript:void(0);">趣玩游戏</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">关于我们</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">联系方式</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">人才招聘</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">服务协议</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">用户权益</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">常见问题</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">交易纠纷</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">家长监护</a>
+            </div>
+            <p>吉安趣玩网络科技有限公司 版权所有 赣ICP备15011427号-1 赣网文[2016]3028-013号</p>
+            <p>电话: 400-001-8131</p>
+            <p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+            <p>本公司游戏仅适合18岁以上玩家！</p>
+        </div>
+    </div>
+    <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
+    <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
+    <script src="../../public/js/yydz/detail.min.js?v=4a126f2"></script>
+    <script>
+        var apiVersion = '//aliyun.cdn.dl.quwannetwork.com/static_file/html/guanwang/detail/yydz_version/yydz_version.json';
+        var apiArticleList = '//yydz.ums.quwannetwork.com:10101/h5/article/get_article_list/';
+        var _common = {
+            sendAjax: function(url, params, dataType, callback) {
+                $.ajax({
+                    url: url,
+                    data: params,
+                    dataType: dataType,
+                    success: callback
+                });
+            }
+        };
+
+        //版本号
+        _common.sendAjax(apiVersion, {}, 'json', function(data) {
+            if (data && data.code === 0) {
+                var _data = data.data;
+                console.log(_data);
+                var year = _data.yydz.update.year;
+                var month = _data.yydz.update.month;
+                var day = _data.yydz.update.day;
+                var version = _data.yydz.version;
+                var size = _data.yydz.size;
+                var ios_link = '//itunes.apple.com/us/app/ye-ye-de-zhou-pu-ke/id1137555565?ls=1&mt=8';
+                var android_link = _data.apk_url.package;
+
+                $('#ios_link').attr('href', ios_link);
+                $('#android_link').attr('href', android_link);
+                $('#J_year').html(year);
+                $('#J_month').html(month);
+                $('#J_day').html(day);
+                $('#J_version').html(version);
+                $('#J_size').html(size);
+            }
+        });
+
+        //获取url参数
+        var getUrlParameter = function(url) {
+            if (!url) {
+                url = location.search.substring(1);
+            } else {
+                url = url.substr(url.indexOf('?') + 1);
+            }
+
+            var args = new Object();
+            var query = decodeURI(url);
+            var pairs = query.split('&');
+
+            for (var i = 0; i < pairs.length; i++) {
+                var pos = pairs[i].indexOf('=');
+                if (pos === -1) {
+                    continue;
+                }
+                var argname = pairs[i].substring(0, pos);
+                var value = pairs[i].substring(pos + 1);
+                args[argname] = decodeURI(value);
+            }
+            return args;
+        };
+        var Request = new Object();
+        Request = getUrlParameter();
+
+        var zone = Request['zone'];
+        $('#J_zone').attr('href', 'list.html?zone=' + zone);
+
+        function get_poker_list() {
+            _common.sendAjax(apiArticleList, {
+                reference_address: 'gw',
+                reference_module: 'gw_anounce'
+            }, 'json', function(data) {
+                if (data && data.code == 0) {
+                    window.gw_anounce = [];
+                    data['data'].map(function(val) {
+                        window.gw_anounce.push(val);
+                    });
+                    var vm_01 = new Vue({
+                        el: '.poker_famous',
+                        data: {
+                            anounce_list: [],
+                        }
+                    });
+                    vm_01.anounce_list = window.gw_anounce.reverse();
+                }
+            });
+        }
+        get_poker_list();
+
+        function get_host_list() {
+            _common.sendAjax(apiArticleList, {
+                reference_address: 'gw',
+                reference_module: 'gw_hot_spot'
+            }, 'json', function(data) {
+                if (data && data.code == 0) {
+                    window.gw_hot_spot = [];
+                    data['data'].map(function(val) {
+                        window.gw_hot_spot.push(val);
+                    });
+                    var vm_02 = new Vue({
+                        el: '.hot-spot',
+                        data: {
+                            hot_spot_list: [],
+                        }
+                    });
+                    vm_02.hot_spot_list = window.gw_hot_spot.reverse();
+                }
+            });
+        }
+        get_host_list();
+    </script>
+</body>
+
+</html>

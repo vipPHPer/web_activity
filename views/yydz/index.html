@@ -82,7 +82,7 @@
                     </div>
                     <ul class="clearfix">
                         <li v-for="todo in anounceList" track-by="$index" v-if="$index < 5" id="anounce_{{todo._id}}">
-                            <a class="J_links" href="detail.html?zone=anounce&article_id={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
+                            <a class="J_links" href="detail.html?zone=anounce&articleid={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
                         </li>
                     </ul>
                 </div>
@@ -116,7 +116,7 @@
                     <ul class="clearfix">
                         <li v-for="todo in hotSpotList" track-by="$index" v-if="$index < 5" v-cloak id="hot-spot_{{todo._id}}">
                             <span>热点</span>
-                            <a class="J_links" href="detail.html?zone=hot_spot&article_id={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
+                            <a class="J_links" href="detail.html?zone=hot_spot&articleid={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
                         </li>
                     </ul>
                 </div>
@@ -131,7 +131,7 @@
                         </div>
                         <ul class="clearfix">
                             <li v-for="todo in birdGuideList" track-by="$index" v-if="$index < 6" v-cloak id="bird-guide_{{todo._id}}">
-                                <a class="J_links" href="detail.html?zone=bird_guide&article_id={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
+                                <a class="J_links" href="detail.html?zone=bird_guide&articleid={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
                             </li>
                         </ul>
                     </div>
@@ -164,13 +164,13 @@
                             <div class="box-info" v-for="todo in pokerClList" v-cloak v-if="$index < 1">
                                 <h3 class="h3-title" v-html="todo.title"></h3>
                                 <p class="desc">
-                                    <a href="detail.html?zone=poker_cl&article_id={{todo._id}}" v-html="todo.description" title="{{todo.title}}" id="poker_cl_{{todo._id}}"></a>
+                                    <a href="detail.html?zone=poker_cl&articleid={{todo._id}}" v-html="todo.description" title="{{todo.title}}" id="poker_cl_{{todo._id}}"></a>
                                 </p>
                             </div>
                         </div>
                         <ul class="clearfix">
                             <li v-for="todo in pokerClList" track-by="$index" v-cloak v-if="$index >= 1" class="poker_cl_{{todo._id}}">
-                                <a class="J_links" href="detail.html?zone=poker_cl&article_id={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
+                                <a class="J_links" href="detail.html?zone=poker_cl&articleid={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
                             </li>
                         </ul>
                     </div>
@@ -187,7 +187,7 @@
                         </div>
                         <ul class="clearfix">
                             <li v-for="todo in chessClList" track-by="$index" v-cloak v-if="$index < 6" id="chess_cl_{{todo._id}}">
-                                <a class="J_links" href="detail.html?zone=chess_cl&article_id={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
+                                <a class="J_links" href="detail.html?zone=chess_cl&articleid={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
                             </li>
                         </ul>
                     </div>
@@ -199,7 +199,7 @@
                     </div>
                     <ul class="clearfix">
                         <li v-for="todo in pokerNewsList" track-by="$index" v-if="$index < 5" v-cloak id="poker_news_{{todo._id}}">
-                            <a class="J_links" href="detail.html?zone=poker_news&article_id={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
+                            <a class="J_links" href="detail.html?zone=poker_news&articleid={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
                         </li>
                     </ul>
                 </div>
@@ -235,7 +235,7 @@
     </div>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/yydz/index.min.js?v=22e7de3"></script>
+    <script src="../../public/js/yydz/index.min.js?v=e5d9408"></script>
 </body>
 
 </html>
