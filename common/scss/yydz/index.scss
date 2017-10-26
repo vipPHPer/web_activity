@@ -1,0 +1,689 @@
+/**
+ *
+ * @authors chenfuxin (chenfuxin@99cj.com.cn)
+ * @date    2016-11-01 10:08:20
+ */
+
+@import '../../../static/scss/_custom.scss';
+@import '../../../static/scss/_normalize.scss';
+@import '../../../static/scss/_reset.scss';
+@import '../../../static/scss/_modal.scss';
+// Your style here
+@mixin transition($arr) {
+    -webkit-transition: $arr;
+    -moz-transition: $arr;
+    -ms-transition: $arr;
+    -o-transition: $arr;
+    transition: $arr;
+}
+
+@mixin transform($arr) {
+    -webkit-transform: $arr;
+    -moz-transform: $arr;
+    -ms-transform: $arr;
+    -o-transform: $arr;
+    transform: $arr;
+}
+
+@mixin animation($arr) {
+    -webkit-animation: $arr;
+    -moz-animation: $arr;
+    -ms-animation: $arr;
+    -o-animation: $arr;
+    animation: $arr;
+}
+
+@mixin boxShadow($arr) {
+    -webkit-box-shadow: $arr;
+    -moz-box-shadow: $arr;
+    -ms-box-shadow: $arr;
+    -o-box-shadow: $arr;
+    box-shadow: $arr;
+}
+
+@mixin pos {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin abs-lt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 1260px;
+    margin: 0 auto;
+    display: table;
+}
+
+$imgUrl: '/public/img/yydz/';
+body {
+    min-width: 1260px;
+    color: #333;
+    font: 14px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #dfdfdf;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+.common_title {
+    border-bottom: 1px solid #cac7c5;
+    height: 58px;
+    line-height: 58px;
+}
+
+.common_span {
+    display: inline-block;
+    font-size: 24px;
+    color: #c72f22;
+    width: 146px;
+    border-bottom: 2px solid #c72f22;
+    text-align: center;
+}
+
+.common_li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.section {
+    position: relative;
+    .more {
+        color: #999;
+        font-size: 14px;
+        float: right;
+        margin-right: 25px;
+        @include transition(all .4s ease);
+        em {
+            display: inline-block;
+            margin-left: 5px;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 2px;
+            background: #bfbfbf;
+            color: #fff;
+            @include transition(all .4s ease);
+        }
+        &:hover {
+            color: #c72f22;
+            em {
+                background: #c72f22;
+            }
+        }
+    }
+}
+
+.section-header {
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include abs;
+    z-index: 10;
+    .container {
+        height: 100px;
+        line-height: 100px;
+    }
+    ul {
+        li {
+            float: left;
+            width: 110px;
+            height: 100px;
+            text-align: center;
+            font-size: 18px;
+            a {
+                color: #fff;
+                display: block;
+                @include transition(all .4s ease);
+            }
+            &:hover {
+                a {
+                    color: #ecca69;
+                }
+            }
+        }
+        .logo {
+            width: 209px;
+            height: 83px;
+            padding: 20px 85px 0;
+        }
+    }
+    &.preload {
+        background: url('#{$imgUrl}daohang.png') no-repeat center center;
+    }
+}
+
+.section-banner {
+    z-index: 2;
+    height: 990px;
+    .container {
+        padding-top: 578px;
+    }
+    .content {
+        @include pos;
+        margin-top: 10px;
+        display: table;
+        box-sizing: border-box;
+    }
+    .item-left {
+        width: 366px;
+        height: 388px;
+        overflow: hidden;
+        background: #fff;
+        .gg-box {
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            border-bottom: 1px solid #ddd;
+            a {
+                display: inline-block;
+                padding-left: 25px;
+                color: #333;
+                @include transition(all .2s ease);
+                &:hover {
+                    color: #c72f22;
+                }
+            }
+        }
+    }
+    .item-middle {
+        width: 496px;
+        height: 388px;
+        margin-left: 15px;
+        border-radius: 5px;
+        .title {
+            @extend .common_title;
+            .anounce {
+                @extend .common_span;
+            }
+        }
+        ul {
+            margin: 0 24px;
+            li {
+                font-size: 18px;
+                color: #666;
+                margin: 25px 0 0 0;
+                @extend .common_li;
+                @include transition(all .8s ease-out);
+                @include transform(translate3d(0, 80px, 0));
+                opacity: 0;
+                a {
+                    color: #333;
+                    @include transition(all .2s ease);
+                    &:hover {
+                        color: #c72f22;
+                    }
+                }
+                &:first-child {
+                    font-size: 22px;
+                    border-bottom: 1px dashed #cac7c5;
+                    padding: 25px 0;
+                    margin: 0;
+                    a {
+                        color: #c72f22;
+                    }
+                }
+            }
+        }
+    }
+    .item-right {
+        width: 368px;
+        height: 388px;
+        margin-left: 15px;
+        .qr-code {
+            position: relative;
+            width: 100%;
+        }
+        .img-2 {
+            position: absolute;
+            top: -12px;
+            right: -35px;
+        }
+        .download {
+            width: 368px;
+            height: 88px;
+            overflow: hidden;
+            margin-top: 6px;
+            a {
+                display: block;
+            }
+            img {
+                width: 368px;
+                height: 88px;
+            }
+        }
+        .android-download {
+            margin-top: 5px;
+        }
+    }
+    &.preload {
+        background: url('#{$imgUrl}banner-beijing.jpg') no-repeat center center;
+        .item-middle {
+            background: url('#{$imgUrl}bg-neirongye_02.jpg') no-repeat center center;
+        }
+    }
+    &.is-visible {
+        .item-middle ul li {
+            opacity: 1;
+            @include transform(translate3d(0,
+            0,
+            0));
+        }
+    }
+}
+
+.section-middle {
+    .hot-spot {
+        width: 366px;
+        height: 310px;
+        .title {
+            @extend .common_title;
+            span {
+                @extend .common_span;
+            }
+        }
+        ul {
+            height: 274px;
+            li {
+                font-size: 14px;
+                line-height: 40px;
+                margin-left: 24px;
+                margin-right: 24px;
+                @extend .common_li;
+                @include transition(all .8s ease-out);
+                @include transform(translate3d(0,
+                80px,
+                0));
+                opacity: 0;
+                a {
+                    color: #333;
+                    @include transition(all .2s ease);
+                    &:hover {
+                        color: #c72f22;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    width: 48px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 5px;
+                    background: #ff8076;
+                    margin-right: 10px;
+                }
+                &:first-child {
+                    margin-top: 22px;
+                }
+            }
+        }
+    }
+    .bird-guide {
+        width: 496px;
+        height: 310px;
+        margin-left: 15px;
+        .title {
+            @extend .common_title;
+            span {
+                @extend .common_span;
+            }
+        }
+        .img {
+            width: 456px;
+            height: 117px;
+            padding: 20px 20px 0 20px;
+        }
+        .guide-bg {
+            height: 274px;
+        }
+        ul {
+            margin: 8px 0 0 20px;
+            li {
+                float: left;
+                width: 46%;
+                font-size: 14px !important;
+                padding: 0 !important;
+                border: none !important;
+                margin: 0 !important;
+                color: #666 !important;
+                line-height: 32px;
+                @extend .common_li;
+                @include transition(all .8s ease-out);
+                @include transform(translate3d(0,
+                80px,
+                0));
+                opacity: 0;
+                a {
+                    color: #333;
+                    @include transition(all .2s ease);
+                    &:hover {
+                        color: #c72f22;
+                    }
+                }
+                &:nth-child(even) {
+                    margin-left: 24px !important;
+                }
+            }
+        }
+    }
+    .race-center {
+        width: 368px;
+        height: 310px;
+        margin-left: 15px;
+        .race_center-bg {
+            height: 274px;
+        }
+        .title {
+            @extend .common_title;
+            span {
+                @extend .common_span;
+            }
+        }
+        .img {
+            width: 329px;
+            height: 227px;
+            padding: 20px 20px 0 20px;
+        }
+    }
+    &.preload {
+        .hot-spot ul {
+            background: url('#{$imgUrl}bg-neirongye_03.jpg') no-repeat center center;
+        }
+        .guide-bg {
+            background: url('#{$imgUrl}bg-neirongye_04.jpg') no-repeat center center;
+        }
+        .race_center-bg {
+            background: url('#{$imgUrl}bg-neirongye_05.jpg') no-repeat center center;
+        }
+    }
+    &.is-visible {
+        .hot-spot ul li {
+            @include transform(translate3d(0,
+            0,
+            0));
+            opacity: 1;
+        }
+        .bird-guide ul li {
+            @include transform(translate3d(0,
+            0,
+            0));
+            opacity: 1;
+        }
+    }
+}
+
+.section-bottom {
+    margin-top: 35px;
+    padding-bottom: 65px;
+    .poker_cl {
+        width: 366px;
+        height: 310px;
+        .title {
+            @extend .common_title;
+            span {
+                @extend .common_span;
+            }
+        }
+        .img {
+            height: 68px;
+            overflow: hidden;
+            padding: 20px 20px 0 20px;
+            img {
+                width: 140px;
+                height: 68px;
+                float: left;
+                margin-right: 24px;
+            }
+        }
+        .h3-title {
+            font-weight: 700;
+            color: #333;
+            font-size: 14px;
+            @extend .common_li;
+        }
+        .desc {
+            line-height: 25px;
+            @extend .common_li;
+            color: #333;
+            a {
+                color: #333;
+                @include transition(all .2s ease);
+                &:hover {
+                    color: #c72f22;
+                }
+            }
+        }
+        .poker_cl_bg {
+            height: 274px;
+        }
+        ul {
+            margin-left: 24px;
+            margin-right: 24px;
+            li {
+                line-height: 40px;
+                @extend .common_li;
+                @include transition(all .8s ease-out);
+                @include transform(translate3d(0,
+                80px,
+                0));
+                opacity: 0;
+                a {
+                    color: #333;
+                    @include transition(all .2s ease);
+                    &:hover {
+                        color: #c72f22;
+                    }
+                }
+                &:first-child {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .chess_cl {
+        width: 496px;
+        height: 310px;
+        margin-left: 15px;
+        .chess_cl_bg {
+            height: 274px;
+        }
+        .title {
+            @extend .common_title;
+            span {
+                @extend .common_span;
+            }
+        }
+        .img {
+            padding-top: 20px;
+        }
+        img {
+            margin-left: 20px;
+            width: 216px;
+            height: 106px;
+        }
+        ul {
+            margin: 0 20px;
+            li {
+                float: left;
+                font-size: 14px;
+                margin: 0;
+                width: 50%;
+                line-height: 40px;
+                @extend .common_li;
+                @include transition(all .8s ease-out);
+                @include transform(translate3d(0,
+                80px,
+                0));
+                opacity: 0;
+                a {
+                    color: #333;
+                    @include transition(all .2s ease);
+                    &:hover {
+                        color: #c72f22;
+                    }
+                }
+                &:first-child {
+                    font-size: 14px;
+                    border: none;
+                    padding: 0;
+                    a {
+                        color: #333;
+                        &:hover {
+                            color: #c72f22;
+                        }
+                    }
+                }
+                &:nth-child(even) a {
+                    padding-left: 12px;
+                }
+            }
+        }
+    }
+    .industry-news {
+        width: 368px;
+        height: 310px;
+        margin-left: 15px;
+        .title {
+            @extend .common_title;
+            span {
+                @extend .common_span;
+            }
+        }
+        ul {
+            height: 274px;
+            li {
+                line-height: 40px;
+                margin-left: 24px;
+                margin-right: 24px;
+                @extend .common_li;
+                @include transition(all .8s ease-out);
+                @include transform(translate3d(0,
+                80px,
+                0));
+                opacity: 0;
+                a {
+                    color: #333;
+                    @include transition(all .2s ease);
+                    &:hover {
+                        color: #c72f22;
+                    }
+                }
+                &:first-child {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+    &.preload {
+        .poker_cl_bg {
+            background: url('#{$imgUrl}bg-neirongye_03.jpg') no-repeat center center;
+        }
+        .chess_cl_bg {
+            background: url('#{$imgUrl}bg-neirongye_04.jpg') no-repeat center center;
+        }
+        .industry-news ul {
+            background: url('#{$imgUrl}bg-neirongye_05.jpg') no-repeat center center;
+        }
+    }
+    &.is-visible {
+        .poker_cl ul li {
+            @include transform(translate3d(0,
+            0,
+            0));
+            opacity: 1;
+        }
+        .chess_cl ul li {
+            @include transform(translate3d(0,
+            0,
+            0));
+            opacity: 1;
+        }
+        .industry-news ul li {
+            @include transform(translate3d(0,
+            0,
+            0));
+            opacity: 1;
+        }
+    }
+}
+
+.section-footer {
+    padding: 35px 0 40px;
+    overflow: hidden;
+    background: #bf2f2f;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    .footer-nav a {
+        color: #fff;
+        @include transition(all .4s ease);
+        &:hover {
+            color: #ff6700;
+        }
+    }
+    .sep {
+        margin: 0 8px;
+    }
+    p {
+        line-height: 30px;
+    }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>夜夜德州扑克官网_安卓ios下载_游戏攻略礼包_吉安趣玩游戏平台</title>
+    <meta name="description" content="吉安趣玩棋牌游戏平台提供最权威的夜夜德州棋牌游戏,棋牌游戏平台,德州扑克游戏平台,致力于为用户开发最好玩,最受玩家欢迎的夜夜德州棋牌游戏.">
+    <meta name="keywords" content="夜夜德州,棋牌游戏,德州扑克下载,棋牌游戏平台,棋牌游戏排行榜,送分的棋牌游戏">
+    <link rel="shortcut icon" href="//aliyun.cdn.dl.quwannetwork.com/static_file/html/guanwang/images/yydz.ico" />
+    <link rel="stylesheet" href="../../public/css/yydz/index.min.css?v=3b2f8f4">
+    <script>
+        //移动端跳转
+        var u = navigator.userAgent;
+        var app = navigator.appVersion;
+        var url = '//quwannetwork.com/yydz/m_index.html';
+        if (u.match(/Android/i) || (u.indexOf('iPhone') != -1) || (u.indexOf('iPod') != -1) || (u.indexOf('iPad') != -1)) {
+            window.location = url;
+        }
+    </script>
+</head>
+
+<body id="app" v-cloak>
+    <div class="section section-header">
+        <div class="container">
+            <ul class="clearfix">
+                <li class="head-list">
+                    <a href="index.html" class="link">官网首页</a>
+                </li>
+                <li class="head-list">
+                    <a href="javascript:void(0);" class="link">活动公告</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=bird_guide" class="link">新手入门</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=poker_cl" class="link">扑克策略</a>
+                </li>
+                <li class="logo">
+                    <a href="index.html">
+                        <img data-src="../../public/img/yydz/logo.png?v=58c17fc" alt="夜夜德州扑克">
+                    </a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=hot_spot" class="link">近期热点</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=chess_cl" class="link">棋牌策略</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=poker_news" class="link">行业新闻</a>
+                </li>
+                <li class="head-list">
+                    <a href="list.html?zone=anounce" class="link">扑克名人</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section section-banner">
+        <div class="container">
+            <div class="content">
+                <div class="item item-left fl">
+                    <div class="item-banner" style="height: 210px;">
+                        <img data-src="../../public/img/yydz/guanggaotu_03.jpg?v=8504b91">
+                    </div>
+                    <div class="gg-box" style="background: #e4393c;">
+                        <a href="{{androidLink}}" style="color: #fff;">国庆幸运砸蛋活动大奖送不停</a>
+                    </div>
+                    <div class="gg-box">
+                        <a href="{{androidLink}}">国庆欢乐渔场活动第1名送iPhone7 Plus</a>
+                    </div>
+                    <div class="gg-box">
+                        <a href="{{androidLink}}">国庆豪华礼包更新上线即可领取</a>
+                    </div>
+                    <div class="gg-box">
+                        <a href="{{androidLink}}">国庆幸运锤子SNG比赛</a>
+                    </div>
+                </div>
+                <div class="item item-middle fl">
+                    <div class="title">
+                        <span class="anounce">扑克名人</span>
+                    </div>
+                    <ul class="clearfix">
+                        <li v-for="todo in anounceList" track-by="$index" v-if="$index < 5" id="anounce_{{todo._id}}">
+                            <a class="J_links" href="detail.html?zone=anounce&article_id={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item item-right fl">
+                    <div class="qr-code">
+                        <img data-src="../../public/img/yydz/xiazai_03.jpg?v=fc49006" class="img-1">
+                        <img data-src="../../public/img/yydz/katongren.png?v=6380800" class="img-2">
+                    </div>
+                    <div class="download ios-download">
+                        <a href="{{iosLink}}">
+                            <img data-src="../../public/img/yydz/xiazai_06.jpg?v=2c90958">
+                        </a>
+                    </div>
+                    <div class="download android-download">
+                        <a v-bind:href="androidLink">
+                            <img data-src="../../public/img/yydz/xiazai_09.jpg?v=e5750c1">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-middle">
+        <div class="container">
+            <div class="content">
+                <div class="item item-left hot-spot fl">
+                    <div class="title">
+                        <span>近期热点</span>
+                        <a href="list.html?zone=hot_spot" class="more">更多<em>+</em></a>
+                    </div>
+                    <ul class="clearfix">
+                        <li v-for="todo in hotSpotList" track-by="$index" v-if="$index < 5" v-cloak id="hot-spot_{{todo._id}}">
+                            <span>热点</span>
+                            <a class="J_links" href="detail.html?zone=hot_spot&article_id={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item item-middle bird-guide fl">
+                    <div class="title">
+                        <span>新手指南</span>
+                        <a href="list.html?zone=bird_guide" class="more">更多<em>+</em></a>
+                    </div>
+                    <div class="guide-bg">
+                        <div class="img">
+                            <img data-src="../../public/img/yydz/guanggaotu_10.jpg?v=9390a1e">
+                        </div>
+                        <ul class="clearfix">
+                            <li v-for="todo in birdGuideList" track-by="$index" v-if="$index < 6" v-cloak id="bird-guide_{{todo._id}}">
+                                <a class="J_links" href="detail.html?zone=bird_guide&article_id={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item item-right race-center fl">
+                    <div class="title">
+                        <span>赛事中心</span>
+                        <a href="list.html?zone=race_video" class="more">更多<em>+</em></a>
+                    </div>
+                    <div class="race_center-bg">
+                        <div class="img">
+                            <img data-src="../../public/img/yydz/banner-saishi.jpg?v=d828195">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-bottom">
+        <div class="container">
+            <div class="content">
+                <div class="item item-left poker_cl fl">
+                    <div class="title">
+                        <span>扑克策略</span>
+                        <a href="list.html?zone=poker_cl" class="more">更多<em>+</em></a>
+                    </div>
+                    <div class="poker_cl_bg">
+                        <div class="img">
+                            <img data-src="../../public/img/yydz/guanggaotu_19.jpg?v=8579a3f">
+                            <div class="box-info" v-for="todo in pokerClList" v-cloak v-if="$index < 1">
+                                <h3 class="h3-title" v-html="todo.title"></h3>
+                                <p class="desc">
+                                    <a href="detail.html?zone=poker_cl&article_id={{todo._id}}" v-html="todo.description" title="{{todo.title}}" id="poker_cl_{{todo._id}}"></a>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="clearfix">
+                            <li v-for="todo in pokerClList" track-by="$index" v-cloak v-if="$index >= 1" class="poker_cl_{{todo._id}}">
+                                <a class="J_links" href="detail.html?zone=poker_cl&article_id={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item item-middle chess_cl fl">
+                    <div class="title">
+                        <span>棋牌策略</span>
+                        <a href="list.html?zone=chess_cl" class="more">更多<em>+</em></a>
+                    </div>
+                    <div class="chess_cl_bg">
+                        <div class="img">
+                            <img data-src="../../public/img/yydz/guanggaotu_22.jpg?v=fa6adb5">
+                            <img data-src="../../public/img/yydz/guanggaotu_24.jpg?v=24e79b3">
+                        </div>
+                        <ul class="clearfix">
+                            <li v-for="todo in chessClList" track-by="$index" v-cloak v-if="$index < 6" id="chess_cl_{{todo._id}}">
+                                <a class="J_links" href="detail.html?zone=chess_cl&article_id={{todo._id}}" v-html="todo.title" title="{{todo.title}}"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item item-right industry-news fl">
+                    <div class="title">
+                        <span>行业新闻</span>
+                        <a href="list.html?zone=poker_news" class="more">更多<em>+</em></a>
+                    </div>
+                    <ul class="clearfix">
+                        <li v-for="todo in pokerNewsList" track-by="$index" v-if="$index < 5" v-cloak id="poker_news_{{todo._id}}">
+                            <a class="J_links" href="detail.html?zone=poker_news&article_id={{todo._id}}" v-cloak v-html="todo.title" title="{{todo.title}}"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="javascript:void(0);">趣玩游戏</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">关于我们</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">联系方式</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">人才招聘</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">服务协议</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">用户权益</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">常见问题</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">交易纠纷</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">家长监护</a>
+            </div>
+            <p>吉安趣玩网络科技有限公司 版权所有 赣ICP备15011427号-1 赣网文[2016]3028-013号</p>
+            <p>电话: 400-001-8131</p>
+            <p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+            <p>本公司游戏仅适合18岁以上玩家！</p>
+        </div>
+    </div>
+    <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
+    <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
+    <script src="../../public/js/yydz/index.min.js?v=22e7de3"></script>
+</body>
+
+</html>
