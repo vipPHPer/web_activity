@@ -82,8 +82,8 @@
                         <a href="list.html?zone=anounce" class="more">更多<em>+</em></a>
                     </div>
                     <ul class="clearfix">
-                        <li v-for="todo in anounce_list" track-by="$index" v-cloak>
-                            <a href="detail.html?zone=anounce&article_id={{todo._id}}" v-cloak v-html="todo.title"></a>
+                        <li v-for="todo in anounceList" track-by="$index" v-cloak>
+                            <a href="detail.html?zone=anounce&articleid={{todo._id}}" v-cloak v-html="todo.title"></a>
                         </li>
                     </ul>
                 </div>
@@ -93,9 +93,9 @@
                         <a href="list.html?zone=hot_spot" class="more">更多<em>+</em></a>
                     </div>
                     <ul class="clearfix">
-                        <li v-for="todo in hot_spot_list" track-by="$index" v-cloak>
+                        <li v-for="todo in hotSpotList" track-by="$index" v-cloak>
                             <span>新闻</span>
-                            <a href="detail.html?zone=hot_spot&article_id={{todo._id}}" v-cloak v-html="todo.title"></a>
+                            <a href="detail.html?zone=hot_spot&articleid={{todo._id}}" v-cloak v-html="todo.title"></a>
                         </li>
                     </ul>
                 </div>
@@ -171,7 +171,7 @@
     </div>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/yydz/detail.min.js?v=4a126f2"></script>
+    <script src="../../public/js/yydz/detail.min.js?v=7c06f24"></script>
     <script>
         var apiVersion = '//aliyun.cdn.dl.quwannetwork.com/static_file/html/guanwang/detail/yydz_version/yydz_version.json';
         var apiArticleList = '//yydz.ums.quwannetwork.com:10101/h5/article/get_article_list/';
@@ -190,17 +190,16 @@
         _common.sendAjax(apiVersion, {}, 'json', function(data) {
             if (data && data.code === 0) {
                 var _data = data.data;
-                console.log(_data);
                 var year = _data.yydz.update.year;
                 var month = _data.yydz.update.month;
                 var day = _data.yydz.update.day;
                 var version = _data.yydz.version;
                 var size = _data.yydz.size;
                 var ios_link = '//itunes.apple.com/us/app/ye-ye-de-zhou-pu-ke/id1137555565?ls=1&mt=8';
-                var android_link = _data.apk_url.package;
+                var androidLink = _data.apk_url.package;
 
                 $('#ios_link').attr('href', ios_link);
-                $('#android_link').attr('href', android_link);
+                $('#android_link').attr('href', androidLink);
                 $('#J_year').html(year);
                 $('#J_month').html(month);
                 $('#J_day').html(day);
@@ -217,7 +216,7 @@
                 url = url.substr(url.indexOf('?') + 1);
             }
 
-            var args = new Object();
+            var args = {};
             var query = decodeURI(url);
             var pairs = query.split('&');
 
@@ -232,55 +231,55 @@
             }
             return args;
         };
-        var Request = new Object();
+        var Request = {};
         Request = getUrlParameter();
 
-        var zone = Request['zone'];
+        var zone = Request.zone;
         $('#J_zone').attr('href', 'list.html?zone=' + zone);
 
-        function get_poker_list() {
+        function getPokerList() {
             _common.sendAjax(apiArticleList, {
                 reference_address: 'gw',
                 reference_module: 'gw_anounce'
             }, 'json', function(data) {
-                if (data && data.code == 0) {
-                    window.gw_anounce = [];
-                    data['data'].map(function(val) {
-                        window.gw_anounce.push(val);
+                if (data && data.code === 0) {
+                    window.gwAnounce = [];
+                    data.data.map(function(val) {
+                        window.gwAnounce.push(val);
                     });
                     var vm_01 = new Vue({
                         el: '.poker_famous',
                         data: {
-                            anounce_list: [],
+                            anounceList: [],
                         }
                     });
-                    vm_01.anounce_list = window.gw_anounce.reverse();
+                    vm_01.anounceList = window.gwAnounce.reverse();
                 }
             });
         }
-        get_poker_list();
+        getPokerList();
 
-        function get_host_list() {
+        function getHostList() {
             _common.sendAjax(apiArticleList, {
                 reference_address: 'gw',
                 reference_module: 'gw_hot_spot'
             }, 'json', function(data) {
                 if (data && data.code == 0) {
-                    window.gw_hot_spot = [];
-                    data['data'].map(function(val) {
-                        window.gw_hot_spot.push(val);
+                    window.gwHotSpot = [];
+                    data.data.map(function(val) {
+                        window.gwHotSpot.push(val);
                     });
                     var vm_02 = new Vue({
                         el: '.hot-spot',
                         data: {
-                            hot_spot_list: [],
+                            hotSpotList: [],
                         }
                     });
-                    vm_02.hot_spot_list = window.gw_hot_spot.reverse();
+                    vm_02.hotSpotList = window.gwHotSpot.reverse();
                 }
             });
         }
-        get_host_list();
+        getHostList();
     </script>
 </body>
 

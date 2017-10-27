@@ -65,8 +65,6 @@ var yydzDetail = {
 
     var articleId = Request.articleid;
     var zone = Request.zone;
-    console.log(articleId);
-    console.log(zone);
 
     function getReadDetail() {
       _common.sendAjax(apiActicleDetail, {
