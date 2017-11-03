@@ -1,0 +1,840 @@
+/**
+ * 
+ * @authors chenfuxin (chenfuxin@99cj.com.cn)
+ * @date    2016-11-01 10:08:20
+ */
+
+@import '../../../static/scss/_custom.scss';
+@import '../../../static/scss/_normalize.scss';
+@import '../../../static/scss/_reset.scss';
+@import '../../../static/scss/_modal.scss';
+// Your style here
+@mixin transition($arr) {
+    -webkit-transition: $arr;
+    -moz-transition: $arr;
+    -ms-transition: $arr;
+    -o-transition: $arr;
+    transition: $arr;
+}
+
+@mixin transform($arr) {
+    -webkit-transform: $arr;
+    -moz-transform: $arr;
+    -ms-transform: $arr;
+    -o-transform: $arr;
+    transform: $arr;
+}
+
+@mixin animation($arr) {
+    -webkit-animation: $arr;
+    -moz-animation: $arr;
+    -ms-animation: $arr;
+    -o-animation: $arr;
+    animation: $arr;
+}
+
+@mixin boxShadow($arr) {
+    -webkit-box-shadow: $arr;
+    -moz-box-shadow: $arr;
+    -ms-box-shadow: $arr;
+    -o-box-shadow: $arr;
+    box-shadow: $arr;
+}
+
+@mixin pos {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin abs-lt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+body {
+    min-width: 1280px;
+    color: #333;
+    font: 14px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+.section {
+    @include pos;
+    .balloon {
+        @include abs;
+    }
+}
+
+.btn-disable {
+    display: none;
+}
+
+@keyframes balloon1 {
+    0% {
+        @include transform(translate(-10px, -20px));
+    }
+    25% {
+        @include transform(translate(-20px, -40px));
+    }
+    50% {
+        @include transform(translate(-10px, -20px));
+    }
+    75% {
+        @include transform(translate(10px, -40px));
+    }
+    100% {
+        @include transform(translate(-10px, -20px));
+    }
+}
+
+@keyframes balloon2 {
+    0% {
+        @include transform(scale(0.6));
+    }
+    25% {
+        @include transform(scale(1));
+    }
+    50% {
+        @include transform(scale(0.8));
+    }
+    75% {
+        @include transform(scale(1));
+    }
+    100% {
+        @include transform(scale(1.1));
+    }
+}
+
+@keyframes balloon3 {
+    0% {
+        @include transform(translate(-30px, -40px));
+    }
+    25% {
+        @include transform(translate(-80px, -90px));
+    }
+    50% {
+        @include transform(translate(-30px, -40px));
+    }
+    75% {
+        @include transform(translate(60px, -60px));
+    }
+    100% {
+        @include transform(translate(-30px, -40px));
+    }
+}
+
+@keyframes balloon4 {
+    0% {
+        @include transform(translate(-20px, -40px));
+    }
+    25% {
+        @include transform(translate(-50px, -60px));
+    }
+    50% {
+        @include transform(translate(-20px, -40px));
+    }
+    75% {
+        @include transform(translate(30px, -40px));
+    }
+    100% {
+        @include transform(translate(-20px, -40px));
+    }
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-70deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+$imgUrl: '/public/img/hd_v02/';
+.section-header {
+    &.preload {
+        background: url('#{$imgUrl}summary-header-bg.jpg') no-repeat center top;
+        .logo {
+            background: url('#{$imgUrl}logo.jpg') no-repeat;
+        }
+    }
+    .container {
+        height: 620px;
+    }
+    .links {
+        @include pos;
+    }
+    a {
+        @include abs;
+        color: #1479a1;
+    }
+    .logo {
+        width: 44px;
+        height: 44px;
+        top: 0;
+        left: 100px;
+        text-indent: -9999em;
+    }
+    .enterBtn {
+        top: 20px;
+        right: 160px;
+    }
+    .content {
+        text-align: center;
+        color: #fff;
+    }
+    .txt {
+        padding-top: 260px;
+        font-size: 48px;
+        text-indent: -9999em;
+    }
+    .desc {
+        margin-top: 20px;
+    }
+    .balloon-1 {
+        width: 24px;
+        height: 38px;
+        top: 320px;
+        left: 50%;
+        margin-left: 600px;
+        background: url('#{$imgUrl}header-balloon-1.png') no-repeat;
+        @include animation(balloon1 5s infinite linear);
+    }
+    .balloon-2 {
+        width: 43px;
+        height: 68px;
+        top: 60px;
+        left: 50%;
+        margin-left: -120px;
+        background: url('#{$imgUrl}/header-balloon-2.png') no-repeat;
+        transform-origin: 21.5px 68px;
+        @include animation(balloon2 1s infinite);
+    }
+    .balloon-3 {
+        width: 93px;
+        height: 147px;
+        top: 390px;
+        left: 50%;
+        margin-left: -760px;
+        @include animation(balloon3 8s infinite linear);
+        background: url('#{$imgUrl}header-balloon-3.png') no-repeat;
+    }
+    .ani-ship {
+        position: absolute;
+        width: 287px;
+        height: 258px;
+        top: 88px;
+        right: 152px;
+        transform-origin: 220px 20px;
+        @include animation(round 6s infinite linear);
+        background: url('#{$imgUrl}ani-ship.png') no-repeat;
+    }
+}
+
+.section-nav {
+    height: 110px;
+    background: #054862;
+    .container {
+        overflow: hidden;
+    }
+    ul {
+        text-align: center;
+    }
+    li {
+        float: left;
+        width: 320px - 4px;
+        height: 110px;
+        margin-left: -1px;
+        cursor: pointer;
+        a {
+            font-weight: normal;
+            color: #b0f0f9;
+        }
+        .txt {
+            border-left: 1px solid #4b7677;
+            margin-top: 30px;
+            width: 316px;
+            height: 48px;
+            z-index: 6;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: normal;
+        }
+        p {
+            font-size: 14px;
+        }
+        &:hover {
+            background: #117ca0;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.section-car {
+    &.preload {
+        background: url('#{$imgUrl}summary-car-bg.jpg') no-repeat center center;
+    }
+    .container {
+        height: 594px;
+    }
+    .content {
+        @include abs;
+        top: 210px;
+        right: 250px;
+        color: #084e69;
+    }
+    h2 {
+        margin-top: 15px;
+        font-weight: normal;
+        font-size: 22px;
+    }
+    .price {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #fcd94c;
+        em {
+            font-size: 27px;
+            font-family: Avenir;
+        }
+    }
+    .btn-buy {
+        display: inline-block;
+        width: 138px;
+        height: 35px;
+        line-height: 35px;
+        background: #fcd94c;
+        color: #1481a1;
+        border-radius: 27px;
+        text-align: center;
+    }
+}
+
+.section-horse,
+.section-ship,
+.section-wheel {
+    ul {
+        text-align: center;
+    }
+    li {
+        float: left;
+        width: 306px;
+        height: 393px;
+        background: #fff;
+        margin: 0 0 10px 10px;
+        text-align: center;
+        color: #515151;
+        @include pos;
+        img {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            border: none;
+            background: url('#{$imgUrl}preload.jpg') no-repeat;
+        }
+        .title {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 36px;
+        }
+        .price {
+            color: #f57230;
+            em {
+                font-size: 27px;
+                font-family: Avenir;
+            }
+        }
+        del {
+            margin-left: 5px;
+            color: #757575;
+        }
+        .btn-buy {
+            display: inline-block;
+            width: 138px;
+            line-height: 35px;
+            line-height: 35px;
+            text-align: center;
+            background: #f57230;
+            border-radius: 27px;
+            color: #fff;
+        }
+        i {
+            @include abs;
+            top: 0;
+            left: 50%;
+            z-index: 2;
+            width: 64px;
+            height: 20px;
+            margin-left: -32px;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            background-color: #ffac13;
+            font-style: normal;
+            font-weight: 700;
+            &.flag-new {
+                background-color: #83c44e;
+            }
+            &.flag-gift {
+                background-color: #2196f3;
+            }
+        }
+    }
+}
+
+.section-horse {
+    height: 1418px;
+    background: #f28d2f;
+    &.preload {
+        .car-bg {
+            background: url('#{$imgUrl}summary-car.jpg') no-repeat left top;
+        }
+    }
+    .container {
+        padding-top: 112px;
+    }
+    .car-bg {
+        @include pos;
+        width: 622px;
+        height: 795px;
+        margin-left: 10px;
+        display: inline-block;
+        float: left;
+        z-index: 1;
+        p {
+            text-align: center;
+            padding-top: 132px;
+            color: #2a456d;
+            font-size: 16px;
+        }
+    }
+    .balloon {
+        width: 43px;
+        height: 69px;
+        z-index: 3;
+        top: 286px;
+        left: 430px;
+        @include animation(balloon4 6s infinite linear);
+        background: url('#{$imgUrl}ship-balloon.png') no-repeat;
+    }
+}
+
+.section-ship {
+    @include pos;
+    height: 990px;
+    background: #f9c12d;
+    &.preload {
+        .ship-bg {
+            background: url('#{$imgUrl}summary-ship.jpg') no-repeat;
+        }
+        .ani-ship {
+            background: url('#{$imgUrl}ani-ship.png') no-repeat;
+        }
+    }
+    ul {
+        float: left;
+        width: 1280px - 622px;
+    }
+    .container {
+        padding-top: 90px;
+    }
+    .ship-bg {
+        @include abs;
+        width: 622px;
+        height: 795px;
+        top: 90px;
+        right: 15px;
+        margin-left: -13px;
+        p {
+            text-align: center;
+            padding-top: 160px;
+            color: #2a456d;
+            font-size: 16px;
+        }
+    }
+    .ani-ship {
+        @include abs;
+        width: 287px;
+        height: 258px;
+        top: 466px;
+        right: 240px;
+        transform-origin: 220px 20px;
+        @include animation(round 6s infinite linear);
+    }
+    .moutain {
+        @include abs;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        background: url('#{$imgUrl}shan.png') no-repeat;
+    }
+}
+
+.section-wheel {
+    height: 997px;
+    background: #219b9d;
+    &.preload {
+        .wheel-bg {
+            background: url('#{$imgUrl}summary-wheel.jpg') no-repeat center top;
+        }
+    }
+    .container {
+        padding-top: 86px;
+    }
+    .wheel-bg {
+        width: 1255px;
+        height: 438px;
+        margin: 0 0 10px 10px;
+        p {
+            text-align: center;
+            padding-top: 132px;
+            color: #2a456d;
+            font-size: 16px;
+            width: 373px;
+            margin-left: 520px;
+        }
+    }
+    .balloon {
+        width: 69px;
+        height: 110px;
+        top: 260px;
+        right: 255px;
+        @include animation(balloon4 6s infinite linear);
+        background: url('#{$imgUrl}wheel-balloon.png') no-repeat;
+    }
+}
+
+.section-luckdraw {
+    height: 925px;
+    overflow: hidden;
+    .photo-bg {
+        overflow: hidden;
+        width: 645px;
+        height: 361px;
+        @include abs;
+        top: 297px;
+        left: 315px;
+        display: none;
+        @include transition(all .5s);
+    }
+    .camera-bg {
+        width: 120px;
+        height: 120px;
+        @include abs;
+        top: 350px;
+        right: 388px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: #eee;
+        display: none;
+        @include transition(all 1s 1s);
+        img {
+            width: 120px;
+            height: 120px;
+            text-align: center;
+        }
+    }
+    &.preload {
+        background: url('#{$imgUrl}summary-luckdraw-bg.jpg') no-repeat center center;
+        .photo-bg {
+            background: url('#{$imgUrl}photo01.jpg') no-repeat;
+        }
+    }
+    .content {
+        text-align: center;
+        color: #fff;
+    }
+    .text-01 {
+        padding-top: 160px;
+    }
+    .links {
+        margin-top: 8px;
+        a {
+            margin: 0 8px;
+            color: #fff;
+        }
+    }
+    .text-02 {
+        margin-top: 925px - 360px;
+        .btn {
+            display: inline-block;
+            width: 234px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background: #f57230;
+            color: #fff;
+            border-radius: 27px;
+            font-size: 18px;
+        }
+    }
+    .text-03 {
+        margin-top: 500px;
+        .btn {
+            display: inline-block;
+            width: 234px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background: #f57230;
+            color: #fff;
+            border-radius: 27px;
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 8px;
+        }
+        .icon {
+            display: inline-block;
+            width: 38px;
+            height: 31px;
+            vertical-align: -8px;
+            margin: 0 36px 0 -18px;
+            background: url('#{$imgUrl}sina-icon.png') no-repeat;
+        }
+    }
+    .text-04 {
+        margin-top: 530px;
+        .btn {
+            display: inline-block;
+            width: 234px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background: #f57230;
+            color: #fff;
+            border-radius: 27px;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .gray-btn {
+            background: #ccc;
+            cursor: default;
+        }
+    }
+}
+
+.modal-rule {
+    background: #fff;
+    width: 614px;
+    height: 535px;
+    .close {
+        width: 40px;
+        height: 40px;
+        top: -10px;
+        right: -10px;
+        background: #ff6700;
+        border-radius: 50%;
+        line-height: 40px;
+        color: #fff;
+    }
+    .modal-body {
+        padding: 60px;
+        .title {
+            text-align: center;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 52px;
+        }
+        .infor-box {
+            width: 474px;
+        }
+        p {
+            line-height: 24px;
+            margin-bottom: 8px;
+        }
+        span {
+            display: block;
+            margin-top: 40px;
+            line-height: 24px;
+            em {
+                color: #ff6700;
+            }
+        }
+    }
+}
+
+.modal-prize {
+    width: 500px;
+    height: 468px;
+    .modal-body {
+        @include pos;
+        padding: 60px;
+        height: 535px;
+    }
+    .title {
+        text-align: center;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 52px;
+    }
+    .prizeBox {
+        text-align: center;
+        @include pos;
+        height: 95px;
+        line-height: 95px;
+        margin-top: 100px;
+        background: url('#{$imgUrl}prize-icon.png') no-repeat center 0;
+        .prize-name {
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+    .tip {
+        @include abs;
+        left: 0;
+        bottom: -15px;
+        width: 100%;
+        height: 110px;
+        background: #fdba34;
+        text-align: center;
+        p {
+            margin-top: 30px;
+            color: #af7519;
+            line-height: 20px;
+        }
+    }
+}
+
+.modal-draw-result {
+    width: 493px;
+    height: 459px;
+    margin-left: -236px;
+    margin-top: -248px;
+    .close {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        top: -10px;
+        right: -10px;
+        background: #fff;
+        color: #fc4440;
+        border-radius: 50%;
+        font-size: 16px;
+        &:hover {
+            color: #fc4440;
+        }
+    }
+    .modal-body {
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    .content,
+    .btn {
+        display: none;
+    }
+    .content {
+        margin-top: 260px;
+        .tip {
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+    .msg {
+        color: #711e1e;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.modal-draw-lucky {
+    background: url('#{$imgUrl}lucky-bg.jpg') no-repeat center 0;
+    .btn {
+        display: inline-block;
+        width: 154px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        color: #fc4440;
+        background-color: #fff;
+        border-radius: 27px;
+    }
+    .content {
+        margin-top: 200px;
+        display: block;
+        .tip {
+            font-size: 24px;
+            color: #fff;
+            span {
+                color: #fefc34;
+            }
+        }
+    }
+}
+
+.modal-draw-noscore {
+    background: url('#{$imgUrl}noscore-bg.jpg') no-repeat center 0;
+    .content-noscore {
+        display: block;
+    }
+}
+
+.modal-draw-faild {
+    background: url('#{$imgUrl}faild-bg.jpg') no-repeat center 0;
+    .content-faild {
+        display: block;
+    }
+}
