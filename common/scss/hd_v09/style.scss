@@ -1,0 +1,323 @@
+/**
+ * 
+ * @authors chenfuxin (chenfuxin@99cj.com.cn)
+ * @date    2016-11-01 10:08:20
+ */
+
+@import '../../../static/scss/_custom.scss';
+@import '../../../static/scss/_normalize.scss';
+@import '../../../static/scss/_reset.scss';
+@import '../../../static/scss/_modal.scss';
+// Your style here
+@mixin transition($str) {
+    -webkit-transition: $str;
+    -moz-transition: $str;
+    -ms-transition: $str;
+    -o-transition: $str;
+    transition: $str;
+}
+
+@mixin transform($str) {
+    -webkit-transform: $str;
+    -moz-transform: $str;
+    -ms-transform: $str;
+    -o-transform: $str;
+    transform: $str;
+}
+
+@mixin animation($str) {
+    -webkit-animation: $str;
+    -moz-animation: $str;
+    -ms-animation: $str;
+    -o-animation: $str;
+    animation: $str;
+}
+
+@mixin boxShadow($str) {
+    -webkit-box-shadow: $str;
+    -moz-box-shadow: $str;
+    -ms-box-shadow: $str;
+    -o-box-shadow: $str;
+    box-shadow: $str;
+}
+
+@mixin pos {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin abs-lt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+$imgUrl: '/public/img/hd_v09/';
+body {
+    min-width: 980px;
+    color: #333;
+    font: 14px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+.section {
+    @include pos;
+    text-align: center;
+}
+
+.btnEnter {
+    display: block;
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+    background: #ffd600;
+    margin-left: 341px;
+    color: #333;
+    font-size: 20px;
+    @include transition(all .5s);
+    &:hover {
+        background: #e6c103;
+    }
+}
+
+.section-01 {
+    height: 708px;
+    &.preload {
+        background: url('#{$imgUrl}section01-bg.jpg') no-repeat center center;
+        .logo {
+            background: url('#{$imgUrl}logo.jpg') no-repeat;
+        }
+    }
+    .logo {
+        display: block;
+        width: 60px;
+        height: 59px;
+    }
+    .links {
+        @include abs;
+        top: 15px;
+        right: 0;
+        text-align: right;
+    }
+    .tip {
+        color: #fff;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .btn-enter {
+        color: #fff;
+    }
+    .content {
+        text-align: center;
+        padding-top: 398px;
+    }
+    h2 {
+        font-size: 34px;
+        color: #fff;
+        font-weight: normal;
+    }
+    .btn {
+        @extend .btnEnter;
+        @include boxShadow(0px 6px 0px #e27221);
+    }
+    .number {
+        display: none;
+        padding-top: 16px;
+        line-height: 36px;
+        color: #9d5419;
+        em {
+            color: #333;
+        }
+    }
+}
+
+.section-02 {
+    height: 640px;
+    background: #ffc42a;
+    .section02-item-img {
+        padding: 92px 0 20px 0;
+    }
+    .title {
+        font-size: 20px;
+        line-height: 36px;
+        color: #653a00;
+    }
+    ul {
+        padding-top: 66px;
+    }
+    li {
+        float: left;
+        width: 300px;
+        height: 200px;
+        background: #fff;
+        border-radius: 8px;
+        margin-left: 40px;
+        @include boxShadow(0px 4px 0px #e3a622);
+        &:first-child {
+            margin-left: 0;
+        }
+        img {
+            padding: 60px 0 20px 0;
+            &.img03 {
+                padding-top: 60px - 40px;
+            }
+        }
+        p {
+            color: #653a00;
+        }
+    }
+    .reading {
+        padding-top: 50px;
+        display: inline-block;
+        .iconfont {
+            display: block;
+            width: 57px;
+            height: 1px;
+            background: #d09a1d;
+            margin: 0 32px 32px;
+        }
+        .btnRead {
+            font-size: 20px;
+            line-height: 36px;
+            color: #653a00;
+            border-bottom: 2px solid #653a00;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.section-03 {
+    height: 963px;
+    &.preload {
+        background: url('#{$imgUrl}mimax/section03-bg.jpg') no-repeat center center;
+    }
+    .section03-item-img {
+        padding: 92px 0 28px 0;
+    }
+    .title {
+        font-size: 20px;
+        line-height: 36px;
+        color: #fff;
+        padding-bottom: 40px;
+        font-weight: normal;
+        .liaojie {
+            color: #ffd600;
+            margin-left: 6px;
+        }
+    }
+    .btn {
+        @extend .btnEnter;
+        @include boxShadow(0px 6px 0px #42356a);
+    }
+}
+
+.section-04 {
+    height: 415px - 77px;
+    background: #fd8729;
+    .content {
+        .title {
+            padding-top: 48px;
+            font-size: 30px;
+            line-height: 36px;
+            color: #fff;
+            font-weight: normal;
+        }
+        ul {
+            padding-top: 50px;
+        }
+        li {
+            float: left;
+            width: 180px;
+            height: 160px;
+            background: #fff;
+            border-radius: 8px;
+            margin-left: 20px;
+            overflow: hidden;
+            @include boxShadow(0px 4px 0px #e27221);
+            &:first-child {
+                margin-left: 0;
+            }
+            h3 {
+                font-size: 20px;
+                line-height: 24px;
+                color: #88480a;
+                padding: 45px 0 32px 0;
+                font-weight: normal;
+            }
+            .J_date {
+                height: 40px;
+                line-height: 40px;
+                background: #ffd600;
+                span {
+                    color: #a2570d;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.section-footer {
+    height: 147px;
+    line-height: 147px;
+    background: #c96a0d;
+    h2 {
+        color: #5e340c;
+        font-size: 16px;
+    }
+}
