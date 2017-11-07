@@ -1,0 +1,653 @@
+/**
+ * 
+ * @authors chenfuxin (chenfuxin@99cj.com.cn)
+ * @date    2016-11-01 10:08:20
+ */
+
+@import '../../../static/scss/_custom.scss';
+@import '../../../static/scss/_normalize.scss';
+@import '../../../static/scss/_reset.scss';
+@import '../../../static/scss/_modal.scss';
+// Your style here
+@mixin transition($arr) {
+    -webkit-transition: $arr;
+    -moz-transition: $arr;
+    -ms-transition: $arr;
+    -o-transition: $arr;
+    transition: $arr;
+}
+
+@mixin transform($arr) {
+    -webkit-transform: $arr;
+    -moz-transform: $arr;
+    -ms-transform: $arr;
+    -o-transform: $arr;
+    transform: $arr;
+}
+
+@mixin animation($arr) {
+    -webkit-animation: $arr;
+    -moz-animation: $arr;
+    -ms-animation: $arr;
+    -o-animation: $arr;
+    animation: $arr;
+}
+
+@mixin boxShadow($arr) {
+    -webkit-box-shadow: $arr;
+    -moz-box-shadow: $arr;
+    -ms-box-shadow: $arr;
+    -o-box-shadow: $arr;
+    box-shadow: $arr;
+}
+
+@mixin pos {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin abs-lt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 1230px;
+    margin: 0 auto;
+    position: relative;
+}
+
+$imgUrl: '/public/img/hd_v07/';
+body {
+    min-width: 1230px;
+    color: #333;
+    font: 14px/1.5 "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+.section {
+    @include pos;
+}
+
+.mitv-price {
+    font-size: 30px;
+    color: #477efc;
+    margin-bottom: 36px;
+    font-weight: normal;
+    font-family: 'Avenir';
+}
+
+.button {
+    display: inline-block;
+    @include pos;
+    z-index: 1;
+    width: 165px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    color: #fff;
+    background: #477efc;
+    @include transition(all .5s);
+    .iconfont {
+        width: 17px;
+        height: 13px;
+        @include abs;
+        top: 13px;
+        right: 30px;
+        z-index: 3px;
+        background: url('#{$imgUrl}enter.png') no-repeat;
+    }
+    &:hover {
+        background: #346cec;
+    }
+}
+
+.J_buyBtn {
+    @extend .button;
+}
+
+.message {
+    width: 370px;
+    height: 370px;
+    @include pos;
+    z-index: 3;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    overflow: hidden;
+    @include transition(all 1s ease-out);
+}
+
+.brick-item-active {
+    @include boxShadow(0 15px 30px rgba(0, 0, 0, .2));
+    @include transform(translate3d(0, -2px, 0));
+}
+
+.mitv-vip-header {
+    height: 800px;
+    &.preload {
+        background: url('#{$imgUrl}section-01-bg.jpg') no-repeat center center;
+    }
+    .container {
+        a.logo {
+            @include abs;
+            background: url('#{$imgUrl}logo.jpg') no-repeat center center;
+            display: block;
+            width: 70px;
+            height: 70px;
+        }
+        .link {
+            text-align: right;
+            padding-top: 20px;
+            a {
+                color: #fff;
+                margin-right: 15px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .content {
+            text-align: center;
+            padding-top: 445px;
+            .links {
+                @include abs;
+                top: 200px;
+                left: 400px;
+                font-size: 48px;
+                display: none;
+            }
+            p {
+                color: #fff;
+                font-size: 24px;
+            }
+            span {
+                cursor: pointer;
+            }
+            .btn {
+                overflow: hidden;
+                margin-top: 55px;
+                a {
+                    width: 173px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 18px;
+                    color: #7a1d91;
+                    background: #fdd930;
+                    display: inline-block;
+                    @include transition(all 1s ease-out);
+                    &:hover {
+                        background: #ffa516;
+                    }
+                    &.vip-privilege {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mitv-vip-privilege {
+    text-align: center;
+    height: 2349px;
+    &.preload {
+        background: url('#{$imgUrl}mitv-section02-bg.jpg') no-repeat center center;
+    }
+    .tip {
+        font-size: 16px;
+        display: inline-block;
+        margin-top: 76px - 40px;
+    }
+    .text {
+        padding-top: 90px;
+        h2 {
+            font-size: 48px;
+            color: #7a1c95;
+            font-weight: normal;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .mitv-privilege-con {
+            height: 67px;
+            img {
+                padding: 52px 0;
+            }
+        }
+    }
+    .qiy-privilege-con {
+        height: 58px;
+        img {
+            padding: (28px - 16px) 0 52px 0;
+        }
+    }
+    ul {
+        display: block;
+        li {
+            position: relative;
+            width: 370px;
+            height: 370px;
+            float: left;
+            margin: 0 20px 40px;
+            @include transition(all 1s ease-out);
+            .icon {
+                display: block;
+                width: 120px;
+                height: 75px;
+                @include abs;
+                z-index: 1;
+                background: url('#{$imgUrl}mitv-icon.png') no-repeat;
+            }
+            .mitv-text {
+                line-height: 1;
+                @include pos;
+                .title {
+                    margin: 0;
+                    position: relative;
+                    font-size: 36px;
+                    line-height: 48px;
+                    font-weight: normal;
+                    color: #fff;
+                    z-index: 3;
+                    @include transition(all .5s ease-out);
+                    @include transform(translateY(215px));
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #fff;
+                    z-index: 3;
+                    @include pos;
+                    opacity: 0;
+                    @include transition(all .5s ease-out);
+                    @include transform(translateY(208px));
+                }
+            }
+            &:hover {
+                .title {
+                    @include transform(translateY(76px));
+                }
+                p {
+                    opacity: 1;
+                    @include transform(translateY(90px));
+                }
+            }
+            &.list-li-01 {
+                .icon {
+                    top: 250px;
+                    left: -52px;
+                    background-position: 0px 0px;
+                }
+            }
+            &.list-li-03 {
+                .icon-left {
+                    top: 346px;
+                    left: -47px;
+                    background-position: 0px -98px;
+                }
+                .icon-right {
+                    top: -25px;
+                    right: -53px;
+                    background-position: -240px -98px;
+                }
+            }
+            &.list-li-04 {
+                .icon {
+                    top: 310px;
+                    left: -56px;
+                    background-position: -120px 0px;
+                }
+            }
+            &.list-li-06 {
+                .icon {
+                    top: 230px;
+                    right: -46px;
+                    background-position: -120px -98px;
+                }
+            }
+            &.list-li-07 {
+                .icon {
+                    top: 55px;
+                    left: -48px;
+                    background-position: -240px 0px;
+                }
+            }
+            &.list-li-08 {
+                .icon {
+                    top: 338px;
+                    left: -55px;
+                    background-position: -360px -98px;
+                }
+            }
+            &.list-li-09 {
+                .icon {
+                    top: -26px;
+                    right: -55px;
+                    background-position: -480px -98px;
+                }
+            }
+            &.list-li-11 {
+                .icon {
+                    top: 350px;
+                    right: -12px;
+                    background-position: -360px 0px;
+                }
+            }
+            @for $i from 1 through 12 {
+                .section-#{$i} {
+                    @extend .message;
+                    background: url('#{$imgUrl}icon#{$i}.jpg') no-repeat;
+                    &:hover {
+                        background: url('#{$imgUrl}icon#{$i}-bg.jpg') no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .qiy-mitv-privilege {
+        li {
+            &:hover {
+                .title {
+                    @include transform(translateY(106px));
+                }
+                p {
+                    @include transform(translateY(118px));
+                }
+            }
+        }
+    }
+}
+
+.mitv-parts {
+    height: 2670px;
+    &.preload {
+        background: url('#{$imgUrl}mitv-body-bg.jpg') no-repeat center center;
+    }
+    .mitv-parts-header {
+        text-align: center;
+        display: block;
+        img {
+            padding-top: 112px - 42px;
+        }
+    }
+    .content {
+        text-align: center;
+        h2 {
+            font-size: 42px;
+            line-height: 36px;
+            color: #fff;
+            font-weight: normal;
+            padding: 65px 0 16px 0;
+        }
+        p {
+            color: #fff;
+            font-size: 16px;
+            ;
+            margin-bottom: 68px;
+            .liaojie {
+                color: #fdd930;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    ul {
+        margin-top: 48px;
+        display: block;
+        li {
+            float: left;
+            width: 500px;
+            height: 650px;
+            margin-bottom: 42px;
+            background: #fff;
+            @include transition(all .2s linear);
+            .box {
+                width: 500px;
+                height: 290px;
+                div {
+                    padding: 55px 0 0 62px;
+                    h2 {
+                        font-weight: normal;
+                        font-size: 30px;
+                        color: #20293c;
+                        a {
+                            color: #20293c;
+                        }
+                        em {
+                            font-size: 16px;
+                            font-style: normal;
+                            margin: 0 15px 0 5px;
+                            display: inline-block;
+                            padding: 7px 8px 4px;
+                            border-radius: 6px;
+                            border: 2px solid #20293c;
+                            vertical-align: 5px;
+                            line-height: 1;
+                        }
+                    }
+                    .text {
+                        font-size: 16px;
+                        color: #20293c;
+                    }
+                    .price {
+                        @extend .mitv-price;
+                        em {
+                            font-size: 16px;
+                        }
+                    }
+                    .btn {
+                        @extend .button;
+                    }
+                    .start {
+                        display: none;
+                        font-size: 12px;
+                        color: #20293c;
+                        margin-top: 12px;
+                        a {
+                            color: #477efc;
+                        }
+                    }
+                }
+            }
+        }
+        .mitv-list-01,
+        .mitv-list-03,
+        .mitv-list-05 {
+            margin-left: 93px;
+        }
+        .mitv-list-02,
+        .mitv-list-04,
+        .mitv-list-06 {
+            margin-left: 42px;
+        }
+    }
+}
+
+.heziyinxiang {
+    height: 300px;
+    div {
+        padding: 65px 0 0 48px;
+        h2 {
+            font-weight: normal;
+            font-size: 30px;
+            color: #20293c;
+            a {
+                color: #20293c;
+            }
+            em {
+                font-size: 16px;
+                border: 2px solid #20293c;
+                border-radius: 6px;
+                padding: 3px 8px;
+                line-height: 1;
+                vertical-align: 5px;
+                margin-left: 8px;
+            }
+        }
+        .text {
+            font-size: 16px;
+            color: #20293c;
+        }
+        .price {
+            @extend .mitv-price;
+            em {
+                font-size: 16px;
+            }
+        }
+        .btn {
+            @extend .button;
+        }
+    }
+}
+
+.mitv-hezi {
+    height: 1730px;
+    &.preload {
+        background: url('#{$imgUrl}mitv-hezi-bg.jpg') no-repeat center center;
+    }
+    .content {
+        text-align: center;
+        h2 {
+            margin: 0;
+            color: #fff;
+            padding: 85px 0 70px 0;
+            font-size: 42px;
+            line-height: 54px;
+            font-weight: normal;
+        }
+    }
+    ul {
+        padding: 0;
+        li {
+            margin: 0 20px 40px;
+            float: left;
+            width: 370px;
+            height: 600px;
+            background: #fff;
+            @include transition(all .2s linear);
+            .box {
+                @extend .heziyinxiang;
+            }
+        }
+    }
+    .mitv-hezi-parts {
+        li {
+            width: 1190px;
+            height: 300px;
+            .figue-img {
+                float: left;
+            }
+            .box {
+                padding: 0;
+                margin-left: 595px;
+                div {
+                    padding: 65px 0 0 55px;
+                }
+            }
+        }
+    }
+}
+
+.mitv-yinxiang {
+    height: 950px;
+    &.preload {
+        background: url('#{$imgUrl}yinxiang-bg.jpg') no-repeat center center;
+    }
+    .content {
+        text-align: center;
+        h2 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 42px;
+            color: #fff;
+            padding: 72px 0 68px 0;
+        }
+    }
+    ul {
+        padding: 0;
+        li {
+            margin: 0 20px;
+            float: left;
+            width: 370px;
+            height: 600px;
+            background: #fff;
+            @include transition(all .2s linear);
+            .box {
+                @extend .heziyinxiang;
+            }
+        }
+    }
+}
+
+.mitv-footer {
+    height: 100px;
+    background: #fff;
+    text-align: center;
+    .content {
+        line-height: 30px;
+        padding-top: 20px;
+        color: #ababab;
+    }
+}
+
+.btn-gray {
+    display: block;
+    width: 165px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    background: #b0b0b0;
+    color: #fff;
+    &:hover {
+        background: #b0b0b0;
+    }
+}
