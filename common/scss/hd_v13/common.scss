@@ -1,0 +1,159 @@
+//公共头部header
+$image_url: '/public/img/hd_v13/';
+.section-header {
+    height: 100px - 1px;
+    background-color: #fff;
+    overflow: hidden;
+    .container {
+        height: 100px;
+    }
+    .logo {
+        display: inline-block;
+        float: left;
+        .fz-color {
+            font-size: 32px;
+            font-weight: bold;
+            white-space: nowrap;
+            line-height: 100px;
+        }
+        .color-a {
+            color: #f13a3a;
+        }
+        .color-b {
+            color: #ccc;
+        }
+    }
+    .nav {
+        float: left;
+        margin-left: 130px;
+        width: 596px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 25px;
+        li {
+            float: left;
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            margin-right: 30px;
+            &.current {
+                border-bottom: 2px solid #f13a3a;
+                a {
+                    color: #ff6700;
+                }
+            }
+            a {
+                display: block;
+                color: #ccc;
+            }
+        }
+    }
+}
+
+.header-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    border-bottom: 1px solid #e0e0e0;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    -webkit-box-shadow: 0 0 3px #b0b0b0;
+    -moz-box-shadow: 0 0 3px #b0b0b0;
+    -ms-box-shadow: 0 0 3px #b0b0b0;
+    -o-box-shadow: 0 0 3px #b0b0b0;
+    box-shadow: 0 0 3px #b0b0b0;
+}
+
+//公共底部footer
+.section-footer {
+    height: 323px;
+    border-top: 2px solid #ff6700;
+    background-color: #1b252e;
+    color: #8B939D;
+    font-size: 14px;
+    .container {
+        display: table;
+        text-align: center;
+    }
+    ul {
+        position: relative;
+        padding-top: 90px;
+        padding-bottom: 70px;
+        border-bottom: 1px solid #ccc;
+        li {
+            float: left;
+            width: 300px;
+            text-align: center;
+            opacity: 0;
+            -webkit-transition: all .5s ease-out;
+            -moz-transition: all .5s ease-out;
+            -ms-transition: all .5s ease-out;
+            -o-transition: all .5s ease-out;
+            transition: all .5s ease-out;
+            -webkit-transform: translate3d(0, 80px, 0);
+            -moz-transform: translate3d(0, 80px, 0);
+            -ms-transform: translate3d(0, 80px, 0);
+            -o-transform: translate3d(0, 80px, 0);
+            transform: translate3d(0, 80px, 0);
+            .iconfont {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 8px;
+            }
+            .icon-address {
+                width: 20px;
+                height: 24px;
+                background: url('#{$image_url}a.png') no-repeat;
+            }
+            .icon-phone {
+                width: 22px;
+                height: 22px;
+                background: url('#{$image_url}b.png') no-repeat;
+            }
+            .icon-time {
+                width: 22px;
+                height: 22px;
+                background: url('#{$image_url}c.png') no-repeat;
+            }
+            .icon-email {
+                width: 25px;
+                height: 17px;
+                background: url('#{$image_url}d.png') no-repeat;
+            }
+        }
+    }
+    .content-footer {
+        margin-top: (120px / 2);
+        a {
+            display: inline-block;
+            color: #8B939D;
+            font-size: 16px;
+            margin: 0 20px;
+            -webkit-transition: all .2s ease-out;
+            -moz-transition: all .2s ease-out;
+            -ms-transition: all .2s ease-out;
+            -o-transition: all .2s ease-out;
+            transition: all .2s ease-out;
+            &:hover {
+                color: #ff6700;
+            }
+        }
+        .copyright {
+            margin-top: 30px;
+            a {
+                margin: 0;
+            }
+        }
+    }
+    &.is-visible {
+        li {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

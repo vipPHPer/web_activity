@@ -1,0 +1,16 @@
+{
+  "code": 0,
+  "type": 1,
+  "msg": "",
+  "data": {
+    "slider": [{
+      "image": "/public/img/hd_v13/banner-1.jpg",
+      "image_url": "/public/img/hd_v13/banner-1.jpg",
+      "sale_sign": "active"
+    }, {
+      "image": "/public/img/hd_v13/banner-2.jpg",
+      "image_url": "/public/img/hd_v13/banner-2.jpg",
+      "sale_sign": ""
+    }]
+  }
+}

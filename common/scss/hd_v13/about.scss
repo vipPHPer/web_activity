@@ -1,0 +1,280 @@
+/**
+ * @authors chenfuxin (chenfuxin@99cj.com.cn)
+ * @date    2016-12-23 09:53:18
+ */
+
+@import '../../../static/scss/_custom.scss';
+@import '../../../static/scss/_normalize.scss';
+@import '../../../static/scss/_reset.scss';
+@import '../../../static/scss/_modal.scss';
+// Your style here
+@mixin transition($str) {
+    -webkit-transition: $str;
+    -moz-transition: $str;
+    -ms-transition: $str;
+    -o-transition: $str;
+    transition: $str;
+}
+
+@mixin transform($arr) {
+    -webkit-transform: $arr;
+    -moz-transform: $arr;
+    -ms-transform: $arr;
+    -o-transform: $arr;
+    transform: $arr;
+}
+
+@mixin animation($arr) {
+    -webkit-animation: $arr;
+    -moz-animation: $arr;
+    -ms-animation: $arr;
+    -o-animation: $arr;
+    animation: $arr;
+}
+
+@mixin boxShadow($arr) {
+    -webkit-box-shadow: $arr;
+    -moz-box-shadow: $arr;
+    -ms-box-shadow: $arr;
+    -o-box-shadow: $arr;
+    box-shadow: $arr;
+}
+
+@mixin pos {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin abs-lt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Your style here
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    min-width: 1200px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$image_url: '/public/img/hd_v13/';
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+em {
+    font-style: normal;
+}
+
+.section {
+    @include pos;
+}
+
+.brick-item-active {
+    @include boxShadow(0 15px 30px rgba(0, 0, 0, .1));
+    @include transform(translate3d(0, -2px, 0));
+}
+
+.section-banner {
+    margin-top: 100px;
+    height: 300px;
+    overflow: hidden;
+    &.preload {
+        background: url('#{$image_url}about-banner-01.jpg') no-repeat center center;
+    }
+}
+
+.section-aboutus {
+    height: 1018px;
+    overflow: hidden;
+    background-color: #fff;
+    .container {
+        display: table;
+        overflow: hidden;
+    }
+    .content {
+        text-align: center;
+        display: table;
+        .title,
+        .desc {
+            opacity: 0;
+        }
+        h2 {
+            font-weight: normal;
+            margin-top: 60px;
+            color: #333;
+            font-size: 36px;
+            @include transition(all .5s ease-out);
+            @include transform(translate3d(700px, 0, 0));
+        }
+        .desc {
+            width: 630px;
+            margin-top: 30px;
+            line-height: 3em;
+            color: #999;
+            font-size: 14px;
+            margin-left: (1200px - 630px) / 2;
+            @include transition(all .5s ease-out);
+            @include transform(translate3d(700px, 0, 0));
+        }
+    }
+    .text-box {
+        @include pos;
+        margin-top: 40px;
+        .img {
+            display: inline-block;
+            float: left;
+            width: 890px;
+            height: 593px;
+            overflow: hidden;
+            margin-left: -157px;
+            opacity: 0;
+            @include transition(all 1s .5s ease-out);
+            @include transform(translate3d(-733px, 0, 0));
+            img {
+                width: 890px;
+                height: 593px;
+                overflow: hidden;
+            }
+        }
+        .txt {
+            display: inline-block;
+            float: left;
+            width: (1200px - 890px + 157px);
+            height: 593px;
+            background-color: #F13A3A;
+            color: #fff;
+            text-align: left;
+            opacity: 0;
+            @include transition(all 1s .5s ease-out);
+            @include transform(translate3d(733px, 0, 0));
+            .box {
+                margin-left: 50px;
+                margin-top: (593px - 49px - 70px) / 2;
+            }
+            h3 {
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 49px;
+                opacity: 0;
+                @include transition(all 2s 1s ease-out);
+            }
+            .desc-p {
+                line-height: 35px;
+                font-size: 16px;
+                word-wrap: break-word;
+                opacity: 0;
+                @include transition(all 2s 1s ease-out);
+            }
+        }
+    }
+    &.is-visible {
+        .title,
+        .desc,
+        .img,
+        .txt {
+            opacity: 1;
+            @include transform(translate3d(0, 0, 0));
+        }
+        .txt {
+            h3,
+            .desc-p {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.section-introduce {
+    height: 700px;
+    background: #f5f5f5;
+    overflow: hidden;
+    .container {
+        display: table;
+    }
+    ul {
+        margin-top: (700px - 464px) / 2;
+    }
+    li {
+        float: left;
+        width: 270px;
+        height: 464px;
+        background: #fff;
+        text-align: center;
+        margin-left: 40px;
+        opacity: 0;
+        @include transform(translate3d(0, 600px, 0));
+        &:first-child {
+            margin-left: 0;
+        }
+        .box {
+            @include pos;
+            line-height: 30px;
+            margin-top: (464px - 320px - 90px) / 2;
+            .name,
+            .position {
+                font-size: 16px;
+            }
+            .work-years {
+                font-size: 12px;
+                color: #999;
+            }
+        }
+        &.item-1 {
+            @include transition(all .5s 0s ease-out);
+        }
+        &.item-2 {
+            @include transition(all .5s .5s ease-out);
+        }
+        &.item-3 {
+            @include transition(all .5s 1s ease-out);
+        }
+        &.item-4 {
+            @include transition(all .5s 1.5s ease-out);
+        }
+    }
+    &.is-visible {
+        li {
+            opacity: 1;
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+}

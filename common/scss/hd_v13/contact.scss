@@ -1,0 +1,318 @@
+/**
+ * @authors chenfuxin (chenfuxin@99cj.com.cn)
+ * @date    2016-12-23 14:07:34
+ */
+
+@import '../../../static/scss/_custom.scss';
+@import '../../../static/scss/_normalize.scss';
+@import '../../../static/scss/_reset.scss';
+@import '../../../static/scss/_modal.scss';
+// Your style here
+@mixin transition($str) {
+    -webkit-transition: $str;
+    -moz-transition: $str;
+    -ms-transition: $str;
+    -o-transition: $str;
+    transition: $str;
+}
+
+@mixin transform($arr) {
+    -webkit-transform: $arr;
+    -moz-transform: $arr;
+    -ms-transform: $arr;
+    -o-transform: $arr;
+    transform: $arr;
+}
+
+@mixin animation($arr) {
+    -webkit-animation: $arr;
+    -moz-animation: $arr;
+    -ms-animation: $arr;
+    -o-animation: $arr;
+    animation: $arr;
+}
+
+@mixin boxShadow($arr) {
+    -webkit-box-shadow: $arr;
+    -moz-box-shadow: $arr;
+    -ms-box-shadow: $arr;
+    -o-box-shadow: $arr;
+    box-shadow: $arr;
+}
+
+@mixin pos {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin abs-lt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Your style here
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    min-width: 1200px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$image_url: '/public/img/hd_v13/';
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+em {
+    font-style: normal;
+}
+
+.section {
+    @include pos;
+}
+
+.section-banner {
+    margin-top: 100px;
+    height: 300px;
+    overflow: hidden;
+    &.preload {
+        background: url('#{$image_url}contact-banner-01.jpg') no-repeat center center;
+    }
+}
+
+.section-contact {
+    height: 450px;
+    .container {
+        display: table;
+        @include pos;
+    }
+    .content {
+        text-align: center;
+        padding-top: 66px;
+        h2 {
+            font-size: 32px;
+            font-weight: normal;
+            color: #000;
+            line-height: 45px;
+        }
+        .desc {
+            margin-top: 38px;
+            line-height: 45px;
+            font-size: 16px;
+            color: #666;
+        }
+        .phone {
+            font-size: 26px;
+            color: #333;
+        }
+    }
+    ul {
+        @include pos;
+        margin: 70px auto;
+        li {
+            float: left;
+            width: 330px - 2px;
+            height: 90px - 2px;
+            border: 1px solid #cecece;
+            margin-left: 53px;
+        }
+        .iconfont {
+            display: inline-block;
+            float: left;
+            margin-left: 50px;
+            &.icon-qq {
+                width: 30px;
+                height: 31px;
+                margin-top: (90px - 31px) / 2;
+                background: url('#{$image_url}qq.png') no-repeat;
+            }
+            &.icon-sina {
+                width: 37px;
+                height: 30px;
+                margin-top: (90px - 30px) / 2;
+                background: url('#{$image_url}sina.png') no-repeat;
+            }
+            &.icon-weixin {
+                width: 39px;
+                height: 32px;
+                margin-top: (90px - 32px) / 2;
+                background: url('#{$image_url}weixin.png') no-repeat;
+            }
+        }
+        span {
+            display: block;
+            line-height: 20px + 5px;
+            text-align: left;
+            margin-left: 50px + 40px + 45px;
+            color: #666;
+            &.name {
+                margin-top: 20px;
+            }
+            &.text {
+                font-size: 12px;
+                color: #666;
+            }
+        }
+    }
+}
+
+.section-message {
+    height: 400px;
+    background-color: #ebebeb;
+    overflow: hidden;
+    .container {
+        display: table;
+    }
+    .content {
+        font-size: 14px;
+        color: #666;
+        padding: 20px 110px;
+    }
+    .publish-msg {
+        height: 30px;
+        line-height: 30px;
+        margin: 10px 0 15px;
+    }
+    .msg-infor {
+        overflow: hidden;
+        .items {
+            float: left;
+            line-height: 34px;
+            height: 34px;
+            margin: 10px 50px 15px 0;
+        }
+        .text {
+            float: left;
+            display: inline-block;
+            width: 60px;
+            line-height: 34px;
+            text-align: right;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        input {
+            width: 198px;
+            height: 30px;
+            line-height: 30px;
+            padding: 1px;
+            float: left;
+            text-indent: 6px;
+            outline: none;
+            border: 1px solid #dadada;
+            color: #333;
+        }
+        .red {
+            margin-left: 8px;
+            color: #ff0000;
+        }
+    }
+    .msg-content {
+        height: 80px;
+        line-height: 80px;
+        width: 100%;
+        margin: 10px 0;
+        span {
+            width: 60px;
+            float: left;
+            line-height: 80px;
+            text-align: right;
+        }
+        textarea {
+            float: left;
+            height: 80px;
+            line-height: 26px;
+            width: 846px;
+            border-color: #dadada;
+            outline: none;
+            min-width: 104px;
+            margin: 0;
+            font-size: 14px;
+            font-family: 微软雅黑;
+            color: #333;
+            text-indent: 6px;
+        }
+    }
+    .verification-Code {
+        height: 34px;
+        line-height: 34px;
+        margin: 10px 0;
+        width: 100%;
+        display: inline-block;
+        .code {
+            width: 60px;
+            float: left;
+            line-height: 34px;
+            text-align: right;
+        }
+        input {
+            width: 198px / 2;
+            height: 30px;
+            line-height: 30px;
+            padding: 1px;
+            float: left;
+            text-indent: 6px;
+            outline: none;
+            border: 1px solid #dadada;
+            color: #333;
+        }
+        img {
+            height: 26px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+    .send-btn {
+        display: block;
+        width: 230px;
+        height: 44px;
+        line-height: 44px;
+        margin-left: 80px - 20px;
+        background: #f54f4f;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+        @include transition(all .2s ease-out);
+        &:hover {
+            background: #ff6700;
+        }
+    }
+}

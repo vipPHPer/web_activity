@@ -1,0 +1,35 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "introduce": [{
+      "title": "Aaron",
+      "name": "Aaron",
+      "brief": "资深网页设计师",
+      "image": "/public/img/hd_v13/introduce-1.jpg",
+      "image_url": "/public/img/hd_v13/introduce-1.jpg",
+      "experience": "6年网页设计经验"
+    }, {
+      "title": "Beck",
+      "name": "Beck",
+      "brief": "高级平面设计师",
+      "image": "/public/img/hd_v13/introduce-2.jpg",
+      "image_url": "/public/img/hd_v13/introduce-2.jpg",
+      "experience": "7年网页设计经验"
+    }, {
+      "title": "Anna",
+      "name": "Anna",
+      "brief": "广告商务策划",
+      "image": "/public/img/hd_v13/introduce-3.jpg",
+      "image_url": "/public/img/hd_v13/introduce-3.jpg",
+      "experience": "8年活动策划经验"
+    }, {
+      "title": "Jack",
+      "name": "Jack",
+      "brief": "高级插画师",
+      "image": "/public/img/hd_v13/introduce-4.jpg",
+      "image_url": "/public/img/hd_v13/introduce-4.jpg",
+      "experience": "5年绘画设计经验"
+    }]
+  }
+}

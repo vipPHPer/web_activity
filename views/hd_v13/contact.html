@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>广告设计</title>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../public/css/hd_v13/common.min.css?v=4616195">
+    <link rel="stylesheet" href="../../public/css/hd_v13/contact.min.css?v=590b126">
+    <script>
+        var UA = navigator.userAgent;
+        var search = location.search;
+        //移动端地址跳转
+        if (UA.match(/Android/i) || (UA.indexOf('iPhone') != -1) || (UA.indexOf('iPod') != -1) || (UA.indexOf('iPad') != -1)) {
+            window.location = 'index.html' + search;
+        }
+    </script>
+</head>
+
+<body class="bd">
+    <div class="section section-header header-fixed" id="header">
+        <!-- 公共header -->
+    </div>
+    <div class="section section-banner"> </div>
+    <div class="section section-contact">
+        <div class="container">
+            <div class="content">
+                <h2 class="title">联系我们</h2>
+                <p class="desc">如有任何问题请联系我们，我们7*24小时竭诚为您服务</p>
+                <p class="phone">185-2022-7827</p>
+                <ul class="cleaxfix">
+                    <li>
+                        <i class="iconfont icon-qq"></i>
+                        <span class="name">在线QQ客服</span>
+                        <span class="text">370065053</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-sina"></i>
+                        <span class="name">广告行业制作</span>
+                        <span class="text">since1991_vip@163.com</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-weixin"></i>
+                        <span class="name">关注官方微信</span>
+                        <span class="text">Xin_since-1991</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section section-message">
+        <div class="container">
+            <div class="content">
+                <div class="msg-add">
+                    <div class="publish-msg">
+                        <span class="title">发表您的留言：</span>
+                    </div>
+                    <div class="msg-infor">
+                        <div class="items msg-username">
+                            <span class="text username">姓名：</span>
+                            <input type="text" name="username" placeholder="" id="js-username">
+                            <span class="tips red">*</span>
+                        </div>
+                        <div class="items msg-email">
+                            <span class="text email">邮箱：</span>
+                            <input type="text" name="email" placeholder="" id="js-email">
+                            <span class="tips red">*</span>
+                        </div>
+                        <div class="items msg-phone">
+                            <span class="text phone">手机：</span>
+                            <input type="text" name="phone" placeholder="" maxlength="11" id="js-phone">
+                            <span class="tips red">*</span>
+                        </div>
+                    </div>
+                    <div class="msg-content">
+                        <span class="con">内容：</span>
+                        <textarea placeholder="留言需审核后才会显示"></textarea>
+                    </div>
+                    <div class="verification-Code">
+                        <span class="code">验证码：</span>
+                        <input type="text" name="verification">
+                        <img data-src="../../public/img/hd_v13/validateCode.jpg?v=77573a2">
+                    </div>
+                    <a href="javascript:void(0);" class="btn send-btn" id="js-btn">提交</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer" id="footer">
+        <!-- 公共footer -->
+    </div>
+    <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
+    <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
+    <script src="../../public/js/hd_v13/common.min.js?v=16e91dc"></script>
+    <script src="../../public/js/hd_v13/contact.min.js?v=3a8fc4f"></script>
+</body>
+
+</html>
