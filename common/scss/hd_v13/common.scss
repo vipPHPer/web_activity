@@ -32,19 +32,39 @@ $image_url: '/public/img/hd_v13/';
         margin-top: 25px;
         li {
             float: left;
-            width: 80px;
-            height: 50px;
-            text-align: center;
-            margin-right: 30px;
-            &.current {
-                border-bottom: 2px solid #f13a3a;
-                a {
+            a {
+                display: inline-block;
+                color: #666;
+                width: 80px;
+                height: 48px;
+                line-height: 50px;
+                text-align: center;
+                font-weight: lighter;
+                padding: 0 10px;
+                margin: 0 6px;
+                -webkit-transition: all .4s;
+                transition: all .4s;
+                position: relative;
+                &:before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    width: 0;
+                    height: 2px;
+                    left: 50%;
+                    background: #ff6700;
+                    -webkit-transition: all .4s;
+                    transition: all .4s;
+                }
+                &:hover:before {
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                }
+                &:hover {
                     color: #ff6700;
                 }
-            }
-            a {
-                display: block;
-                color: #ccc;
             }
         }
     }
@@ -71,7 +91,7 @@ $image_url: '/public/img/hd_v13/';
 
 //公共底部footer
 .section-footer {
-    height: 323px;
+    height: 320px - 20px;
     border-top: 2px solid #ff6700;
     background-color: #1b252e;
     color: #8B939D;
@@ -128,11 +148,11 @@ $image_url: '/public/img/hd_v13/';
         }
     }
     .content-footer {
-        margin-top: (120px / 2);
+        margin-top: (120px / 2) - 20px;
         a {
             display: inline-block;
             color: #8B939D;
-            font-size: 16px;
+            font-size: 14px;
             margin: 0 20px;
             -webkit-transition: all .2s ease-out;
             -moz-transition: all .2s ease-out;

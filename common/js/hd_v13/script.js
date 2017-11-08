@@ -8,6 +8,18 @@
 //=require ../../../static/js/_modules/modal.js
 //=require ../../../static/js/_modules/miVisibleWatcher.js
 
+var _common = {
+  //ajax请求
+  sendAjax: function(api, params, dataType, callback) {
+    $.ajax({
+      url: api,
+      data: params,
+      dataType: dataType,
+      success: callback
+    });
+  }
+};
+
 /* 懒加载 */
 function lazyload() {
   var $bd = $('.bd');
@@ -36,17 +48,17 @@ function rotationSlider() {
   var change = function() {
     $oItem.removeClass('banner-active').eq(index).addClass('banner-active');
     aPage.removeClass('pager-current').eq(index).addClass('pager-current');
-  }
+  };
 
   var timer = function() {
     _time = setInterval(function() {
       index++;
-      if (index == 2) {
+      if (index === 2) {
         index = 0;
       }
       change();
     }, 5000);
-  }
+  };
   timer();
 
   aPage.hover(function() {
@@ -58,9 +70,24 @@ function rotationSlider() {
   aPage.on('click', function() {
     index = $(this).index();
     change();
-
     return false;
   });
+}
+
+function numberScroll(className, end, time) {
+  var obj = $('.' + className);
+  var displayNum = obj.find('.num');
+  var _starttime = 0;
+
+  var countDown = function() {
+    _starttime++;
+    if (_starttime <= end) {
+      displayNum.html(_starttime);
+    } else {
+      return;
+    }
+  };
+  setInterval(countDown, time);
 }
 
 //监听数字滚动
@@ -73,84 +100,32 @@ function parallaxScrolling() {
 
     if (windowScrollTop > windowHei) {
       if (scrollIndex === 0) {
-        numberScroll("num-box-01", "1825", "1");
-        numberScroll("num-box-02", "100", "20");
-        numberScroll("num-box-03", "600", "10");
-        numberScroll("num-box-04", "700", "10");
+        numberScroll('num-box-01', '1825', '1');
+        numberScroll('num-box-02', '100', '20');
+        numberScroll('num-box-03', '600', '10');
+        numberScroll('num-box-04', '700', '10');
         scrollIndex = 1;
       }
     }
   });
 }
 
-function numberScroll(className, end, time) {
-  var obj = $("." + className);
-  var displayNum = obj.find('.num');
-  var _starttime = 0;
-
-  var countDown = function() {
-    _starttime++;
-    if (_starttime <= end) {
-      displayNum.html(_starttime);
-    } else {
-      return;
-    }
-  }
-  setInterval(countDown, time);
-}
-
-function getData() {
-  var apiIndexData = '/controller/hd_v13/index_data.json';
-
-
-  $.ajax({
-    url: apiIndexData,
-    dataType: 'json',
-    error: function() {
-      console.log('获取数据出错！！！')
-    },
-    success: function(data) {
-      formaDate(data);
-    }
-  });
-
-  var formaDate = function(data) {
-    if (data && data.code === 0) {
-      var _data = data.data;
-      console.log(_data);
-
-      //首页slider
-      var sliderList = doT.template($('#js-sliderTemp').html());
-      var sliderData = _data.slider;
-      var sliderHtml = sliderList(sliderData);
-
-      $('.section-banner').html(sliderHtml);
-      rotationSlider();
-    }
-  }
-}
-
 function getIntroduceData() {
   var apiIntroduce = '/controller/hd_v13/introduce.json';
 
-  $.ajax({
-    url: apiIntroduce,
-    dataType: 'json',
-    error: function() { console.log('数据获取失败！！！') },
-    success: function(data) {
-      if (data && data.code === 0) {
-        var data = data.data;
-        var introduceTemp = doT.template($('#J_introduceTemp').html());
-        var introduceData = data.introduce;
-        var introduceHtml = introduceTemp(introduceData);
-
-        $('#J_introduce').find('ul').html(introduceHtml);
-      }
+  _common.sendAjax(apiIntroduce, {}, 'json', function(response) {
+    if (response && response.code === 'result') {
+      var res = response.data;
+      var introduceTemp = doT.template($('#J_introduceTemp').html());
+      var introduceData = res.introduce;
+      var introduceHtml = introduceTemp(introduceData);
+      $('#J_introduce').find('ul').html(introduceHtml);
+    } else {
+      return false;
     }
   });
 
   $('#J_introduce').find('li').hover(function() {
-    console.log('1234567890');
     $(this).addClass('brick-item-active').siblings().removeClass('brick-item-active');
   }, function() {
     $(this).removeClass('brick-item-active');
@@ -162,5 +137,4 @@ $(function() {
   rotationSlider();
   parallaxScrolling();
   getIntroduceData();
-  // getData();
 });

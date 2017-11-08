@@ -27,7 +27,7 @@ var caseShow = {
   init: function() {
     this.navEvent();
   }
-}
+};
 
 $(document).ready(function() {
   caseShow.init();

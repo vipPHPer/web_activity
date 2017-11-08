@@ -18,7 +18,7 @@ var contactUs = {
 
     username.blur(function() {
       var _this = $(this);
-      if (_this.val() === "") {
+      if (_this.val() === '') {
         _this.css({
           'border-color': 'red'
         });
@@ -41,7 +41,7 @@ var contactUs = {
 
     phone.blur(function() {
       var _this = $(this);
-      if (_this.val() === "") {
+      if (_this.val() === '') {
         _this.css('border-color', 'red');
       } else if (!checkPhone.test(_this.val())) {
         _this.css('border-color', 'red');
@@ -58,7 +58,7 @@ var contactUs = {
 
     email.blur(function() {
       var _this = $(this);
-      if (_this.val() === "") {
+      if (_this.val() === '') {
         _this.css('border-color', 'red');
       } else if (!checkRegEmail.test(_this.val())) {
         _this.css('border-color', 'red');
@@ -78,16 +78,14 @@ var contactUs = {
       username: username,
       email: email,
       phone: phone
-    }
-    return resultObj;
+    };
 
     $('#js-btn').on('click', function() {
       var result = resultObj;
-      console.log('123');
+      console.log(result);
       if (result) {
-        console.log(result);
+        // console.log(result);
       }
-
       return false;
     });
   },
@@ -98,7 +96,7 @@ var contactUs = {
     this.checkEmail();
     this.applyInfor();
   }
-}
+};
 
 $(document).ready(function() {
   contactUs.init();
