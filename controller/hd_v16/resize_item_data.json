@@ -1,0 +1,35 @@
+{
+  "code": "result",
+  "msg": "success",
+  "data": {
+    "homePromo": [{
+      "image": "/public/img/hd_v16/hot/56c3fbf9fac0c7c9a6f71504.png"
+    }, {
+      "image": "/public/img/hd_v16/hot/56c3fbf9fac0c7c9a6f71505.png"
+    }, {
+      "image": "/public/img/hd_v16/hot/56c3fbf9fac0c7c9a6f71506.png"
+    }, {
+      "image": "/public/img/hd_v16/hot/56c3fce5b702b4a7a9c2f02e.png"
+    }],
+    "newsGoods": [{
+      "image": "/public/img/hd_v16/goods/01.png"
+    }, {
+      "image": "/public/img/hd_v16/goods/02.png"
+    }, {
+      "image": "/public/img/hd_v16/goods/03.png"
+    }, {
+      "image": "/public/img/hd_v16/goods/04.png"
+    }, {
+      "image": "/public/img/hd_v16/goods/05.png"
+    }],
+    "customized": [{
+      "image": "/public/img/hd_v16/dingzhi/01.png"
+    }, {
+      "image": "/public/img/hd_v16/dingzhi/02.png"
+    }, {
+      "image": "/public/img/hd_v16/dingzhi/03.png"
+    }, {
+      "image": "/public/img/hd_v16/dingzhi/04.png"
+    }]
+  }
+}
