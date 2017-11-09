@@ -2,12 +2,12 @@
 
 CSS
 
-#### 文件命名规范
+### File naming specification
 
 CSS、Sass、Less 文件名以相应频道、模块的英文或拼音命名
 Sass 文件用连字符 - 隔开，例如：shop-cart.scss
 
-#### CSS 命名规范
+### CSS naming specification
 
 css 全部定义在 class 内，id 只作为接口使用
 class 以小写字母命名，用 - 分割，例如： header-menu
@@ -15,7 +15,7 @@ class 以小写字母命名，用 - 分割，例如： header-menu
 js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_miniCart
 作为 js 接口的 class 内不得定义 css
 
-#### CSS 书写规范
+### CSS Writing specification
 
 每句属性定义必须独占一行
 
