@@ -65,23 +65,23 @@ Js 文件采用驼峰式命名，例如：shopCart.js;
   #变量-驼峰大小写
   var myName = 'Json';
   var number = 30;
-  ```
-  
-  //常量
+
+  #常量
   var MINI_NUM = 100;
   var ORDER_URL = 'http://order.xiaomi.com/';
 
-  //函数-首单词为动词
+  #函数-首单词为动词
   function getName() {
     reutrn myName;
   }
 
-  //构造函数-驼峰首字母大写
+  #构造函数-驼峰首字母大写
   function Xiaomi(id){
     this.id = id;
   }
 
   var myId = new Xiaomi(143);
+  ```
 
 ### 注释
 
