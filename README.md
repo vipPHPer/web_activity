@@ -279,7 +279,7 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
   $('.sidebar > ul').hide();
 
   # good
-  $sidebar.find('ul').hide();
+  $('.sidebar').find('ul').hide();
   ```
 
 > 基于PC端Web开发 -- Html规范
