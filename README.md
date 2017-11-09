@@ -9,10 +9,10 @@ Sass 文件用连字符 - 隔开，例如：shop-cart.scss
 
 ### CSS naming specification
 
-css 全部定义在 class 内，id 只作为接口使用
-class 以小写字母命名，用 - 分割，例如： header-menu
-全局 class 以 xm 开头，例如： xm-header
-js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_miniCart
+css 全部定义在 class 内，id 只作为接口使用；
+class 以小写字母命名，用 - 分割，例如： header-menu；
+全局 class 以 xm 开头，例如： xm-header；
+js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_miniCart；
 作为 js 接口的 class 内不得定义 css
 
 ### CSS Writing specification
@@ -37,12 +37,12 @@ js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_mi
 
 ### File naming specification
 
-Js 文件名以相应频道、模块的英文或拼音命名;
-Js 文件采用驼峰式命名，例如：shopCart.js;
+Js 文件名以相应频道、模块的英文或拼音命名；
+Js 文件采用驼峰式命名，例如：shopCart.js
 
 ### Basic formatting
 
-缩进： 使用 2 个空格为一个缩进层级（设置编辑器TAB or EditorConfig ）
+缩进： 使用 2 个空格为一个缩进层级（设置编辑器TAB or EditorConfig ）；
 语句结尾： Javascript语句须以分号结尾，大多数压缩合并工具会自动添加分号
 
 ### Blank line
@@ -142,9 +142,9 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
 
 > 基于PC端Web开发 -- 禁止使用with语句
 
-## 变量&函数&运算符&字符串
+## variable & function & operator & Character string
 
-### 1、变量
+### variable
 
 所有变量必须使用 var 声明；
 一个 var 声明多个变量，容易导致较长的行长度，并且在修改时容易造成逗号和分号的混淆；
@@ -165,7 +165,7 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
   }
   ```
 
-### 2、函数
+### function
 
 函数调用在函数声明之后，调用函数名与左括号无空格
 
@@ -192,7 +192,7 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
   }());
   ```
 
-### 3、运算符
+### operator
 
 推荐局部作用域使用严格模式 “use strict”；
 使用 === !== 避免使用 == !=；
@@ -212,7 +212,7 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
   var length = 10;
   ```
 
-### 4、字符串
+### Character string
 
 字符串开头和结束使用单引号 '；
 输入单引号不需要按住 shift，方便输入。；
@@ -225,7 +225,7 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
   var html = '<div class="cls">拼接HTML可以省去双引号转义</div>';
   ```
 
-### 5、jQuery
+### jQuery
 
 使用 $ 作为存储 jQuery 对象的变量名前缀。
 
