@@ -22,13 +22,19 @@ js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_mi
 ### 示例
 
 /* bad */
+
+```
 .selector { margin: 0; padding: 0; }
+```
 
 /* good */
+
+```
 .selector {
     margin: 0;
     padding: 0;
 }
+```
 -- EOF --
 
 Javascript
