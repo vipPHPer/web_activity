@@ -65,7 +65,7 @@ Js 文件采用驼峰式命名，例如：shopCart.js;
   ```
   var myName = 'Json';
   var number = 30;
-```
+  ```
   //常量
   var MINI_NUM = 100;
   var ORDER_URL = 'http://order.xiaomi.com/';
