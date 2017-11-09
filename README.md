@@ -1,6 +1,6 @@
 # web_activity
 
-> CSS
+> 基于PC端Web开发 -- CSS规范
 
 ### File naming specification
 
@@ -33,7 +33,7 @@ js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_mi
 }
 ```
 
-> Javascript
+> 基于PC端Web开发 -- Javascript规范
 
 ### File naming specification
 
