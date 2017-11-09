@@ -19,7 +19,7 @@ js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_mi
 
 每句属性定义必须独占一行
 
-#### 示例
+### Examples
 
 /* bad */
 
@@ -38,33 +38,34 @@ js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_mi
 
 Javascript
 
-### 文件命名规范
+### File naming specification
 
 Js 文件名以相应频道、模块的英文或拼音命名;
 Js 文件采用驼峰式命名，例如：shopCart.js;
 
-### 基本格式化
+### Basic formatting
 
 缩进： 使用 2 个空格为一个缩进层级（设置编辑器TAB or EditorConfig ）
 语句结尾： Javascript语句须以分号结尾，大多数压缩合并工具会自动添加分号
 
-### 空行：
+### Blank line
 
 在方法之间、方法中局部变量与第一条语句之间、、行注释之前、逻辑片段之前
 
-### 命名：
+### Name
 
 变量-驼峰大小写
 常量-大写以下划线连接
-函数-驼峰首单词为动词（can,has,is,get,set…）
+函数-驼峰首单词为动词（can，has，is，get，set…）
 构造函数-驼峰首字母大写
 
-### 代码示例
+### Code example
 
-  //变量-驼峰大小写
+  <!-- 变量-驼峰大小写 -->
+  ```
   var myName = 'Json';
   var number = 30;
-
+```
   //常量
   var MINI_NUM = 100;
   var ORDER_URL = 'http://order.xiaomi.com/';
