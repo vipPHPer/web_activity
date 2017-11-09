@@ -23,10 +23,10 @@ js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_mi
 
 
 ``` bash
-#bad
+# bad
 .selector { margin: 0; padding: 0; }
 
-#good
+# good
 .selector {
     margin: 0;
     padding: 0;
@@ -51,28 +51,28 @@ Js 文件采用驼峰式命名，例如：shopCart.js;
 
 ### Name
 
-变量-驼峰大小写
-常量-大写以下划线连接
-函数-驼峰首单词为动词（can，has，is，get，set…）
+变量-驼峰大小写，
+常量-大写以下划线连接，
+函数-驼峰首单词为动词（can，has，is，get，set…），
 构造函数-驼峰首字母大写
 
 ### Code example
 
   ``` bash
-  #变量-驼峰大小写
+  # 变量-驼峰大小写
   var myName = 'Json';
   var number = 30;
 
-  #常量
+  # 常量
   var MINI_NUM = 100;
   var ORDER_URL = 'http://order.xiaomi.com/';
 
-  #函数-首单词为动词
+  # 函数-首单词为动词
   function getName() {
     reutrn myName;
   }
 
-  #构造函数-驼峰首字母大写
+  # 构造函数-驼峰首字母大写
   function Xiaomi(id){
     this.id = id;
   }
@@ -84,12 +84,12 @@ Js 文件采用驼峰式命名，例如：shopCart.js;
 
 目的：自己或其他人能快速读懂代码，对文档生成工具友好YUI DOC注释遵循代码格式化；所有函数、方法、构造函数须使用文档注释
 
-tips: 编辑器sublime text 安装DocBlockr插件, 在function上一行输入/**，然后按Tab就自动补全注释
+tips：编辑器sublime text 安装DocBlockr插件，在function上一行输入/**，然后按Tab就自动补全注释
 
-### 语句&表达式
+### Sentence & Expression
 
-块语句须使用大括号（if，for，while，try catch….)
-第一个大括号在块语句第一句末尾
+块语句须使用大括号（if，for，while，try catch….)，
+第一个大括号在块语句第一句末尾，
 块语句间隔-在左小括号之前和右小括号之后添加一个空格
 
 ### Code example
@@ -120,7 +120,7 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
 事实上javascrpt 的 switch 语句中可以使用任意类型的值及表达式作为case从句；
 每条case语句相对于switch关键字保持一个缩进层级；
 从第2条case语句开始，每条case语句前后有一个空行；
-非特殊情况下不允许case语句“连续执行”，结尾须有break,return,throw；
+非特殊情况下不允许case语句“连续执行”，结尾须有break，return，throw；
 我们更倾向于即使没有默认行为也需要保留default
 
 ### Code example
@@ -128,30 +128,31 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
   ``` bash
   switch( condition ) {
     case 'first':
-    #do something
+    # do something
     break;
 
     case 'second':
-    #do someting
+    # do someting
     break;
 
     default:
-    #do someting
+    # do someting
   }
   ```
 
-禁止使用with语句
+> 基于PC端Web开发 -- 禁止使用with语句
 
 ## 变量&函数&运算符&字符串
 
 ### 1、变量
 
-所有变量必须使用var声明
-一个 var 声明多个变量，容易导致较长的行长度，并且在修改时容易造成逗号和分号的混淆
-同一作用域的变量都提前之函数的顶部，且我们推荐每个变量都用var语句声明，每个变量独占一行；
+所有变量必须使用var声明；
+一个 var 声明多个变量，容易导致较长的行长度，并且在修改时容易造成逗号和分号的混淆；
+同一作用域的变量都提前之函数的顶部，且我们推荐每个变量都用 var 语句声明，每个变量独占一行；
 
-### 代码示例
+### Code example
 
+  ``` bash
   function doSomething ( obj ) {
     var value = 10;
     var result = value + 10;
@@ -159,115 +160,129 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
     var lens;
 
     for ( i = 0, len = obj.length; i < len; i++ ){
-      //dosomething
+      #dosomething
     }
   }
+  ```
 
 ### 2、函数
 
 函数调用在函数声明之后，调用函数名与左括号无空格
 
-### 代码示例
+### Code example
 
+  ``` bash
   function doSomething(name) {
     console.log(name + ' say:Hello world!');
   }
 
-  doSomethings('jsonbeta');
+  doSomethings('chenfx');
+  ```
+
 即时函数（立即调用函数）必须使用小括号包裹
 
-### 代码示例
+### Code example
 
+  ``` bash
   var name = (function() {
-    // dosomething
+    # dosomething
     return {
       value: 'jsonbeta'
     }
   }());
+  ```
 
 ### 3、运算符
 
-推荐局部作用域使用严格模式 “use strict”
-使用 === !== 避免使用 == !=
+推荐局部作用域使用严格模式 “use strict”；
+使用 === !== 避免使用 == !=；
 推荐使用对象字面量来代替原始包装类型
 
-### 代码示例
+### Code example
 
-  //bad
+  ``` bash
+  # bad
   var name = new String('jsonbeta');
   var isMan = new Boolean(true);
   var length = new Number(10);
 
-  //good
+  # good
   var name = 'jsonbeta';
   var isMan = true;
   var length = 10;
+  ```
 
 ### 4、字符串
 
-字符串开头和结束使用单引号 '
-输入单引号不需要按住 shift，方便输入。
+字符串开头和结束使用单引号 '；
+输入单引号不需要按住 shift，方便输入。；
 实际使用中，字符串经常用来拼接 HTML。为方便 HTML 中包含双引号而不需要转义写法。
 
-### 代码示例
+### Code example
 
+  ``` bash
   var str = '我是一个字符串';
   var html = '<div class="cls">拼接HTML可以省去双引号转义</div>';
+  ```
 
 ### 5、jQuery
 
 使用 $ 作为存储 jQuery 对象的变量名前缀。
 
-  // bad
+  ``` bash
+  # bad
   var sidebar = $('.sidebar');
 
-  // good
+  # good
   var $sidebar = $('.sidebar');
   缓存 jQuery 查询。
 
-  // bad
+  # bad
   function setSidebar() {
     $('.sidebar').hide();
 
-    // ...stuff...
+    # ...stuff...
 
     $('.sidebar').css({
       'background-color': 'pink'
     });
   }
 
-  // good
+  # good
   function setSidebar() {
     var $sidebar = $('.sidebar');
     $sidebar.hide();
 
-    // ...stuff...
+    # ...stuff...
 
     $sidebar.css({
       'background-color': 'pink'
     });
   }
+  ```
+
 对 DOM 查询使用层叠 $('.sidebar ul') 或 父元素 > 子元素 $('.sidebar > ul')
 
 对有作用域的 jQuery 对象查询使用 find
 
-  // bad
+  ``` bash
+  # bad
   $('ul', '.sidebar').hide();
 
-  // bad
+  # bad
   $('.sidebar').find('ul').hide();
 
-  // good
+  # good
   $('.sidebar ul').hide();
 
-  // good
+  # good
   $('.sidebar > ul').hide();
 
-  // good
+  # good
   $sidebar.find('ul').hide();
--- EOF --
+  ```
 
-Html
+> 基于PC端Web开发 -- Html规范
 
 ### 文件命名规范
 
