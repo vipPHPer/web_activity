@@ -61,11 +61,12 @@ Js 文件采用驼峰式命名，例如：shopCart.js;
 
 ### Code example
 
-  <!-- 变量-驼峰大小写 -->
-  ```
+  ``` bash
+  #变量-驼峰大小写
   var myName = 'Json';
   var number = 30;
   ```
+  
   //常量
   var MINI_NUM = 100;
   var ORDER_URL = 'http://order.xiaomi.com/';
