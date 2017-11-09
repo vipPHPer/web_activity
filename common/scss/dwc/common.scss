@@ -1,0 +1,530 @@
+/*!
+ * authors: chenfx (since1991_vip@163.com)
+ * date:    2017-07-28 10:18:25
+ * version: v1.0.0
+ */
+
+
+/***********通用基本类************/
+
+@import '../../../static/scss/_custom.scss';
+@import '../../../static/scss/_normalize.scss';
+@import '../../../static/scss/_reset.scss';
+@import '../../../static/scss/_modal.scss';
+@mixin transition($arr) {
+    -webkit-transition: $arr;
+    transition: $arr;
+}
+
+@mixin transform($arr) {
+    -webkit-transform: $arr;
+    transform: $arr;
+}
+
+@mixin animation($arr) {
+    -webkit-animation: $arr;
+    animation: $arr;
+}
+
+@mixin box_shodow($arr) {
+    -webkit-box-shadow: $arr;
+    box-shadow: $arr;
+}
+
+@mixin box_sizing($arr) {
+    -webkit-box-sizing: $arr;
+    box-sizing: $arr;
+}
+
+@mixin pos {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin abs-lt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@mixin fl {
+    float: left;
+}
+
+@mixin fr {
+    float: right;
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        color: #ff6700;
+    }
+    50% {
+        color: #e13a3f;
+    }
+    100% {
+        color: #ff6700;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        color: #ff6700;
+    }
+    50% {
+        color: #e13a3f;
+    }
+    100% {
+        color: #ff6700;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$imgUrl: '/public/img/dwc/';
+body {
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+    min-width: 1226px;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*格式化样式*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.container {
+    width: 1226px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.section {
+    @include pos;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+
+/* 公共头部样式 start */
+
+.section-header {
+    background-color: #fff;
+    .tools {
+        width: 100%;
+        height: 40px;
+        color: #333;
+        a {
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    span {
+        line-height: 40px;
+        @include fl;
+        margin: 0 20px;
+    }
+    .time {
+        line-height: 40px;
+        @include fl;
+        margin: 0 5px;
+    }
+    .links {
+        @include fr;
+        margin-right: 20px;
+        a {
+            height: 38px;
+            line-height: 40px;
+            color: #333;
+            margin: 0 5px;
+            padding: 0 10px;
+            text-align: center;
+            display: inline-block;
+            @include pos;
+            @include transition(all .4s);
+            &:before {
+                display: block;
+                content: "";
+                @include abs;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                left: 50%;
+                background: #ff6700;
+                @include transition(all .4s);
+            }
+            &:hover:before {
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+            &:hover {
+                color: #ff6700;
+            }
+        }
+    }
+    .navwap {
+        height: 60px;
+        background: #333;
+        @include pos;
+        z-index: 15;
+        .container {
+            @include pos;
+        }
+    }
+    .logo {
+        @include abs;
+        top: 0;
+        left: 0;
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+        text-align: center;
+        background: #b0b0b0;
+        border-radius: 100%;
+        a {
+            display: block;
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+    .nav {
+        @include fr;
+        li {
+            @include fl;
+        }
+        a {
+            display: inline-block;
+            height: 58px;
+            line-height: 60px;
+            font-size: 18px;
+            color: #fff;
+            font-weight: lighter;
+            padding: 0 20px;
+            margin: 0 6px;
+            @include pos;
+            @include transition(all .4s);
+            &:before {
+                display: block;
+                content: "";
+                @include abs;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                left: 50%;
+                background: #ff6700;
+                @include transition(all .4s);
+            }
+            &:hover:before {
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+            &:hover {
+                color: #ff6700;
+            }
+        }
+    }
+}
+
+
+/* 公共头部样式 end */
+
+
+/* 公共底部样式 start */
+
+.section-footer {
+    background: #262a2d;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px 0;
+    padding-bottom: 15px;
+    .links {
+        line-height: 25px;
+    }
+    a {
+        display: inline-block;
+        @include transition(all .2s);
+        color: #ff6700;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .sep {
+        display: inline-block;
+        color: #666;
+        margin: 0 5px;
+    }
+    p {
+        color: #fff;
+        line-height: 25px;
+    }
+}
+
+
+/* 公共底部样式 end */
+
+
+/* 文章内容样式 start */
+
+.article {
+    .section-banner {
+        width: 100%;
+        height: 150px;
+        background-image: url('#{$imgUrl}banner-game.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        .bread-road {
+            margin-top: 130px - 15px;
+            font-family: "微软雅黑";
+            margin-left: 13px;
+            .title {
+                font-weight: 700;
+                color: #fff;
+                margin-right: 5px + 5px;
+                display: none;
+            }
+            a {
+                color: #fff;
+                @include transition(color .4s);
+                &:hover {
+                    color: #ff6700;
+                }
+            }
+            span {
+                color: #fff;
+                margin: 0 5px;
+            }
+            .target {
+                margin-left: 0px;
+            }
+        }
+    }
+    .section-content {
+        .content {
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 20px;
+            .h2-title {
+                text-align: center;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #e8e8e8;
+                margin-bottom: 15px;
+            }
+            h2 {
+                font-weight: normal;
+                font-size: 26px;
+            }
+            .time {
+                color: #666;
+                line-height: 30px;
+            }
+            .author {
+                color: #666;
+            }
+            i {
+                margin: 0 10px;
+                color: #666;
+            }
+            p {
+                line-height: 30px;
+                font-size: 14px;
+                margin-bottom: 20px - 5px;
+                text-indent: 2em;
+                padding: 0 15px;
+                color: #333;
+            }
+        }
+        ul {
+            margin-top: 30px;
+            margin-bottom: 50px - 30px;
+            li {
+                @include fl;
+                width: 50%;
+                text-align: center;
+                padding: 0 20px;
+                a {
+                    display: inline-block;
+                    color: #ff6700;
+                    @include transition(color .4s);
+                    @include animation(colorchange .5s ease-in infinite);
+                }
+                .icon {
+                    display: none;
+                    width: 26px;
+                    height: 16px;
+                    background: url("#{$imgUrl}hot.gif") no-repeat center center;
+                }
+            }
+        }
+    }
+}
+
+
+/* 文章内容样式 end */
+
+
+/* 文章列表样式 start */
+
+.list {
+    .section-banner {
+        width: 100%;
+        height: 150px;
+        background-image: url('#{$imgUrl}banner-game.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        .bread-road {
+            margin-top: 130px - 15px;
+            font-family: "微软雅黑";
+            .title {
+                font-weight: 700;
+                color: #fff;
+                margin-right: 5px + 5px;
+                display: none;
+            }
+            a {
+                color: #fff;
+                @include transition(color .4s);
+                &:hover {
+                    color: #ff6700;
+                }
+            }
+            span {
+                color: #fff;
+                margin: 0 5px;
+            }
+            .target {
+                margin-left: 0px;
+            }
+        }
+    }
+    .section-content {
+        .content {
+            margin-top: 20px;
+        }
+        ul {
+            padding: 20px 0;
+        }
+        li {
+            border-bottom: 1px solid #e8e8e8;
+            line-height: 46px;
+            .sep {
+                color: #ff6700;
+                margin-right: 5px;
+            }
+            a {
+                color: #333;
+                @include transition(color .2s);
+                &:hover {
+                    color: #ff6700;
+                }
+            }
+            .date {
+                @include fr;
+            }
+        }
+    }
+}
+
+
+/* 文章列表样式 end */

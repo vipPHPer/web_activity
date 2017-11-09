@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh-CN">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8">
+    <title>掌上澳门 -- 电玩城</title>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../public/css/dwc/common.min.css?v=9cee432">
+</head>
+
+<body>
+    <div class="list" id="bd" v-cloak>
+        <!-- 公共头部 start -->
+        <!-- <include src="header.html"></include> -->
+        <div class="section section-header" id="header"></div>
+        <!-- 公共头部 end -->
+
+        <div class="section section-banner">
+            <div class="container">
+                <div class="bread-road">
+                    <span class="title">xxxxxx</span>
+                    <a href="javascript:;">首页</a>
+                    <span>&gt;</span>
+                    <a href="javascript:;">活动中心</a>
+                    <span>&gt;</span>
+                    <span class="target">公告</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-content">
+            <div class="container">
+                <div class="content">
+                    <ul class="clearfix ul-list">
+                        <li class="li-item" v-for="todo in articleList">
+                            <span class="sep">&gt;</span>
+                            <a href="acticle.html?zone={{todo.zone}}&article_id={{todo.id}}">{{todo.title}}</a>
+                            <span class="date">
+                                {{todo.timestamp}}
+                                 <!-- v-html="convertIntToTime(todo.timestamp)" -->
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 公共底部 start  -->
+        <!-- <include src="footer.html"></include> -->
+        <div class="section section-footer" id="footer"></div>
+        <!-- 公共底部 end  -->
+    </div>
+
+    <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
+    <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
+    <script src="../../public/js/dwc/common.min.js?v=2289269"></script>
+    <script src="../../public/js/dwc/list.min.js?v=b1e64f7"></script>
+</body>
+
+</html>

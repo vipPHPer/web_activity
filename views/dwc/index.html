@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh-CN">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8">
+    <title>掌上澳门 -- 官方网站</title>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../public/css/dwc/common.min.css?v=9cee432">
+    <link rel="stylesheet" href="../../public/css/dwc/style.min.css?v=f3d263b">
+    <!-- <script src="/public/js/include.min.js "></script> -->
+</head>
+
+<body id="bd" v-cloak>
+    <!-- 公共头部 start -->
+    <!-- <include src="header.html"></include> -->
+    <div class="section section-header" id="header"></div>
+    <!-- 公共头部 end -->
+
+    <div class="section section-slider">
+        <div class="slider J_slider">
+            <ul class="clearfix">
+                <li v-for="todo in bannerList" class="slot-item" :class="todo.is_show === true ? 'current':''">
+                    <a href="acticle.html?zone={{todo.zone}}&article_id={{todo.id}}" class="item" target="_blank">
+                        <img v-bind:data-src="'/public/img/dwc/' + todo.image_url" alt="{{todo.title}}">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="page J_page"> </div>
+    </div>
+
+    <div class="section section-wrap">
+        <div class="container">
+            <div class="slot-wrap slot-wrap-left">
+                <ul class="clearfix">
+                    <li class="item-1">
+                        <a href="javascript:;">1秒极速下载</a>
+                    </li>
+                    <li class="item-2">
+                        <a href="javascript:;">苹果下载</a>
+                    </li>
+                    <li class="item-3">
+                        <a href="javascript:;">安卓下载</a>
+                    </li>
+                    <li class="item-4">
+                        <a href="javascript:;">会员登录</a>
+                    </li>
+                    <li class="item-5">
+                        <a href="javascript:;">充值中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="slot-wrap slot-wrap-middle">
+                <div class="tab-list">
+                    <ul class="clearfix J_tablist">
+                        <li class="current">公告</li>
+                        <li>动态</li>
+                    </ul>
+                </div>
+                <div class="list-wrap J_listwrap">
+                    <ul class="clearfix ul-show">
+                        <li v-for="todo in noticeList">
+                            <i class="icon" v-if="todo.is_hot"></i>
+                            <a href="acticle.html?zone={{todo.zone}}&article_id={{todo.id}}" v-html="todo.title" target="_blank"></a>
+                            <span class="date" v-html="todo.timestamp"></span>
+                        </li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li v-for="todo in dynamicList">
+                            <i class="icon" v-if="todo.is_hot"></i>
+                            <a href="acticle.html?zone={{todo.zone}}&article_id={{todo.id}}" v-html="todo.title" target="_blank"></a>
+                            <span class="date" v-html="todo.timestamp"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slot-wrap slot-wrap-right">
+                <div class="tab-list-fr">
+                    <ul class="clearfix">
+                        <li class="current">最新活动</li>
+                    </ul>
+                </div>
+                <div class="list-wrap-fr">
+                    <ul class="clearfix J_acList">
+                        <li v-for="todo in activityList" :class="todo.is_show === true ? 'current':''">
+                            <a href="acticle.html?zone={{todo.zone}}&article_id={{todo.id}}" class="activity-img" target="_blank">
+                                <img v-bind:data-src="'/public/img/dwc/' + todo.image_url" alt="{{todo.title}}">
+                            </a>
+                            <span class="tips" v-html="todo.brief"></span>
+                        </li>
+                    </ul>
+                    <div class="activity-page J_acPage"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-more">
+        <div class="container">
+            <div class="hot-games">
+                <div class="hot-title">
+                    <span class="title">热门游戏</span>
+                </div>
+                <ul class="clearfix">
+                    <li v-for="todo in gamesList">
+                        <a href="acticle.html?zone={{todo.zone}}&article_id={{todo.id}}" target="_blank">
+                            <img v-bind:data-src="'/public/img/dwc/' + todo.image" alt="{{todo.title}}">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-box">
+                <div class="contact-title">
+                    <span class="title">联系我们</span>
+                </div>
+                <div class="contact-info">
+                    <div class="content-fl">
+                        <p class="desc1">关注官方微信公众号</p>
+                        <p class="desc2">第一时间了解官方信息</p>
+                        <div class="code">
+                            <img data-src="/public/img/dwc/qrcode-icon.jpg" alt="" width="160px" height="160px;">
+                        </div>
+                    </div>
+                    <div class="content-fr">
+                        <div class="servers">
+                            <p>客服时间</p>
+                            <span>7*24小时</span>
+                        </div>
+                        <div>
+                            <a href="javascript:;" class="online-servers">24小时在线客服</a>
+                        </div>
+                        <p class="dack">客服QQ：370065053</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 公共底部 start  -->
+    <!-- <include src="footer.html"></include> -->
+    <div class="section section-footer" id="footer"></div>
+    <!-- 公共底部 end  -->
+
+    <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
+    <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
+    <script src="../../public/js/dwc/common.min.js?v=2289269"></script>
+    <script src="../../public/js/dwc/script.min.js?v=c5ada3b"></script>
+
+</body>
+
+</html>
