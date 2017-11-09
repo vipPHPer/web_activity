@@ -4,8 +4,8 @@
  * version: v1.0.0
  */
 (function(window, document, undefined) {
-  var Include39485748323 = function() {};
-  Include39485748323.prototype = {
+  var IncludeHtml = function() {};
+  IncludeHtml.prototype = {
     //倒序循环  
     forEach: function(array, callback) {
       var size = array.length;
@@ -85,6 +85,6 @@
     }
   };
   window.onload = function() {
-    new Include39485748323().replaceIncludeElements();
+    new IncludeHtml().replaceIncludeElements();
   };
 })(window, document);
