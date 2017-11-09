@@ -1,6 +1,6 @@
 # web_activity
 
-CSS
+> CSS
 
 ### File naming specification
 
@@ -21,22 +21,19 @@ js 接口用的 id、class 以 J_ 开头，后跟驼峰式命名，例如：J_mi
 
 ### Examples
 
-/* bad */
 
-```
+``` bash
+#bad
 .selector { margin: 0; padding: 0; }
-```
 
-/* good */
-
-```
+#good
 .selector {
     margin: 0;
     padding: 0;
 }
 ```
 
-Javascript
+> Javascript
 
 ### File naming specification
 
