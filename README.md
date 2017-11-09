@@ -47,7 +47,7 @@ Js 文件采用驼峰式命名，例如：shopCart.js;
 
 ### Blank line
 
-在方法之间、方法中局部变量与第一条语句之间、、行注释之前、逻辑片段之前
+在方法之间、方法中局部变量与第一条语句之间、行注释之前、逻辑片段之前
 
 ### Name
 
@@ -102,7 +102,7 @@ tips：编辑器sublime text 安装DocBlockr插件，在function上一行输入/
   }
  ```
 
-for 循环 保留对break，continue来控制数组的迭代；
+for 循环 保留对 break，continue 来控制数组的迭代；
 for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍历数组成员；
 
 ### Code example
@@ -117,11 +117,11 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
 
 ### Switch Sentence
 
-事实上javascrpt 的 switch 语句中可以使用任意类型的值及表达式作为case从句；
-每条case语句相对于switch关键字保持一个缩进层级；
-从第2条case语句开始，每条case语句前后有一个空行；
-非特殊情况下不允许case语句“连续执行”，结尾须有break，return，throw；
-我们更倾向于即使没有默认行为也需要保留default
+事实上 javascrpt 的 switch 语句中可以使用任意类型的值及表达式作为 case 从句；
+每条 case 语句相对于 switch 关键字保持一个缩进层级；
+从第2条 case 语句开始，每条 case 语句前后有一个空行；
+非特殊情况下不允许 case 语句“连续执行”，结尾须有 break，return，throw；
+我们更倾向于即使没有默认行为也需要保留 default
 
 ### Code example
 
@@ -146,7 +146,7 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
 
 ### 1、变量
 
-所有变量必须使用var声明；
+所有变量必须使用 var 声明；
 一个 var 声明多个变量，容易导致较长的行长度，并且在修改时容易造成逗号和分号的混淆；
 同一作用域的变量都提前之函数的顶部，且我们推荐每个变量都用 var 语句声明，每个变量独占一行；
 
@@ -292,15 +292,15 @@ Html 文件 全小写字母 命名，例如：index.html，不要用连字符或
 
 使用符合语义的标签书写 HTML 文档, 选择恰当的元素表达所需的含义；
 元素的标签和属性名必须小写，属性值必须加双引号；
-元素嵌套遵循 (X)HTML Strict 嵌套规则，推荐使用Firefox插件 HTML Validator 进行检查；
+元素嵌套遵循 (X)HTML Strict 嵌套规则，推荐使用 Firefox 插件 HTML Validator 进行检查；
 正确区分自闭合元素和非自闭合元素，非法闭合包括：<br>..</br>、<script />、<iframe />，非法闭合会导致页面嵌套错误问题；
 通过给元素设置自定义属性来存放与 JavaScript 交互的数据，属性名格式为 data-xx (例如：data-lazyload-url)；
-特殊字符需转义，如：> => &gt; ，具体参照 HTML特殊转义字符列表
+特殊字符需转义，如：> => &gt; ，具体参照 HTML 特殊转义字符列表
 
 ### Document template
 
 DOCTYPE
-页面文档类型统一使用HTML5 DOCTYPE. 代码如下：
+页面文档类型统一使用 HTML5 DOCTYPE. 代码如下：
 
 ``` bash
 <!doctype html>
