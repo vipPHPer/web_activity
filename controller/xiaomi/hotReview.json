@@ -1,0 +1,35 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "hotReview": [{
+      "title": "米家压力IH电饭煲",
+      "image": "/public/img/xiaomi/goods/cons/review-001.jpg",
+      "review_author": "米果果大叔",
+      "review": "包装很让人感动，式样也很可爱，做出的饭全家人都爱吃，超爱五星！手机控制还是不太熟练，最主要是没有连接...",
+      "price": "999",
+      "first": "1"
+    }, {
+      "title": "小米净水器",
+      "image": "/public/img/xiaomi/goods/cons/review-002.jpg",
+      "review_author": "紫道场",
+      "review": "有了它，妈妈再也不用担心我喝不到健康的水了。呵呵，良心产品，平民价格，对现在的水质起到了很好的改善",
+      "price": "1299",
+      "first": ""
+    }, {
+      "title": "小米胶囊耳机",
+      "image": "/public/img/xiaomi/goods/cons/review-003.jpg",
+      "review_author": "yinyin19891117",
+      "review": "很小巧 像不喜欢戴活塞的人可以试试这种~很舒服 包装还是一如既往的简洁 要是有盒子就好了=￣ω￣=",
+      "price": "69",
+      "first": ""
+    }, {
+      "title": "小米路由器3",
+      "image": "/public/img/xiaomi/goods/cons/review-004.jpg",
+      "review_author": "朔之故里",
+      "review": "安装简洁方便，信号不错！！！！！",
+      "price": "149",
+      "first": ""
+    }]
+  }
+}

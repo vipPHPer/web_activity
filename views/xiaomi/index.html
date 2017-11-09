@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>小米商城 - 红米Note 4X、小米5s、小米MIX、小米笔记本官方网站</title>
+    <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../public/css/xiaomi/style.min.css?v=71c9af7">
+    <script>
+        var UA = navigator.userAgent;
+        var search = location.search;
+        //移动端地址跳转
+        if (UA.match(/Android/i) || (UA.indexOf('iPhone') != -1) || (UA.indexOf('iPod') != -1) || (UA.indexOf('iPad') != -1)) {
+            window.location = 'index.html' + search;
+        }
+    </script>
+</head>
+
+<body id="J_visibleWatcher">
+    <!-- Part 1 -->
+    <div class="section site-topbar">
+        <div class="container">
+            <div class="topbar-nav">
+                <a href="javascript:void(0);">小米商城</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">MIUI</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">米聊</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">游戏</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">多看阅读</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">云服务</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">小米商城移动版</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);">问题反馈</a>
+                <span class="sep">|</span>
+                <a href="javascript:void(0);" id="J_select">Select Region</a>
+            </div>
+            <div class="topbar-cart topbar-cart-filled" id="shop_top_cart_info">
+                <a href="javascript:void(0);" class="cart-mini" id="J_miniCartBtn">
+                    购物车（<span class="cart-mini-num shop_cart_goods_num">0</span>）
+                </a>
+                <div class="cart-menu" id="shop_cart_lay">
+                    <ul class="cart-list">
+                        <li>
+                            <div class="loading">
+                                购物车中还没有商品，赶紧选购吧！
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="topbar-info">
+                <a href="javascript:void(0);" class="link">登录</a><span class="sep">|</span>
+                <a href="javascript:void(0);" class="link">注册</a>
+            </div>
+        </div>
+    </div>
+    <!-- Part 2 -->
+    <!-- #include file="header.php" -->
+    <div class="section site-header">
+        <div class="container">
+            <div class="header-logo">
+                <a href="javascript:void(0);" class="logo"></a>
+            </div>
+            <div class="header-nav">
+                <ul class="nav-list J_navMainList clearfix">
+                    <!-- 左边导航栏 Start-->
+                    <li class="nav-category" id="J_navCategory">
+                        <a href="javascript:void(0);" class="link-category">
+                            <span class="text">全部商品分类</span>
+                        </a>
+                        <div class="site-category">
+                            <ul class="site-category-list clearfix" id="J_categoryList">
+                                <!-- 1 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">手机 电话卡</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-2 clearfix">
+                                        <ul class="children-list children-list-col children-list-col-1">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">小米手机5</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">小米Max</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">小米手机4S</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">小米手机4c</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">红米Note3</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">红米手机3S</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="children-list children-list-col children-list-col-2">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">红米手机3</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">小米平板2</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">合约机</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">定制版手机</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">对比手机</span>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-line-primary btn-small btn-buy">选购</a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mi5bar80.jpg?v=d32c836" alt="" class="thumb">
+                                                    <span class="text">小米移动 电话卡</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 2 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">电视 盒子</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-3 clearfix">
+                                        <ul class="children-list children-list-col children-list-col-1">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米电视 43英寸</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米电视 48英寸</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米电视 55英寸</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米电视 60英寸</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米电视 65英寸</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米电视 70英寸</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="children-list children-list-col children-list-col-2">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米电视主机</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米盒子3 增强版</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米盒子3</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米盒子 mini</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">小米低音炮</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">蓝牙手柄</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="children-list children-list-col children-list-col-3">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">家庭音箱</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/6580side.jpg?v=974823e" alt="" class="thumb">
+                                                    <span class="text">电视盒子配件</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 3 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">路由器 智能硬件</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-3 clearfix">
+                                        <ul class="children-list children-list-col children-list-col-1">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">小米无人机</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">小米路由器</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">九号平衡车</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">米家压力IH电饭煲</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">米家恒温电水壶</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">米兔儿童电话手表</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="children-list children-list-col children-list-col-2">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">血压计</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">净化器及滤芯</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">净水器及滤芯</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">摄像机</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">智能灯</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">智能插座 基础版</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="children-list children-list-col children-list-col-3">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">智能家庭组合</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">手环及配件</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">体重秤</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">WiFi放大器</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/wurenji80.jpg?v=f41f273" alt="" class="thumb">
+                                                    <span class="text">全部智能硬件</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 4 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">移动电源 插线板</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-1 clearfix">
+                                        <ul class="children-list children-list-col">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/dianyuan.jpg?v=ed801bf" alt="" class="thumb">
+                                                    <span class="text">小米移动电源</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/dianyuan.jpg?v=ed801bf" alt="" class="thumb">
+                                                    <span class="text">小米插线板</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/dianyuan.jpg?v=ed801bf" alt="" class="thumb">
+                                                    <span class="text">品牌移动电源</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/dianyuan.jpg?v=ed801bf" alt="" class="thumb">
+                                                    <span class="text">移动电源配件</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 5 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">耳机 音箱</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-3 clearfix">
+                                        <ul class="children-list children-list-col children-list-col-1">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米头戴式耳机</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米圈铁耳机</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米胶囊耳机</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米活塞耳机 基础版</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米蓝牙耳机</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">品牌耳机</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="children-list children-list-col children-list-col-2">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米蓝牙音箱</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米随身蓝牙音箱</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小钢炮音箱 2</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小钢炮音箱 青春版</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">小米方盒子音箱</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">网络收音机</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="children-list children-list-col children-list-col-3">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/pocketaudio.png?v=95d9f08" alt="" class="thumb">
+                                                    <span class="text">品牌音箱</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 6 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">电池 存储卡</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-1 clearfix">
+                                        <ul class="children-list children-list-col">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/5Battery1.jpg?v=0e3dbf9" alt="" class="thumb">
+                                                    <span class="text">电池</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/5Battery1.jpg?v=0e3dbf9" alt="" class="thumb">
+                                                    <span class="text">充电器</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/5Battery1.jpg?v=0e3dbf9" alt="" class="thumb">
+                                                    <span class="text">线材</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/5Battery1.jpg?v=0e3dbf9" alt="" class="thumb">
+                                                    <span class="text">存储卡</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/5Battery1.jpg?v=0e3dbf9" alt="" class="thumb">
+                                                    <span class="text">彩虹5号电池</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/5Battery1.jpg?v=0e3dbf9" alt="" class="thumb">
+                                                    <span class="text">彩虹7号电池</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 7 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">保护套 后盖</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-1 clearfix">
+                                        <ul class="children-list children-list-col">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/baohu.jpg?v=84a643f" alt="" class="thumb">
+                                                    <span class="text">保护套/保护壳</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/baohu.jpg?v=84a643f" alt="" class="thumb">
+                                                    <span class="text">后盖</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 8 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">贴膜 其他配件</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-1 clearfix">
+                                        <ul class="children-list children-list-col children-list-col-1">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/tiemo.jpg?v=7d2cac6" alt="" class="thumb">
+                                                    <span class="text">贴膜</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/tiemo.jpg?v=7d2cac6" alt="" class="thumb">
+                                                    <span class="text">自拍杆</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/tiemo.jpg?v=7d2cac6" alt="" class="thumb">
+                                                    <span class="text">贴纸</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/tiemo.jpg?v=7d2cac6" alt="" class="thumb">
+                                                    <span class="text">防尘塞</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/tiemo.jpg?v=7d2cac6" alt="" class="thumb">
+                                                    <span class="text">手机支架</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/tiemo.jpg?v=7d2cac6" alt="" class="thumb">
+                                                    <span class="text">随身WiFi</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 9 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">米兔 服装</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-1 clearfix">
+                                        <ul class="children-list children-list-col">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mitu-80.jpg?v=41a71e9" alt="" class="thumb">
+                                                    <span class="text">米兔</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mitu-80.jpg?v=41a71e9" alt="" class="thumb">
+                                                    <span class="text">服装</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/mitu-80.jpg?v=41a71e9" alt="" class="thumb">
+                                                    <span class="text">变形金刚特别版声波</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- 10 -->
+                                <li class="category-item">
+                                    <a href="javascript:void(0);" class="title">
+                                        <span class="text">箱包 其他周边</span>
+                                        <i class="iconfont">&gt;</i>
+                                    </a>
+                                    <div class="children children-col-1 clearfix">
+                                        <ul class="children-list children-list-col">
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/xiangbao-80.jpg?v=5260506" alt="" class="thumb">
+                                                    <span class="text">箱包</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/xiangbao-80.jpg?v=5260506" alt="" class="thumb">
+                                                    <span class="text">90分旅行箱</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/xiangbao-80.jpg?v=5260506" alt="" class="thumb">
+                                                    <span class="text">小米鼠标垫</span>
+                                                </a>
+                                            </li>
+                                            <li class="star-goods">
+                                                <a href="javascript:void(0);" class="link">
+                                                    <img data-src="/public/img/xiaomi/goods/slidebar/xiangbao-80.jpg?v=5260506" alt="" class="thumb">
+                                                    <span class="text">生活周边</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 顶部导航分类 Part -->
+                    <!-- 小米手机 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">小米手机</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <div class="item-children">
+                            <div class="container">
+                                <ul class="children-list clearfix">
+                                    <li class="first">
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/maxdingbu!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米Max</a>
+                                        </div>
+                                        <p class="price">1499元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/maxdingbu!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米手机5</a>
+                                        </div>
+                                        <p class="price">1999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/maxdingbu!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米手机4S</a>
+                                        </div>
+                                        <p class="price">1699元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/maxdingbu!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米手机4c</a>
+                                        </div>
+                                        <p class="price">1099元</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 红米手机 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">红米</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <div class="item-children">
+                            <div class="container">
+                                <ul class="children-list clearfix">
+                                    <li class="first">
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/note3!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">红米Note3</a>
+                                        </div>
+                                        <p class="price">899元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/note3!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">红米手机3S</a>
+                                        </div>
+                                        <p class="price">699元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/note3!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">红米手机3</a>
+                                        </div>
+                                        <p class="price">699元起</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 平板 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">平板</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <div class="item-children">
+                            <div class="container">
+                                <ul class="children-list clearfix">
+                                    <li class="first">
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mipad2-16!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米平板2 16GB</a>
+                                        </div>
+                                        <p class="price">999元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mipad2-16!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米平板2 64GB</a>
+                                        </div>
+                                        <p class="price">1299元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mipad2-16!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米平板2 64GB Windows版</a>
+                                        </div>
+                                        <p class="price">1299元</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 电视 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">电视</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <div class="item-children">
+                            <div class="container">
+                                <ul class="children-list clearfix">
+                                    <li class="first">
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mitv3s-65!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米电视3S 43英寸</a>
+                                        </div>
+                                        <p class="price">1799元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mitv3s-65!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米电视3S 48英寸</a>
+                                        </div>
+                                        <p class="price">1999元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mitv3s-65!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米电视3 55英寸</a>
+                                        </div>
+                                        <p class="price">3999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mitv3s-65!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米电视3 60英寸</a>
+                                        </div>
+                                        <p class="price">4999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mitv3s-65!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米电视3S 65英寸 曲面</a>
+                                        </div>
+                                        <p class="price">8999元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/mitv3s-65!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米电视3 70英寸</a>
+                                        </div>
+                                        <p class="price">9999元起</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 盒子 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">盒子 · 影音</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <div class="item-children">
+                            <div class="container">
+                                <ul class="children-list clearfix">
+                                    <li class="first">
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/hezi3s!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米盒子mini版</a>
+                                        </div>
+                                        <p class="price">199元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/hezi3s!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米盒子3</a>
+                                        </div>
+                                        <p class="price">299元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/hezi3s!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米盒子3 增强版</a>
+                                        </div>
+                                        <p class="price">399元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/hezi3s!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米电视主机</a>
+                                        </div>
+                                        <p class="price">999元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/hezi3s!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米家庭音响 金属版</a>
+                                        </div>
+                                        <p class="price">899元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/hezi3s!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米家庭音响 标准版</a>
+                                        </div>
+                                        <p class="price">699元</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 路由器 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">路由器</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <div class="item-children">
+                            <div class="container">
+                                <ul class="children-list clearfix">
+                                    <li class="first">
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/miwifi!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">全新小米路由器</a>
+                                        </div>
+                                        <p class="price">699元起</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/miwifi!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米路由器 3</a>
+                                        </div>
+                                        <p class="price">149元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/miwifi!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米路由器 mini</a>
+                                        </div>
+                                        <p class="price">129元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/miwifi!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米路由器 青春版</a>
+                                        </div>
+                                        <p class="price">79元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/miwifi!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米WiFi放大器</a>
+                                        </div>
+                                        <p class="price">39元</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 智能硬件 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">智能硬件</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <div class="item-children">
+                            <div class="container">
+                                <ul class="children-list clearfix">
+                                    <li class="first">
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/dianfanbao!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">米家压力IH电饭煲</a>
+                                        </div>
+                                        <p class="price">999元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/dianfanbao!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">九号平衡车</a>
+                                        </div>
+                                        <p class="price">1999元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/dianfanbao!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">小米空气净化器 2</a>
+                                        </div>
+                                        <p class="price">699元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/dianfanbao!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">体重秤</a>
+                                        </div>
+                                        <p class="price">99元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/dianfanbao!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">摄像机</a>
+                                        </div>
+                                        <p class="price">149元</p>
+                                    </li>
+                                    <li>
+                                        <div class="figure figure-thumb">
+                                            <a href="javascript:void(0);">
+                                                <img data-src="/public/img/xiaomi/goods/nav/dianfanbao!320x220.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0);">查看全部<br />智能硬件</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 服务 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">服务</span>
+                        </a>
+                    </li>
+                    <!-- 社区 -->
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="text">社区</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-search">
+                <form id="J_searchForm" class="search-form clearfix">
+                    <label for="search" class="hide">
+                        站内搜索
+                    </label>
+                    <input type="search" id="search" class="search-text" name="Gstr" autocomplete="off">
+                    <input type="sumbit" class="search-btn iconfont" value="">
+                    <div class="search-hot-words">
+                        <a href="javascript:void(0);">红米3S</a>
+                        <a href="javascript:void(0);">小米手环2</a>
+                    </div>
+                    <div id="J_keywordList" class="keyword-list">
+                        <ul class="result-list">
+                            <li>
+                                <a href="javascript:void(0);">移动电源<i class="keyword-list-info">约有22件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">空气净化器<i class="keyword-list-info">约有2件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">小米耳机<i class="keyword-list-info">约有5件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">WiFi<i class="keyword-list-info">约有7件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">自拍杆<i class="keyword-list-info">约有4件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">小米体重秤<i class="keyword-list-info">约有1件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">小蚁摄像机<i class="keyword-list-info">约有2件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">运动相机<i class="keyword-list-info">约有2件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">智能插座<i class="keyword-list-info">约有5件</i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">配件优惠套装<i class="keyword-list-info">约有15件</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="header-nav-menu" id="J_navMenu"> </div>
+    </div>
+    <!-- Part 3 -->
+    <div class="section home-hero-container container J_sliderBox">
+        <div class="home-hero">
+            <div class="home-hero-slider" id="J_sliderHtml"> </div>
+            <div class="home-hero-sub row">
+                <div class="home-advert-left">
+                    <ul class="home-channel-list clearfix">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="iconfont"></i> 选购手机
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="iconfont"></i> 企业团购
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="iconfont"></i> 一元活动
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="iconfont"></i> 小米移动
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="iconfont"></i> 以旧换新
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="iconfont"></i> 话费充值
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home-advert-right">
+                    <ul class="home-promo-list clearfix" id="J_sliderMap"> </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 小米明星单品 -->
+        <div class="home-star-goods xm-carousel-container" id="J_homeStarGoods"> </div>
+    </div>
+    <!-- Part 4 -->
+    <div class="section home-wrapper page-wrapper">
+        <div class="container">
+            <!-- 1 智能硬件-->
+            <div id="smart" class="home-brick-box home-brick-box-col-1"> </div>
+            <!-- 2 搭配-->
+            <div id="match" class="home-brick-box home-brick-box-col-1">
+                <div class="box-hd">
+                    <h2 class="title">搭配</h2>
+                    <div class="more">
+                        <ul class="tab-list">
+                            <li class="tab-active">热门</li>
+                            <li>耳机音箱</li>
+                            <li>电源</li>
+                            <li>电池存储卡</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-bd" id="J_match"> </div>
+            </div>
+            <!-- 3 配件-->
+            <div id="accessories" class="home-brick-box home-brick-box-col-1">
+                <div class="box-hd">
+                    <h2 class="title">配件</h2>
+                    <div class="more">
+                        <ul class="tab-list">
+                            <li class="tab-active">热门</li>
+                            <li>保护套</li>
+                            <li>贴膜</li>
+                            <li>其他配件</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-bd" id="J_accessories"> </div>
+            </div>
+            <!-- 4 周边-->
+            <div id="around" class="home-brick-box home-brick-box-col-1">
+                <div class="box-hd">
+                    <h2 class="title">周边</h2>
+                    <div class="more">
+                        <ul class="tab-list">
+                            <li class="tab-active">热门</li>
+                            <li>服装</li>
+                            <li>米兔</li>
+                            <li>生活周边</li>
+                            <li>箱包</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-bd" id="J_around"> </div>
+            </div>
+            <!-- 5 为你推荐-->
+            <div id="recommend" class="home-brick-box home-brick-box-col-2 home-recommend-box">
+                <div class="xm-box">
+                    <div class="box-hd">
+                        <h2 class="title">为你推荐</h2>
+                        <div class="more">
+                            <a href="javascript:void(0);" class="iconfont control control-prev"></a>
+                            <a href="javascript:void(0);" class="iconfont control control-next"></a>
+                        </div>
+                    </div>
+                    <div class="box-bd container" id="J_recommend"> </div>
+                </div>
+            </div>
+            <!-- 6 热评产品-->
+            <div id="review" class="home-brick-box home-review-box">
+                <div class="xm-box">
+                    <div class="box-hd">
+                        <h2 class="title">热评产品</h2>
+                    </div>
+                    <div class="box-bd" id="J_hotReview"> </div>
+                </div>
+            </div>
+            <!-- 7 内容-->
+            <div id="contents" class="home-brick-box home-contents-box">
+                <div class="xm-box">
+                    <div class="box-hd">
+                        <h2 class="title">内容</h2>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="contents-list clearfix">
+                            <li class="contents-items contents-items-book">
+                                <h3 class="title">图书</h3>
+                                <div class="wrapper" id="J_Book"> </div>
+                                <div class="xm-pager">
+                                    <div class="pager-box book" id="J_BookPager" data-type="book">
+
+                                    </div>
+                                </div>
+                                <div class="block-btn">
+                                    <a href="javascript:void(0);" class="control control-prev iconfont">&lt;</a>
+                                    <a href="javascript:void(0);" class="control control-next iconfont">&gt;</a>
+                                </div>
+                            </li>
+                            <li class="contents-items contents-items-theme">
+                                <h3 class="title">MIUI 主题</h3>
+                                <div class="wrapper" id="J_Theme"> </div>
+                                <div class="xm-pager">
+                                    <div class="pager-box theme" id="J_ThemePager" data-type="theme">
+
+                                    </div>
+                                </div>
+                                <div class="block-btn">
+                                    <a href="javascript:void(0);" class="control control-prev iconfont">&lt;</a>
+                                    <a href="javascript:void(0);" class="control control-next iconfont">&gt;</a>
+                                </div>
+                            </li>
+                            <li class="contents-items contents-items-game">
+                                <h3 class="title">游戏</h3>
+                                <div class="wrapper" id="J_game"> </div>
+                                <div class="xm-pager">
+                                    <div class="pager-box game" id="J_gamePager" data-type="game">
+
+                                    </div>
+                                </div>
+                                <div class="block-btn">
+                                    <a href="javascript:void(0);" class="control control-prev iconfont">&lt;</a>
+                                    <a href="javascript:void(0);" class="control control-next iconfont">&gt;</a>
+                                </div>
+                            </li>
+                            <li class="contents-items contents-list-app">
+                                <h3 class="title">应用</h3>
+                                <div class="wrapper" id="J_app"> </div>
+                                <div class="xm-pager">
+                                    <div class="pager-box app" id="J_appPager" data-type="app">
+
+                                    </div>
+                                </div>
+                                <div class="block-btn">
+                                    <a href="javascript:void(0);" class="control control-prev iconfont">&lt;</a>
+                                    <a href="javascript:void(0);" class="control control-next iconfont">&gt;</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 8 视频-->
+            <div id="video" class="home-brick-box home-video-box">
+                <div class="xm-box">
+                    <div class="box-hd">
+                        <h2 class="title">视频</h2>
+                    </div>
+                    <div class="box-bd" id="J_video"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-footer">
+        <div class="container">
+            <div class="footer-service">
+                <ul class="list-service clearfix">
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="iconfont">
+                                <!-- <img src="img/Repair_iconfont.png?v=9bade29"> -->
+                            </i> 预约维修服务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="iconfont">
+                                <!-- <img src="img/Repair_iconfont.png?v=9bade29"> -->
+                            </i> 7天无理由退货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="iconfont">
+                                <!-- <img src="img/Repair_iconfont.png?v=9bade29"> -->
+                            </i> 15天免费换货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="iconfont">
+                                <!-- <img src="img/Repair_iconfont.png?v=9bade29"> -->
+                            </i> 满150元包邮
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="iconfont">
+                                <!-- <img src="img/Repair_iconfont.png?v=9bade29"> -->
+                            </i> 520余家售后网点
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-links clearfix">
+                <dl class="col-links col-links-first">
+                    <dt>帮助中心</dt>
+                    <dd>
+                        <a href="javascript:void(0);">账户管理</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">购物指南</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">订单操作</a>
+                    </dd>
+                </dl>
+                <dl class="col-links">
+                    <dt>服务支持</dt>
+                    <dd>
+                        <a href="javascript:void(0);">售后政策</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">自助服务</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">相关下载</a>
+                    </dd>
+                </dl>
+                <dl class="col-links">
+                    <dt>线下门店</dt>
+                    <dd>
+                        <a href="javascript:void(0);">小米之家</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">服务网点</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">零售网点</a>
+                    </dd>
+                </dl>
+                <dl class="col-links">
+                    <dt>关于小米</dt>
+                    <dd>
+                        <a href="javascript:void(0);">了解小米</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">加入小米</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">联系我们</a>
+                    </dd>
+                </dl>
+                <dl class="col-links">
+                    <dt>关注我们</dt>
+                    <dd>
+                        <a href="javascript:void(0);">新浪微博</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">小米部落</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">官方微信</a>
+                    </dd>
+                </dl>
+                <dl class="col-links">
+                    <dt>特色服务</dt>
+                    <dd>
+                        <a href="javascript:void(0);">F 码通道</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">礼物码</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:void(0);">防伪查询</a>
+                    </dd>
+                </dl>
+                <div class="col-contact">
+                    <p class="phone">400-100-5678</p>
+                    <p>
+                        <span class="J_serviceTime-normal">周一至周日 8:00-18:00</span>
+                        <span class="J_serviceTime-holiday" style="display:none;">1月27日至2月2日服务时间 9:00-18:00</span> <br /> （仅收市话费）
+                    </p>
+                    <a href="javascript:void(0);" class="btn-line-primary">
+                        <i class="iconfont"></i> 24小时在线客服
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-site-info">
+        <div class="container">
+            <div class="footer-logo">小米官网</div>
+            <div class="info-text">
+                <p class="sites">
+                    <a href="javascript:void(0);">小米商城</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">MIUI</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">米聊</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">多看阅读</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">小米路由器</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">视频电话</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">企业团购</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">小米天猫店</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">小米淘宝直营店</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">小米网盟</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">小米移动</a>
+                    <span class="sep">|</span>
+                    <a href="javascript:void(0);">Select Region</a>
+                </p>
+                <p class="desc">©<a href="javascript:void(0);">mi.com</a> 京ICP证110507号 <a href="javascript:void(0);">京ICP备10046444号</a><a href="javascript:void(0);"> 京公网安备11010802020134号 </a><a href="javascript:void(0);">京网文[2014]0059-0009号</a><br /> 违法和不良信息举报电话：185-2022-7827，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+            </div>
+        </div>
+        <div class="slogan">探索黑科技，小米为发烧而生</div>
+    </div>
+
+    <!-- select Region -->
+    <div id="J_modalglobalSites" class="modal fade modal-hide modal-globalSites">
+        <div class="modal-hd">
+            <span class="title">Select Region</span>
+            <span class="close" data-dismiss="modal">X</span>
+        </div>
+        <div class="modal-bd">
+            <h3>Welcome to Mi.com</h3>
+            <p class="desc-tips">Please select your country or region</p>
+            <p class="desc-link clearfix">
+                <a href="javascript:void(0);">Mainland China</a>
+                <a href="javascript:void(0);">Hong Kong</a>
+                <a href="javascript:void(0);">Taiwan</a>
+                <a href="javascript:void(0);">Singapore</a>
+                <a href="javascript:void(0);">Malaysia</a>
+                <a href="javascript:void(0);">Philippines</a>
+                <a href="javascript:void(0);">India</a>
+                <a href="javascript:void(0);">Indonesia</a>
+                <a href="javascript:void(0);">Brasil</a>
+                <a href="javascript:void(0);">Global Home</a>
+                <a href="javascript:void(0);">MENA</a>
+                <a href="javascript:void(0);">Poland</a>
+                <a href="javascript:void(0);">Ukraine</a>
+                <a href="javascript:void(0);">Russia</a>
+                <a href="javascript:void(0);">Vietnam</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
+    <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
+    <script src="../../public/js/xiaomi/script.min.js?v=cf8427e"></script>
+    <!-- 首页轮播图 -->
+    <script type="text/x-dot-template" id="js-sliderTemp">
+        <div class="xm-slider" id="J_homeSlider">
+            <div class="xm-slider-container">
+                <div class="xm-slider-control">
+                    {{~it :value:index}}
+                    <a href="{{=value.image_url}}" class="{{? value.sale_sign === 'active'}}active{{? }}">
+                        <img src="{{=value.image}}" alt="{{=value.title}}">
+                    </a>
+                    {{~}}
+                </div>
+                <span class="icon-slider xm-slider-previous" id="J_btnPrevious">上一页</span>
+                <span class="icon-slider xm-slider-next" id="J_btnNext">下一页</span>
+                <div class="xm-slider-pagination">
+                    <span class="slider-page active">1</span>
+                    <span class="slider-page">2</span>
+                    <span class="slider-page">3</span>
+                    <span class="slider-page">4</span>
+                    <span class="slider-page">5</span>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 轮播图下方三张图 -->
+    <script type="text/x-dot-template" id="js-sliderMapTemp">
+        {{~it :value:index}}
+        <li>
+            <a href="{{=value.image}}" target="_blank">
+                <img src="{{=value.image}}" alt="{{=value.title}}">
+            </a>
+        </li>
+        {{~}}
+    </script>
+    <!-- 小米明星单品 -->
+    <script type="text/x-dot-template" id="js-starTemp">
+        <div class="xm-box">
+            <div class="box-hd">
+                <h2 class="title">小米明星单品</h2>
+                <div class="more">
+                    <a href="javascript:void(0);" class="iconfont control control-prev" data-rel="1"></a>
+                    <a href="javascript:void(0);" class="iconfont control control-next" data-rel="2"></a>
+                </div>
+            </div>
+            <div class="box-bd">
+                <div class="xm-carousel-content">
+                    <ul class="xm-carousel-list goods-list clearfix">
+                        {{~it :value:index}}
+                        <li class="rainbow-item-{{=index + 1}}">
+                            <a href="{{=value.image}}" class="thumb">
+                                <img src="{{=value.image}}" alt="{{=value.title}}">
+                            </a>
+                            <h3 class="title">
+                                <a href="{{=value.image}}">{{=value.title}}</a>
+                            </h3>
+                            <p class="desc">{{=value.brief}}</p>
+                            <p class="price">{{=value.price}}元起</p>
+                        </li>
+                        {{~}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 智能硬件 -->
+    <script type="text/x-dot-template" id="js-smartTemp">
+        <div class="box-hd">
+            <h2 class="title">智能硬件</h2>
+            <div class="more">
+                <a href="javascript:void(0);" class="more-link">
+                    查看全部
+                    <i class="iconfont">&gt;</i>
+                </a>
+            </div>
+        </div>
+        <div class="box-bd">
+            <div class="row">
+                <div class="text-01">
+                    <ul class="text-01-list clearfix">
+                        {{~it :value:index}} {{? value.sale_sign === 'left'}}
+                        <li class="brick-item brick-item-li-col">
+                            <a href="javascript:void(0);">
+                                <img src="{{=value.image}}" alt="{{=value.title}}">
+                            </a>
+                        </li>
+                        {{? }} {{~}}
+                    </ul>
+                </div>
+                <div class="text-02">
+                    <ul class="text-02-list clearfix">
+                        {{~it :value:index}} {{? value.sale_sign === ""}}
+                        <li class="brick-item brick-item-m">
+                            <div class="figure figure-thumb">
+                                <a href="javascript:void(0);">
+                                    <img src="{{=value.image}}" alt="{{=value.title}}">
+                                </a>
+                                <h3 class="title">
+                                    <a href="javascript:void(0);">{{=value.title}}</a>
+                                </h3>
+                                <p class="desc">{{=value.brief}}</p>
+                                <p class="price">{{=value.price}}元</p>
+                            </div>
+                        </li>
+                        {{? }} {{~}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 搭配/配件/周边 -->
+    <script type="text/x-dot-template" id="J_xmWebsiteTemp">
+        <div class="row">
+            <div class="text-01 text-01-first">
+                <ul class="text-01-list clearfix">
+                    {{~it :value:index}} {{? value.sale_sign == "left"}}
+                    <li class="brick-item brick-item-li-col brick-item-li-col-2">
+                        <a href="{{=value.image_url}}">
+                            <img src="{{=value.image}}" alt="{{=value.title}}">
+                        </a>
+                    </li>
+                    {{? }} {{~}}
+                </ul>
+            </div>
+            <div class="text-02">
+                <ul class="text-02-list clearfix">
+                    {{~it :value:index}} {{? value.sale_sign == ""}}
+                    <li class="brick-item brick-item-m">
+                        <div class="figure figure-thumb">
+                            <a href="{{=value.image_url}}">
+                                <img src="{{=value.image}}" alt="{{=value.title}}">
+                            </a>
+                        </div>
+                        <h3 class="title">
+                            <a href="{{=value.image_url}}">{{=value.title}}</a>
+                        </h3>
+                        <p class="price">{{=value.price}}元 {{? value.price_market > value.price}}
+                            <del>{{=value.price_market}}元</del> {{? }}
+                        </p>
+                        <p class="rank">{{=value.rank}}万人评价</p>
+                        <div class="review-wrapper">
+                            <a href="javascript:void(0);">
+                                <span class="review">{{=value.review}}</span>
+                                <span class="author">来自于{{=value.review_author}}的评价</span>
+                            </a>
+                        </div>
+                    </li>
+                    {{? }} {{? value.sale_sign == "mini"}}
+                    <li class="brick-item brick-item-s">
+                        <div class="figure figure-thumb">
+                            <a href="{{=value.image_url}}">
+                                <img src="{{=value.image}}" alt="{{=value.title}}">
+                            </a>
+                        </div>
+                        <h3 class="title">
+                            <a href="javascript:void(0);">{{=value.title}}</a>
+                        </h3>
+                        <p class="price">{{=value.price}}元</p>
+                    </li>
+                    {{? }} {{? value.sale_sign == "更多"}}
+                    <li class="brick-item brick-item-s">
+                        <div class="figure figure-thumb">
+                            <a href="javascript:void(0);">
+                                <i class="iconfont"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0);" class="more">{{=value.title}}<small>{{=value.brief}}</small></a>
+                    </li>
+                    {{? }} {{~}}
+                </ul>
+            </div>
+        </div>
+    </script>
+    <!-- 推荐 -->
+    <script type="text/x-dot-template" id="J_recommendTemp">
+        <div class="xm-recommend">
+            <div class="xm-recommend-wrapper">
+                <ul class="xm-carousel-list clearfix" id="J_xmRecommendList">
+                    {{~it :value:index}}
+                    <li class="js-xm-recommend-list">
+                        <a href="{{=value.image_url}}" class="thumb">
+                            <img src="{{=value.image}}" alt="{{=value.title}}">
+                        </a>
+                        <h3 class="title">
+                            <a href="javascript:void">{{=value.title}}</a>
+                        </h3>
+                        <p class="price">{{=value.price}}元</p>
+                        <p class="tips">{{=value.rank}}万人评价</p>
+                    </li>
+                    {{~}}
+                </ul>
+            </div>
+        </div>
+    </script>
+    <!-- 热评产品 -->
+    <script type="text/x-dot-template" id="J_hotReviewTemp">
+        <ul class="revisw-list clearfix">
+            {{~it :value:index}}
+            <li class="review-items">
+                <div class="figure figure-thumb">
+                    <a href="{{=value.image}}" target="_blank" class="thumb">
+                        <img src="{{=value.image}}" alt="{{=value.title}}">
+                    </a>
+                </div>
+                <p class="review">{{=value.review}}</p>
+                <p class="author">来自于 {{=value.review_author}} 的评价</p>
+                <div class="infor">
+                    <h3 class="title">
+                        <a href="{{=value.image}}">{{=value.title}}</a>
+                    </h3>
+                    <span class="sep">|</span>
+                    <p class="price">
+                        <em>{{=value.price}}</em>元
+                    </p>
+                </div>
+            </li>
+            {{~}}
+        </ul>
+    </script>
+    <!-- 内容 -->
+    <script type="text/x-dot-template" id="J_contentTemp">
+        <ul class="ul-list clearfix">
+            {{~it :value:index}} {{? value.sale_sign == ""}}
+            <li>
+                <h4 class="name">{{=value.name}}</h4>
+                <p class="desc">{{=value.brief}}</p>
+                <p class="price">{{=value.price}}{{? value.num == "1"}}元{{? }}</p>
+                <div class="figure figure-thumb">
+                    <a href="javascript:void(0);">
+                        <img src="{{=value.image}}" alt="{{=value.name}}">
+                    </a>
+                </div>
+            </li>
+            {{? }} {{? value.sale_sign == "more"}}
+            <li class="more">
+                <p class="desc">{{=value.brief}}</p>
+                <a href="javascript:void(0);" class="btn btn-small btn-line-primary">{{=value.name}}</a>
+                <img src="{{=value.image}}" alt="{{=value.name}}">
+            </li>
+            {{? }} {{~}}
+        </ul>
+    </script>
+    <!-- 视频 -->
+    <script type="text/x-dot-template" id="J_videoTemp">
+        <ul class="video-list clearfix">
+            {{~it :value:index}}
+            <li class="video-items">
+                <div class="figure figure-thumb">
+                    <a href="{{=value.image}}" target="_blank">
+                        <img src="{{=value.image}}" alt="{{=value.title}}">
+                        <span class="play"> </span>
+                    </a>
+                </div>
+                <h3 class="title">
+                    <a href="{{=value.image}}" target="_blank">{{=value.title}}</a>
+                </h3>
+                <p class="desc">{{=value.brief}}</p>
+            </li>
+            {{~}}
+        </ul>
+    </script>
+</body>
+
+</html>

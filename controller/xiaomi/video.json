@@ -1,0 +1,23 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "video": [{
+      "title": "红米Note 4X 环岛挑战",
+      "brief": "看看我们关于超长续航的疯狂想法",
+      "image": "/public/img/xiaomi/goods/cons/video-001.jpg"
+    }, {
+      "title": "小米之家里发生了一件怪事",
+      "brief": "World Order星机械人受邀访问地球",
+      "image": "/public/img/xiaomi/goods/cons/video-002.jpg"
+    }, {
+      "title": "小米MIX 概念手机背后的故事",
+      "brief": "雷总亲自讲述小米MIX 的诞生",
+      "image": "/public/img/xiaomi/goods/cons/video-003.jpg"
+    }, {
+      "title": "一面科技，一面艺术",
+      "brief": "梁朝伟讲述双面人生",
+      "image": "/public/img/xiaomi/goods/cons/video-004.jpg"
+    }]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "phone": {
+      "phone1": [{
+        "name": "小米手机5",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "小米Max",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "小米手机4S",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "小米手机4c",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "红米Note3",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "红米手机3S",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }],
+      "phone2": [{
+        "name": "红米手机3",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "小米平板2",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "合约机",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "定制版手机",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "对比手机",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }, {
+        "name": "小米移动 电话卡",
+        "image": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "image_url": "/public/img/xiaomi/goods/slidebar/mi5bar80.jpg",
+        "buybtn": "选购",
+        "sale_sign": ""
+      }]
+    }
+  }
+}
