@@ -83,7 +83,7 @@ Js 文件采用驼峰式命名，例如：shopCart.js;
   var myId = new Xiaomi(143);
   ```
 
-### 注释
+### Notes
 
 目的：自己或其他人能快速读懂代码，对文档生成工具友好YUI DOC注释遵循代码格式化；所有函数、方法、构造函数须使用文档注释
 
@@ -91,30 +91,34 @@ tips: 编辑器sublime text 安装DocBlockr插件, 在function上一行输入/**
 
 ### 语句&表达式
 
-块语句须使用大括号（if,for,while,try catch….)
+块语句须使用大括号（if，for，while，try catch….)
 第一个大括号在块语句第一句末尾
 块语句间隔-在左小括号之前和右小括号之后添加一个空格
 
-### 代码示例：
+### Code example
 
+  ``` bash
   function Name ( obj ) {
     if( arguments ) {
       return false;
     }
   }
+ ```
 
-for 循环 保留对break,continue来控制数组的迭代；
+for 循环 保留对break，continue来控制数组的迭代；
 for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍历数组成员；
 
-###代码示例：
+### Code example
 
+  ``` bash
   for ( target in object ) {
     if ( object.hasOwnProperty(target) ) {
       console.log( 'value is ' + object[target] );
     }
   }
+  ```
 
-###SWITCH 语句
+### Switch Sentence
 
 事实上javascrpt 的 switch 语句中可以使用任意类型的值及表达式作为case从句；
 每条case语句相对于switch关键字保持一个缩进层级；
@@ -122,20 +126,22 @@ for in 循环-hasOwnProperty()来过滤出实例属性且禁止使用它来遍�
 非特殊情况下不允许case语句“连续执行”，结尾须有break,return,throw；
 我们更倾向于即使没有默认行为也需要保留default
 
-### 代码示例：
+### Code example
 
+  ``` bash
   switch( condition ) {
     case 'first':
-    //do something
+    #do something
     break;
 
     case 'second':
-    //do someting
+    #do someting
     break;
 
     default:
-    //do someting
+    #do someting
   }
+  ```
 
 禁止使用with语句
 
