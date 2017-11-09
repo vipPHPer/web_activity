@@ -1,6 +1,4 @@
-
-###dwc
-###https://github.com/vipPHPer/dwc.git
+###web_activity
 
 CSS
 
