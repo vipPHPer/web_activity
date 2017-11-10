@@ -69,6 +69,10 @@
     position: relative;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 body {
     min-width: 1280px;
     color: #333;

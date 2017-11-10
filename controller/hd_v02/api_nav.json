@@ -1,0 +1,23 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "nav": [{
+            "title": "云霄飞车区",
+            "desc": "红米手机 3S现货购",
+            "target": "car"
+        }, {
+            "title": "旋转木马区",
+            "desc": "明星单品包邮购",
+            "target": "horse"
+        }, {
+            "title": "海盗船区",
+            "desc": "小米手环2 天天售",
+            "target": "ship"
+        }, {
+            "title": "摩天轮区",
+            "desc": "新品轻运动背包仅39元",
+            "target": "wheel"
+        }]
+    }
+}
