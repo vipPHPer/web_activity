@@ -1,0 +1,144 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "bannerTitle": [{
+            "id": 1,
+            "name": "红米手机3S",
+            "desc": "新品首发",
+            "slot": 1
+        }, {
+            "id": 2,
+            "name": "小米5",
+            "desc": "现货购买",
+            "slot": 0
+        }, {
+            "id": 3,
+            "name": "红米Note 3",
+            "desc": "全网通降100",
+            "slot": 0
+        }, {
+            "id": 4,
+            "name": "小米Max",
+            "desc": "高配版",
+            "slot": 0
+        }, {
+            "id": 5,
+            "name": "60\"电视 ",
+            "desc": "直降300",
+            "slot": 0
+        }, {
+            "id": 6,
+            "name": "米家台灯",
+            "desc": "新品首发",
+            "slot": 0
+        }, {
+            "id": 7,
+            "name": "小米手环2",
+            "desc": "新品开售",
+            "slot": 0
+        }, {
+            "id": 8,
+            "name": "米家电水壶",
+            "desc": "新品开售",
+            "slot": 0
+        }, {
+            "id": 9,
+            "name": "43\"电视 ",
+            "desc": "领券最多省50",
+            "slot": 0
+        }, {
+            "id": 10,
+            "name": "55\"电视 ",
+            "desc": "直降200",
+            "slot": 0
+        }],
+        "banner": [{
+            "id": 1,
+            "title": "红米手机3S 新品首发",
+            "href": "//www.mi.com/hongmi3s/",
+            "image": "hongmi3s.jpg",
+            "image_url": "",
+            "sale_sign": 1
+        }, {
+            "id": 2,
+            "title": "小米5 现货购买",
+            "href": "//www.mi.com/mi5/",
+            "image": "mi5.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 3,
+            "title": "红米Note 3 全网通降100",
+            "href": "//www.mi.com/note3/",
+            "image": "hmnote3.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 4,
+            "title": "小米Max 高配版",
+            "href": "//www.mi.com/mimax/",
+            "image": "mimax.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 5,
+            "title": "60\"电视 直降300",
+            "href": "//www.mi.com/mitv3/60/",
+            "image": "mitv60.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 6,
+            "title": "米家台灯 新品首发",
+            "href": "//www.mi.com/mjsmartlamp/",
+            "image": "mjtaideng.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 7,
+            "title": "小米手环2 新品开售",
+            "href": "//www.mi.com/shouhuan2/",
+            "image": "shouhuan2.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 8,
+            "title": "米家电水壶 新品开售",
+            "href": "//www.mi.com/kettle/",
+            "image": "mjshuihu.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 9,
+            "title": "43\"电视 领券最多省50",
+            "href": "//www.mi.com/mitv3s/43/",
+            "image": "mitv43.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }, {
+            "id": 10,
+            "title": "55\"电视 直降200",
+            "href": "//www.mi.com/mitv3/55/",
+            "image": "mitv55.jpg",
+            "image_url": "",
+            "sale_sign": 0
+        }],
+        "nav": [{
+            "title": "明星手机天天现货",
+            "target": "phone"
+        }, {
+            "title": "6 大首发新品抢先有",
+            "target": "new"
+        }, {
+            "title": "55\" / 60 \" 电视最高降300",
+            "target": "mitv"
+        }, {
+            "title": "智能硬件、配件最多省50元",
+            "target": "smart"
+        }, {
+            "title": "3 大专属福利",
+            "target": "welfare"
+        }]
+    }
+}

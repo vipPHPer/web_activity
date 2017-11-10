@@ -1,0 +1,163 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "phone": [{
+            "title": "小米5",
+            "span": "标准版 / 高配版",
+            "desc": "骁龙 820 处理器，4 轴防抖相机",
+            "desc_2": "十余项黑科技，很轻狠快",
+            "price": "1999",
+            "buy_url": "//item.mi.com/buyphone/mi5",
+            "slot": false
+        }, {
+            "title": "小米Max",
+            "span": "标准版",
+            "desc": "6.44\"大屏， 4850 mAh 大电池 ",
+            "desc_2": "3GB+32GB 大容量",
+            "price": "1499",
+            "buy_url": "//item.mi.com/buyphone/mimax",
+            "slot": false
+        }, {
+            "title": "红米手机3",
+            "span": "",
+            "desc": "4100mAh 超长待机、金属机身、全网通",
+            "desc_2": "高配版支持指纹识别",
+            "price": "699",
+            "buy_url": "//item.mi.com/buyphone/hongmi3",
+            "slot": false
+        }, {
+            "title": "红米Note 3 全网通",
+            "span": "直降100",
+            "desc": "5.5\"经典大屏， 4000 mAh 大电池， 指纹识别 ",
+            "desc_2": "金属机身，最大可选3GB 内存 + 32GB 闪存",
+            "price": "899",
+            "buy_url": "//item.mi.com/buyphone/note3",
+            "slot": true
+        }],
+        "newProduct": [{
+            "name": "红米手机3S",
+            "buy_url": "//www.mi.com/hongmi3s/"
+        }, {
+            "name": "小米Max 高配版",
+            "buy_url": "//www.mi.com/mimax/"
+        }, {
+            "name": "米家 LED 智能台灯",
+            "buy_url": "//www.mi.com/mjsmartlamp/"
+        }, {
+            "name": "小米手环2",
+            "buy_url": "//www.mi.com/shouhuan2/"
+        }, {
+            "name": "米家恒温电水壶",
+            "buy_url": "//www.mi.com/kettle/"
+        }, {
+            "name": "花花草草检测仪",
+            "buy_url": "//www.mi.com/flowermonitor/"
+        }],
+        "mitv": [{
+            "name": "小米电视3S 43英寸",
+            "buy_url": "//www.mi.com/mitv3s/43/"
+        }, {
+            "name": "小米电视3 55英寸",
+            "buy_url": "//www.mi.com/mitv3/55/"
+        }, {
+            "name": "小米电视3 60英寸",
+            "buy_url": "//www.mi.com/mitv3/60/"
+        }, {
+            "name": "小米电视3S 48英寸",
+            "buy_url": "//www.mi.com/mitv3s/48/"
+        }, {
+            "name": "小米盒子 3",
+            "buy_url": "//www.mi.com/hezi3/"
+        }, {
+            "name": "主机＋低音炮",
+            "buy_url": "//item.mi.com/1161200065.html"
+        }],
+        "smart": [{
+            "title": "Yeelight 床头灯",
+            "desc": "1600万种颜色任你玩",
+            "price": "199",
+            "del": "249元",
+            "buy_url": "//item.mi.com/1152300006.html",
+            "slot": false
+        }, {
+            "title": "九号平衡车",
+            "desc": "年轻人的酷玩具，骑行、遥控两种玩法",
+            "price": "1999",
+            "del": "",
+            "buy_url": "//www.mi.com/scooter/",
+            "slot": false
+        }, {
+            "title": "小米网络收音机",
+            "desc": "WiFi直连，海量电台内容任你听",
+            "price": "99",
+            "del": "129元",
+            "buy_url": "//www.mi.com/radio/",
+            "slot": false
+        }, {
+            "title": "厨下式净水器",
+            "desc": "隐藏式设计，大流量直出纯净水",
+            "price": "1999",
+            "del": "",
+            "buy_url": "//www.mi.com/water2/",
+            "slot": false
+        }, {
+            "title": "小米路由器3",
+            "desc": "四天线设计，比传统WiFi快 3 倍",
+            "price": "149",
+            "del": "",
+            "buy_url": "//www.mi.com/miwifi3/",
+            "slot": false
+        }, {
+            "title": "空气净化器 2",
+            "desc": "6月16日 狂欢开始",
+            "price": "649",
+            "del": "699元",
+            "buy_url": "//www.mi.com/air2/",
+            "slot": false
+        }],
+        "accessories": [{
+            "title": "小米蓝牙音箱",
+            "desc": "仅铅笔盒大小，装进口袋的好声音",
+            "price": "180",
+            "del": "199元",
+            "buy_url": "//www.mi.com/pocketaudio/",
+            "slot": false
+        }, {
+            "title": "10000mAh 高配电源",
+            "desc": "双向快充，轻薄仅12.58mm",
+            "price": "129",
+            "del": "149元",
+            "buy_url": "//www.mi.com/dianyuan10000/pro/",
+            "slot": false
+        }, {
+            "title": "90分旅行箱",
+            "desc": "20寸 / 24寸，轻装出行",
+            "price": "279",
+            "del": "299元",
+            "buy_url": "//list.mi.com/23",
+            "slot": false
+        }, {
+            "title": "小米自拍杆",
+            "desc": "无需安装APP，轻巧便携",
+            "price": "39",
+            "del": "49元",
+            "buy_url": "//item.mi.com/1151500038.html",
+            "slot": false
+        }, {
+            "title": "小米USB充电器(四口)",
+            "desc": "轻巧便携、多重安保，618 期间包邮",
+            "price": "69",
+            "del": "",
+            "buy_url": "//www.mi.com/chongdianqi4kou/",
+            "slot": false
+        }, {
+            "title": "小米T恤",
+            "desc": "特价T恤 3 件包邮",
+            "price": "29",
+            "del": "",
+            "buy_url": "//list.mi.com/22",
+            "slot": false
+        }]
+    }
+}

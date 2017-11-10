@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>小米618主会场 - 小米手机官网</title>
     <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/hd_v01/style.min.css?v=7c8c5d8">
+    <link rel="stylesheet" href="../../public/css/hd_v01/style.min.css?v=b08e3ec">
 </head>
 
-<body class="bd">
+<body class="bd" id="web" v-cloak>
     <div class="section-items-header">
         <div class="container">
             <a href="//www.mi.com/index.html" target="_blank" class="logo">小米网</a>
             <a href="//www.mi.com/index.html" target="_blank" class="return">返回小米网 &gt;</a>
             <div class="content">
-                <p>10大惊喜不间断放送，红米Note 3 全网通直降100
-                    <br />手机天天现货，小米Max 高配版等 6 大新品首发，还有 3 大专属福利</p>
+                <p>{{headerDesc}}
+                    <br />{{headerDesc1}}</p>
                 <a href="//www.mi.com/index.html" target="_blank" class="enter">进入小米网</a>
             </div>
         </div>
@@ -24,108 +24,39 @@
     <div class="section-items-nav" id="J_nav">
         <div class="container">
             <ul class="list clearfix">
-                <li class="items-1" data-target="#phone">
-                    明星手机天天现货
-                </li>
-                <li class="items-2" data-target="#new">
-                    6 大首发新品抢先有
-                </li>
-                <li class="items-3" data-target="#mitv">
-                    55" / 60" 电视最高降300
-                </li>
-                <li class="items-4" data-target="#smart">
-                    智能硬件、配件最多省50元
-                </li>
-                <li class="items-5" data-target="#welfare">
-                    3 大专属福利
-                </li>
+                <template v-for="(index, todo) in navList">
+                    <li class="items-{{index + 1}}" data-target="#{{todo.target}}">
+                        {{todo.title}}
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section section-items-surprise">
         <div class="container">
             <div class="content">
-                <h2 class="title-h2">10大惊喜不间断</h2>
-                <p class="desc">小米5 现货购买、小米Max 高配版首卖、红米Note 3 全网通直降100
-                    <br />还有更多惊喜不间断，狂欢20天</p>
+                <h2 class="title-h2">{{surpriseTitle}}</h2>
+                <p class="desc">{{surpriseDesc}}
+                    <br />{{surpriseDesc1}}</p>
             </div>
             <div>
-                <div class="tab-active">
+                <div class="tab-active" id="tabActive">
                     <ul class="list clearfix">
-                        <li class="items active">
-                            <i>1</i> 红米手机3S
-                            <br />新品首发
-                        </li>
-                        <li class="items">
-                            <i>2</i> 小米5
-                            <br />现货购买
-                        </li>
-                        <li class="items">
-                            <i>3</i> 红米Note 3
-                            <br />全网通降100
-                        </li>
-                        <li class="items">
-                            <i>4</i> 小米Max
-                            <br />高配版
-                        </li>
-                        <li class="items">
-                            <i>5</i> 60"电视
-                            <br />直降300
-                        </li>
-                        <li class="items">
-                            <i>6</i> 米家台灯
-                            <br />新品首发
-                        </li>
-                        <li class="items">
-                            <i>7</i> 小米手环2
-                            <br />新品开售
-                        </li>
-                        <li class="items">
-                            <i>8</i> 米家电水壶
-                            <br />新品开售
-                        </li>
-                        <li class="items">
-                            <i>9</i> 43"电视
-                            <br />领券最多省50
-                        </li>
-                        <li class="items">
-                            <i>10</i> 55" 电视
-                            <br />直降200
-                        </li>
+                        <template v-for="(index, todo) in bannerTitle">
+                            <li class="items" :class="todo.slot === 1 ? 'active': ''">
+                                <i>{{todo.id}}</i> {{todo.name}}
+                                <br />{{todo.desc}}
+                            </li>
+                        </template>
                     </ul>
                 </div>
                 <div class="tab-content">
                     <div class="img-list">
-                        <a href="//www.mi.com/hongmi3s/" target="_blank" class="items active">
-                            <img data-src="../../public/img/hd_v01/hongmi3s.jpg?v=5c1d30b">
-                        </a>
-                        <a href="//www.mi.com/mi5/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/mi5.jpg?v=837cca9">
-                        </a>
-                        <a href="//www.mi.com/note3/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/hmnote3.jpg?v=01e2757">
-                        </a>
-                        <a href="//www.mi.com/mimax/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/mimax.jpg?v=9caa138">
-                        </a>
-                        <a href="//www.mi.com/mitv3/60/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/mitv60.jpg?v=da5854d">
-                        </a>
-                        <a href="//www.mi.com/mjsmartlamp/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/mjtaideng.jpg?v=8621c94">
-                        </a>
-                        <a href="//www.mi.com/shouhuan2/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/shouhuan2.jpg?v=660ed42">
-                        </a>
-                        <a href="//www.mi.com/kettle/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/mjshuihu.jpg?v=c48834a">
-                        </a>
-                        <a href="//www.mi.com/mitv3s/43/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/mitv43.jpg?v=c2834fe">
-                        </a>
-                        <a href="//www.mi.com/mitv3/55/" target="_blank" class="items">
-                            <img data-src="../../public/img/hd_v01/mitv55.jpg?v=d05fadc">
-                        </a>
+                        <template v-for="(index, todo) in bannerList">
+                            <a href="{{todo.href}}" target="_blank" class="items" :class="todo.sale_sign === 1 ? 'active':''">
+                                <img v-bind:src="'/public/img/hd_v01/' + todo.image" alt="">
+                            </a>
+                        </template>
                     </div>
                     <div class="tab-controls">
                         <span class="tab-controls-prev"></span>
@@ -138,219 +69,93 @@
     <div class="section section-items-phonestar" id="phone">
         <div class="container">
             <div class="content">
-                <h2 class="title-h2">明星手机天天现货</h2>
-                <p class="desc">小米5 标准版 / 高配版现货购买，小米Max 每天早 10 点现货，全系红米手机天天有</p>
+                <h2 class="title-h2">{{phoneTitle}}</h2>
+                <p class="desc">{{phoneDesc}}</p>
             </div>
             <ul class="list clearfix" id="J_phoneGoods">
-                <li class="items-1">
-                    <h2 class="title-h2">小米5 <span>标准版 / 高配版</span></h2>
-                    <p class="desc">骁龙 820 处理器，4 轴防抖相机<br />十余项黑科技，很轻狠快</p>
-                    <p class="price price-num">1999<em>元起</em></p>
-                    <a href="//item.mi.com/buyphone/mi5" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-2">
-                    <h2 class="title-h2">小米Max <span>标准版</span></h2>
-                    <p class="desc">6.44" 大屏，4850mAh 大电池<br />3GB+32GB 大容量</p>
-                    <p class="price price-num">1499<em>元</em></p>
-                    <a href="//item.mi.com/buyphone/mimax" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-3">
-                    <h2 class="title-h2">红米手机3</h2>
-                    <p class="desc">4100mAh 超长待机、金属机身、全网通<br />高配版支持指纹识别</p>
-                    <p class="price price-num">699<em>元起</em></p>
-                    <a href="//item.mi.com/buyphone/hongmi3" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-4">
-                    <h2 class="title-h2">红米Note 3 全网通 <span>直降100</span></h2>
-                    <p class="desc">5.5" 经典大屏，4000mAh 大电池，指纹识别<br />金属机身，最大可选3GB 内存 + 32GB 闪存</p>
-                    <p class="price price-num">899<em>元起</em></p>
-                    <a href="//item.mi.com/buyphone/note3" target="_blank" class="btn-buy">立即购买</a>
-                    <div class="links">
-                        <a href="javascript:void(0);" class="buchang">10天内购机补偿 &gt;</a>
-                    </div>
-                </li>
+                <template v-for="(index, todo) in phoneList">
+                    <li class="items-{{index + 1}}">
+                        <h2 class="title-h2">{{todo.title}} <span v-if="todo.span !==''">{{todo.span}}</span></h2>
+                        <p class="desc">{{todo.desc}}<br />{{todo.desc_2}}</p>
+                        <p class="price price-num">{{todo.price}}<em>元起</em></p>
+                        <a href="{{todo.buy_url}}" target="_blank" class="btn-buy">立即购买</a>
+                        <div class="links" v-if="todo.slot">
+                            <a href="javascript:void(0);" class="buchang">10天内购机补偿 &gt;</a>
+                        </div>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section section-items-newpro" id="new">
         <div class="container">
             <div class="content">
-                <h2 class="title-h2">首发新品抢先拥有</h2>
-                <p class="desc">米家 LED 智能台灯、小米手环2 等重量级新品将陆续发布</p>
+                <h2 class="title-h2">{{newProductTitle}}</h2>
+                <p class="desc">{{newProductDesc}}</p>
             </div>
             <ul class="list clearfix" id="J_newGoods">
-                <li class="items-1">
-                    <a href="//www.mi.com/hongmi3s/" target="_blank" class="bg-01">红米手机3S</a>
-                </li>
-                <li class="items-2">
-                    <a href="//www.mi.com/mimax/" target="_blank" class="bg-02">小米Max 高配版</a>
-                </li>
-                <li class="items-3">
-                    <a href="//www.mi.com/mjsmartlamp/" target="_blank" class="bg-03">米家 LED 智能台灯</a>
-                </li>
-                <li class="items-4">
-                    <a href="//www.mi.com/shouhuan2/" target="_blank" class="bg-04">小米手环2</a>
-                </li>
-                <li class="items-5">
-                    <a href="//www.mi.com/kettle/" target="_blank" class="bg-05">米家恒温电水壶</a>
-                </li>
-                <li class="items-6">
-                    <a href="//www.mi.com/flowermonitor/" target="_blank" class="bg-06">花花草草检测仪</a>
-                </li>
+                <template v-for="(index, todo) in newProductList">
+                    <li class="items-{{index + 1}}">
+                        <a href="{{todo.buy_url}}" target="_blank" class="bg-0{{index + 1}}">{{todo.name}}</a>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section section-items-mitv" id="mitv">
         <div class="container">
             <div class="content">
-                <h2 class="title-h2">小米电视3 最高降300</h2>
-                <p class="desc">全系电视买就送 3 个月小米电视 + 爱奇艺 VIP 会员(价值 88 元），电视/盒子有特惠、领券省更多</p>
+                <h2 class="title-h2">{{mitvTitle}}</h2>
+                <p class="desc">{{mitvDesc}}</p>
             </div>
             <ul class="list clearfix" id="J_mitvGoods">
-                <li class="items-1">
-                    <a href="//www.mi.com/mitv3s/43/" target="_blank" class="bg-01">小米电视3S 43英寸</a>
-                </li>
-                <li class="items-2">
-                    <a href="//www.mi.com/mitv3/55/" target="_blank" class="bg-02">小米电视3 55英寸</a>
-                </li>
-                <li class="items-3">
-                    <a href="//www.mi.com/mitv3/60/" target="_blank" class="bg-03">小米电视3 60英寸</a>
-                </li>
-                <li class="items-4">
-                    <a href="//www.mi.com/mitv3s/48/" target="_blank" class="bg-04">小米电视3S 48英寸</a>
-                </li>
-                <li class="items-5">
-                    <a href="//www.mi.com/hezi3/" target="_blank" class="bg-05">小米盒子 3</a>
-                </li>
-                <li class="items-6">
-                    <a href="//item.mi.com/1161200065.html" target="_blank" class="bg-06">主机＋低音炮</a>
-                </li>
+                <template v-for="(index, todo) in mitvList">
+                    <li class="items-{{index + 1}}">
+                        <a href="{{todo.buy_url}}" target="_blank" class="bg-0{{index + 1}}">{{todo.name}}</a>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section section-items-smart" id="smart">
         <div class="container">
             <div class="content">
-                <h2 class="title-h2">智能硬件 最多省50</h2>
-                <p class="desc">买小米净水器，抽奖赢滤芯，空气净化器2 直降50，还有多款爆品特惠</p>
+                <h2 class="title-h2">{{smartTitle}}</h2>
+                <p class="desc">{{smartDesc}}</p>
             </div>
             <ul class="list clearfix" id="J_smartGoods">
-                <li class="items-1">
-                    <h3>Yeelight 床头灯</h3>
-                    <p>1600万种颜色任你玩</p>
-                    <div class="links">
-                        <span class="price price-num">199<em>元</em></span>
-                        <del>249元</del>
-                    </div>
-                    <a href="//item.mi.com/1152300006.html" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-2">
-                    <h3>九号平衡车</h3>
-                    <p>年轻人的酷玩具，骑行、遥控两种玩法</p>
-                    <div class="links">
-                        <span class="price price-num">1999<em>元</em></span>
-                        <del></del>
-                    </div>
-                    <a href="//www.mi.com/scooter/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-3">
-                    <h3>小米网络收音机</h3>
-                    <p>WiFi直连，海量电台内容任你听</p>
-                    <div class="links">
-                        <span class="price price-num">99<em>元</em></span>
-                        <del>129元</del>
-                    </div>
-                    <a href="//www.mi.com/radio/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-4">
-                    <h3>厨下式净水器</h3>
-                    <p>隐藏式设计，大流量直出纯净水</p>
-                    <div class="links">
-                        <span class="price price-num">1999<em>元</em></span>
-                    </div>
-                    <a href="//www.mi.com/water2/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-5">
-                    <h3>小米路由器3</h3>
-                    <p>四天线设计，比传统WiFi快 3 倍</p>
-                    <div class="links">
-                        <span class="price price-num">149<em>元</em></span>
-                    </div>
-                    <a href="//www.mi.com/miwifi3/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-6">
-                    <h3>空气净化器 2</h3>
-                    <p>6月16日 狂欢开始</p>
-                    <div class="links">
-                        <span class="price price-num">649<em>元</em></span>
-                        <del>699元</del>
-                    </div>
-                    <a href="//www.mi.com/air2/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
+                <template v-for="(index, todo) in smartList">
+                    <li class="items-{{index + 1}}">
+                        <h3>{{todo.title}}</h3>
+                        <p>{{todo.desc}}</p>
+                        <div class="links">
+                            <span class="price price-num">{{todo.price}}<em>元</em></span>
+                            <del v-if="todo.del !== ''">{{todo.del}}</del>
+                        </div>
+                        <a href="{{todo.buy_url}}" target="_blank" class="btn-buy">立即购买</a>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section section-items-accessories" id="accessories">
         <div class="container">
             <div class="content">
-                <h2 class="title-h2">配件特惠 全场8折起</h2>
-                <p class="desc">蓝牙音箱、移动电源、旅行箱等配件特惠，还有多款商品包邮</p>
+                <h2 class="title-h2">{{accessTitle}}</h2>
+                <p class="desc">{{accessDesc}}</p>
             </div>
             <ul class="list clearfix" id="J_partsGoods">
-                <li class="items-1">
-                    <h3>小米蓝牙音箱</h3>
-                    <p>仅铅笔盒大小，装进口袋的好声音</p>
-                    <div class="links">
-                        <span class="price price-num">180<em>元</em></span>
-                        <del>199元</del>
-                    </div>
-                    <a href="//www.mi.com/pocketaudio/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-2">
-                    <h3>10000mAh 高配电源</h3>
-                    <p>双向快充，轻薄仅12.58mm</p>
-                    <div class="links">
-                        <span class="price price-num">129<em>元</em></span>
-                        <del>149元</del>
-                    </div>
-                    <a href="//www.mi.com/dianyuan10000/pro/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-3">
-                    <h3>90分旅行箱</h3>
-                    <p>20寸 / 24寸，轻装出行</p>
-                    <div class="links">
-                        <span class="price price-num">279<em>元起</em></span>
-                        <del>299元</del>
-                    </div>
-                    <a href="//list.mi.com/23" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-4">
-                    <h3>小米自拍杆</h3>
-                    <p>无需安装APP，轻巧便携</p>
-                    <div class="links">
-                        <span class="price price-num">39<em>元</em></span>
-                        <del>49元</del>
-                    </div>
-                    <a href="//item.mi.com/1151500038.html" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-5">
-                    <h3>小米USB充电器(四口)</h3>
-                    <p>轻巧便携、多重安保，618 期间包邮</p>
-                    <div class="links">
-                        <span class="price price-num">69<em>元</em></span>
-                        <del></del>
-                    </div>
-                    <a href="//www.mi.com/chongdianqi4kou/" target="_blank" class="btn-buy">立即购买</a>
-                </li>
-                <li class="items-6">
-                    <h3>小米T恤</h3>
-                    <p>特价T恤 3 件包邮</p>
-                    <div class="links">
-                        <span class="price price-num">29<em>元起</em></span>
-                        <del></del>
-                    </div>
-                    <a href="//list.mi.com/22" target="_blank" class="btn-buy">立即购买</a>
-                </li>
+                <template v-for="(index, todo) in accessoriesList">
+                    <li class="items-{{index + 1}}">
+                        <h3>{{todo.title}}</h3>
+                        <p>{{todo.desc}}</p>
+                        <div class="links">
+                            <span class="price price-num">{{todo.price}}<em>元</em></span>
+                            <del v-if="todo.del !== ''">{{todo.del}}</del>
+                        </div>
+                        <a href="{{todo.buy_url}}" target="_blank" class="btn-buy">立即购买</a>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
@@ -362,9 +167,9 @@
     <div class="section section-items-welfare" id="welfare">
         <div class="container">
             <div class="content">
-                <h2 class="title-h2">3大专属福利</h2>
-                <p class="desc">618 活动期间，小米商城准备了 3 大专属福利
-                    <br /> 抽奖赢幸运大礼包、新机红包、晒单赢好礼，抢先拥有小米5 尊享版、小米手环2</p>
+                <h2 class="title-h2">{{welfareTitle}}</h2>
+                <p class="desc">{{welfareDesc}}
+                    <br /> {{welfareDesc1}}</p>
                 <div class="links">
                     <a href="javascript:void(0);" class="rule">规则详情 &gt;</a>
                     <a href="javascript:void(0);" class="prize" id="J_showPrize">我的奖品 &gt;</a>
@@ -466,7 +271,7 @@
     </div>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/hd_v01/script.min.js?v=1d7e468"></script>
+    <script src="../../public/js/hd_v01/script.min.js?v=0abdb6e"></script>
 </body>
 
 </html>
