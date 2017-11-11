@@ -1,0 +1,37 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "nav": [{
+            "title": "手机、笔记本",
+            "desc": "",
+            "target": "J_heikeji",
+            "active": true,
+            "slot": false
+        }, {
+            "title": "品质生活",
+            "desc": "",
+            "target": "J_life",
+            "active": false,
+            "slot": false
+        }, {
+            "title": "智能家居",
+            "desc": "",
+            "target": "J_home",
+            "active": false,
+            "slot": false
+        }, {
+            "title": "时尚出行",
+            "desc": "",
+            "target": "J_trip",
+            "active": false,
+            "slot": false
+        }, {
+            "title": "新潮酷玩",
+            "desc": "",
+            "target": "J_fashion",
+            "active": false,
+            "slot": false
+        }]
+    }
+}

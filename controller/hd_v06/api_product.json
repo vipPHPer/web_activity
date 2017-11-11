@@ -1,0 +1,55 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "heikeji": [{
+            "title": "小米Note 2",
+            "desc": "双曲面商务旗舰，2256万超高像素相机",
+            "price": "2799",
+            "market_price": "2799",
+            "product_type": "minote2",
+            "slot": false
+        }, {
+            "title": "红米 4",
+            "desc": "长续航金属千元旗舰，骁龙高性能处理器",
+            "price": "699",
+            "market_price": "699",
+            "product_type": "redmi4",
+            "slot": false
+        }],
+        "f2_kejishouji": [{
+            "title": "小米手机5",
+            "desc": "限时福利，购机返50元券",
+            "price": "1599",
+            "market_price": "1599",
+            "image": "cms_14828255050268_lpKRN.jpg",
+            "price_unit": "",
+            "sale_sign": ""
+        }, {
+            "title": "小米5s Plus",
+            "desc": "5.7\"大屏双摄手机，骁龙821性能版",
+            "price": "2299",
+            "market_price": "2299",
+            "image": "cms_14828255211557_HUwXD.jpg",
+            "price_unit": "",
+            "sale_sign": ""
+        }],
+        "f2_mibook": [{
+            "title": "小米笔记本Air 13.3英寸",
+            "desc": "1月1日－1月3日下单立减100元",
+            "price": "4999",
+            "market_price": "4999",
+            "price_unit": "",
+            "image": "cms_14828255520695_rmfnG.jpg",
+            "sale_sign": "6期免息"
+        }, {
+            "title": "小米笔记本Air 12.5英寸",
+            "desc": "轻薄高性能，金属机身",
+            "price": "3499",
+            "market_price": "3499",
+            "price_unit": "",
+            "image": "cms_14828255729203_LBEcq.jpg",
+            "sale_sign": "3期免息"
+        }]
+    }
+}

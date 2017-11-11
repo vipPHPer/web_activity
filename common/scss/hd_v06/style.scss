@@ -74,7 +74,15 @@ a {
     transition: $arr;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 .section {
+    del {
+        margin-left: 5px;
+        color: #666;
+    }
     @include pos;
     p {
         line-height: 20px;

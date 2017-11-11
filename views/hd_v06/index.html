@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>玩转2017新年 -- 小米商城</title>
     <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/hd_v06/style.min.css?v=6e0d2db">
+    <link rel="stylesheet" href="../../public/css/hd_v06/style.min.css?v=cbd5669">
     <script>
         var UA = navigator.userAgent;
         var search = location.search;
@@ -17,82 +17,57 @@
     </script>
 </head>
 
-<body>
+<body id="web" v-cloak>
     <div class="newyear" id="J_newyear">
         <div class="section section-header">
             <div class="container">
                 <div class="header-bar">
                     <a href="//www.mi.com/index.html" target="_blank" class="logo">小米网</a>
-                    <span class="bar-items activity-time">活动时间：12月29日至1月3日</span>
-                    <a href="javascript:void(0);" class="bar-items rule">查看专题活动规则</a>
-                    <a href="//www.mi.com/index.html" class="bar-items return">返回小米网</a>
+                    <span class="bar-items activity-time">{{headerDate}}</span>
+                    <a href="javascript:void(0);" class="bar-items rule">{{headerRule}}</a>
+                    <a href="//www.mi.com/index.html" class="bar-items return">{{headerReturn}}</a>
                 </div>
-                <p class="desc">明星商品限时开售，多款新品首卖
-                    <br />还可领超值优惠券</p>
+                <p class="desc">{{headerDesc}}<br />{{headerDesc1}}</p>
             </div>
         </div>
         <div class="section section-nav" id="J_nav">
             <div class="container">
                 <div class="nav-list">
-                    <a href="javascript:void(0);" class="nav-items active" data-target="#J_heikeji">
-                        <div class="icon icon-1"></div>
-                        <p>手机、笔记本</p>
-                    </a>
-                    <a href="javascript:void(0);" class="nav-items" data-target="#J_life">
-                        <div class="icon icon-2"></div>
-                        <p>品质生活</p>
-                    </a>
-                    <a href="javascript:void(0);" class="nav-items" data-target="#J_home">
-                        <div class="icon icon-3"></div>
-                        <p>智能家居</p>
-                    </a>
-                    <a href="javascript:void(0);" class="nav-items" data-target="#J_trip">
-                        <div class="icon icon-4"></div>
-                        <p>时尚出行</p>
-                    </a>
-                    <a href="javascript:void(0);" class="nav-items" data-target="#J_fashion">
-                        <div class="icon icon-5"></div>
-                        <p>新潮酷玩</p>
-                    </a>
+                    <template v-for="(index, todo) in navList">
+                        <a href="javascript:void(0);" class="nav-items" :class="todo.active ? 'active':''" data-target="#{{todo.target}}">
+                            <div class="icon icon-{{index + 1}}"></div>
+                            <p>{{todo.title}}</p>
+                        </a>
+                    </template>
                 </div>
             </div>
         </div>
         <div class="section section-heikeji" id="J_heikeji">
             <div class="container">
-                <h1>新年更有科技感</h1>
-                <p class="desc-text">挑选一份科技好礼，让生活更精彩</p>
-                <h2>明星旗舰，限时开售</h2>
+                <h1>{{heikejiH1}}</h1>
+                <p class="desc-text">{{heikejiDesc}}</p>
+                <h2>{{heikejiH2}}</h2>
                 <div class="group-link">
                     <ul class="group-list group-col2-list clearfix">
-                        <li>
-                            <a href="javascript:void(0);" class="pic minote2"></a>
-                            <h3 class="title">小米Note 2</h3>
-                            <p class="desc">双曲面商务旗舰，2256万超高像素相机</p>
-                            <p class="price">
-                                <span class="price-num">2799</span>元起
-                            </p>
-                            <div class="btn-switch">
-                                <a href="javascript:void(0);" class="btn-buy btn-primary">
-                                    立即购买
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="pic redmi4"></a>
-                            <h3 class="title">红米 4</h3>
-                            <p class="desc">长续航金属千元旗舰，骁龙高性能处理器</p>
-                            <p class="price">
-                                <span class="price-num">699</span>元起
-                            </p>
-                            <div class="btn-switch" id="J_minote2">
-                                <a href="javascript:void(0);" class="btn-buy btn-primary">
-                                    立即购买
-                                </a>
-                            </div>
-                        </li>
+                        <template v-for="(index, todo) in heikejiList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic" :class="todo.product_type == 'minote2' ? 'minote2':'redmi4'"></a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p class="desc">{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元起
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                                </p>
+                                <div class="btn-switch">
+                                    <a href="javascript:void(0);" class="btn-buy btn-primary">
+                                        立即购买
+                                    </a>
+                                </div>
+                            </li>
+                        </template>
                     </ul>
                 </div>
-                <h2>挑选一部手机</h2>
+                <h2>{{heikejiH2Phone}}</h2>
                 <div class="mi5s group-link">
                     <div class="content">
                         <h3 class="title">小米5s 抽小米VR眼镜</h3>
@@ -117,7 +92,19 @@
                 </a>
                 <div class="group-link miphone">
                     <ul class="group-col2-list group-list clearfix">
-                        <!-- doT.js -->
+                        <template v-for="(index, todo) in f2_kejishoujiList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                            </li>
+                        </template>
                     </ul>
                 </div>
                 <a href="javascript:void(0);" class="group-link old-phone">
@@ -126,10 +113,28 @@
                         <div class="btn-primary">查看旧机报价</div>
                     </div>
                 </a>
-                <h2>挑选一台轻盈高性能的笔记本</h2>
+                <h2>{{heikejiH2Phone1}}</h2>
                 <div class="group-link mibook">
                     <ul class="group-col2-list group-list clearfix">
-
+                        <template v-for="(index, todo) in f2_mibookList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                <div class="tag" v-if="todo.sale_sign == '3期免息'">
+                                    3期<br />免息
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '6期免息'">
+                                    6期<br />免息
+                                </div>
+                            </li>
+                        </template>
                     </ul>
                 </div>
                 <a href="https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/7280289c1b08.html?2&needValidHost=false" target="_blank" class="group-link buyphone-tips fingerpost">
@@ -605,7 +610,7 @@
     </script>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/hd_v06/script.min.js?v=d4a2699"></script>
+    <script src="../../public/js/hd_v06/script.min.js?v=231167c"></script>
 </body>
 
 </html>
