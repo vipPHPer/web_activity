@@ -70,12 +70,12 @@
                         <li>
                             <i v-if="todo.sale_sign != ''" class="sign" :class="todo.sale_sign === '新品' ? 'flag-new': 'flag-gift'">{{todo.sale_sign}}</i>
                             <a href="//item.mi.com/{{todo.product_id}}.html" target="_blank">
-                                <img v-bind:src="'/public/img/hd_v02/product/' + todo.image">
+                                <img v-bind:src="'/public/img/hd_v02/product/' + todo.image" alt="{{todo.title}}">
                             </a>
                             <h2 class="title">{{todo.title}}</h2>
                             <p class="desc">{{todo.desc}}</p>
                             <p class="price"><em>{{todo.price}}</em>元
-                                <del v-if="todo.price != todo.market_price">{{todo.market_price}}</del>
+                                <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
                             </p>
                             <a href="//item.mi.com/{{todo.product_id}}.html" class="btn-buy" target="_blank">立即购买</a>
                         </li>
@@ -86,7 +86,22 @@
 
         <div class="section section-ship" id="ship">
             <div class="container">
-                <ul class="list clearfix" id="J_shipList"> </ul>
+                <ul class="list clearfix" id="J_shipList">
+                    <template v-for="(index, todo) in shipList">
+                        <li>
+                            <i class="sign" v-if="todo.sale_sign !=''" :class="todo.sale_sign === '新品' ? 'flag-new':'flag-gift'">{{todo.sale_sign}}</i>
+                            <a href="//item.mi.com/{{todo.product_id}}.html" target="_blank">
+                                <img v-bind:src="'/public/img/hd_v02/product/' + todo.image" alt="{{todo.title}}">
+                            </a>
+                            <h2 class="title">{{todo.title}}</h2>
+                            <p class="desc">{{todo.desc}}</p>
+                            <p class="price"><em>{{todo.price}}</em>元
+                                <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                            </p>
+                            <a href="//item.mi.com/{{todo.product_id}}.html" class="btn-buy" target="_blank">立即购买</a>
+                        </li>
+                    </template>
+                </ul>
                 <div class="ship-bg">
                     <p>乘坐海盗船犹如莅临惊涛骇浪的大海之中，<br /> 喜欢猎奇的人一定会爱上这种快感。
                         <br /> 他们也一定会爱上，使用智能硬件产品去改变生活。
@@ -106,7 +121,20 @@
                     <div class="balloon"></div>
                 </div>
                 <ul class="list clearfix" id="J_wheelList">
-
+                    <template v-for="(index, todo) in wheelList">
+                        <li>
+                            <i class="sign" v-if="todo.sale_sign !=''" :class="todo.sale_sign === '新品' ? 'flag-new':'flag-gift'">{{todo.sale_sign}}</i>
+                            <a href="//item.mi.com/{{todo.product_id}}.html" target="_blank">
+                                <img v-bind:src="'/public/img/hd_v02/product/' + todo.image" alt="{{todo.title}}">
+                            </a>
+                            <h2 class="title">{{todo.title}}</h2>
+                            <p class="desc">{{todo.desc}}</p>
+                            <p class="price"><em>{{todo.price}}</em>元
+                                <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                            </p>
+                            <a href="//item.mi.com/{{todo.product_id}}.html" class="btn-buy" target="_blank">立即购买</a>
+                        </li>
+                    </template>
                 </ul>
             </div>
         </div>
@@ -194,32 +222,7 @@
 
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/hd_v02/script.min.js?v=247d6a7"></script>
-
-    <script type="text/x-dot-template" id="productTemp">
-        {{~it :value:index}}
-        <li>
-            {{if(value.sale_sign){}}
-            <i class="sign {{if(value.sale_sign === '新品'){}}flag-new{{}}} {{if(value.sale_sign ==='买赠'){}}flag-gift{{}}}">
-            {{=value.sale_sign}}
-            </i> {{}}}
-
-            <a href="//item.mi.com/{{=value.product_id}}.html" target="_blank">
-                <img src="" data-src="{{=value.image}}">
-            </a>
-            <h2 class="title">{{=value.title}}</h2>
-            <p class="desc">{{=value.brief}}</p>
-            <p class="price"><em>{{=value.price}}</em>元 {{if(value.market_price != value.price){}}
-                <del>{{=value.market_price}}元</del> {{}}}
-            </p>
-            <a href="//item.mi.com/{{=value.product_id}}.html" class="btn-buy" target="_blank">{{=value.extend_title}}
-            {{if(value.extend_title === ''){}}
-            立即购买
-            {{}}}
-        </a>
-        </li>
-        {{~}}
-    </script>
+    <script src="../../public/js/hd_v02/script.min.js?v=4d5c456"></script>
 </body>
 
 </html>

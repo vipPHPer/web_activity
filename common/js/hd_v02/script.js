@@ -23,33 +23,6 @@ var _common = {
     }
 };
 
-window.vm = new Vue({
-    el: '#web',
-    data: {
-        headerTitle: '小米暑假游乐场',
-        headerDesc: '红米手机3S 现货购 小米手环2 天天售',
-        headerDesc1: '衣服特惠 新品背包仅39元',
-        navList: [],
-        horseList: [],
-    }
-});
-
-_common.sendAjax(apiNav, {}, 'json', function(response) {
-    if (response.code === 'result') {
-        window.NavData = response.data;
-        window.vm.navList = window.NavData.nav;
-        _common.sendAjax(apiProduct, {}, 'json', function(res) {
-            if (res.code === 'result') {
-                window.vm.horseList = res.data.horse;
-            } else {
-                return false;
-            }
-        });
-    } else {
-        return false;
-    }
-});
-
 //懒加载
 function lazyload() {
     var $bd = $('.bd');
@@ -66,39 +39,6 @@ function lazyload() {
         }
     });
 }
-
-function formaDate(data) {
-    var productList = doT.template($('#productTemp').html());
-    var _data = data.data;
-
-    //旋转木马区
-    // var horseData = _data.one;
-    // var horseHtml = productList(horseData);
-
-    // $('#J_horseList').html(horseHtml);
-
-    //海盗船区
-    var shipDate = _data.two;
-    var shipHtml = productList(shipDate);
-
-    $('#J_shipList').html(shipHtml);
-
-    //摩天轮区
-    var wheelDate = _data.three;
-    var wheelHtml = productList(wheelDate);
-
-    $('#J_wheelList').html(wheelHtml);
-}
-
-//渲染产品
-var apiSummer = '/controller/hd_v02/summerData.json';
-_common.sendAjax(apiSummer, {}, 'json', function(data) {
-    if (data && data.code === 'result') {
-        formaDate(data);
-    } else {
-        return false;
-    }
-});
 
 //导航跳转
 function navEvent() {
@@ -127,6 +67,40 @@ function modalInfor() {
     });
 }
 
+window.vm = new Vue({
+    el: '#web',
+    data: {
+        headerTitle: '小米暑假游乐场',
+        headerDesc: '红米手机3S 现货购 小米手环2 天天售',
+        headerDesc1: '衣服特惠 新品背包仅39元',
+        navList: [],
+        horseList: [],
+        shipList: [],
+        wheelList: [],
+    }
+});
+
+_common.sendAjax(apiNav, {}, 'json', function(response) {
+    if (response.code === 'result') {
+        window.NavData = response.data;
+        window.vm.navList = window.NavData.nav;
+        _common.sendAjax(apiProduct, {}, 'json', function(res) {
+            if (res.code === 'result') {
+                window.vm.horseList = res.data.horse;
+                window.vm.shipList = res.data.ship;
+                window.vm.wheelList = res.data.wheel;
+                lazyload();
+                navEvent();
+                modalInfor();
+            } else {
+                return false;
+            }
+        });
+    } else {
+        return false;
+    }
+});
+
 //抽奖逻辑
 function summaryDraw() {
     var uscore = 0;
@@ -143,20 +117,12 @@ function summaryDraw() {
 
     //获取用户积分
     var getscore = function() {
-        $.ajax({
-            url: scoreUrl,
-            dataType: 'jsonp',
-            jsonp: 'jsonpcallback',
-            error: function() {
-                console.log('获取用户积分失败');
-            },
-            success: function(data) {
-                if (data.code === 0) {
-                    uscore = data.available_score;
-                    updateScore();
-                } else if (data.code === 100005) {
-                    window.location.href = loginUrl;
-                }
+        _common.sendAjax(scoreUrl, {}, 'jsonp', function(data) {
+            if (data.code === 0) {
+                uscore = data.availableScore;
+                updateScore();
+            } else if (data.code === 100005) {
+                window.location.href = loginUrl;
             }
         });
     };
@@ -188,7 +154,7 @@ function summaryDraw() {
             statusClass = 'modal-draw-noscore';
         } else if (status === 3) {
             status = 'modal-draw-lucky';
-            $('#J_drawPrizeName').html(luckyInfor.prize_name);
+            $('#J_drawPrizeName').html(luckyInfor.prizeName);
         }
 
         $modalDrawResult.removeClass('modal-draw-faild modal-draw-noscore modal-draw-lucky').addClass(statusClass).modal('show');
@@ -201,44 +167,33 @@ function summaryDraw() {
             return false;
         }
 
-        $.ajax({
-            url: drawUrl,
-            dataType: 'jsonp',
-            jsonp: 'jsonpcallback',
-            success: function(data) {
-                if (data && data.code === 0) {
-                    //中奖
-                    showDrawResult(3, data.user_prize_info);
-                } else {
-                    //未中奖
-                    showDrawResult(1);
-                }
-
-                uscore = data.available_score;
-                updateScore();
+        _common.sendAjax(drawUrl, {}, 'jsonp', function(response) {
+            if (response.code === 0) {
+                //中奖
+                showDrawResult(3, data.userPrizeInfo);
+            } else {
+                //未中奖
+                showDrawResult(1);
             }
+            uscore = data.availableScore;
+            updateScore();
         });
     });
 
     //我的奖品
     $('#J_showPrize').off().on('click', function() {
         if (isLogin) {
-            $.ajax({
-                url: prizeUrl,
-                dataType: 'jsonp',
-                jsonp: 'jsonpcallback',
-                success: function(data) {
-                    if (data && data.code === 0) {
-                        if (data.data.length) {
-                            //中奖
-                            showDrawResult(3, data.data[0]);
-                        } else {
-                            //未中奖
-                            showDrawResult(1);
-                        }
-                    } else if (data.code === 100005) {
-                        window.location.href = loginUrl;
+            _common.sendAjax(prizeUrl, {}, 'jsonp', function(res) {
+                if (res.code === 0) {
+                    if (res.data.length) {
+                        //中奖
+                        showDrawResult(3, res.data[0]);
+                    } else {
+                        //未中奖
+                        showDrawResult(1);
                     }
+                } else if (res.code === 100005) {
+                    window.location.href = loginUrl;
                 }
             });
         } else {
@@ -267,16 +222,13 @@ function summaryDraw() {
         $('#J_camera').on('click', function() {
 
             if (isLogin) {
-                $.ajax({
-                    url: autarUrl,
-                    dataType: 'jsonp',
-                    jsonp: 'jsonpcallback',
-                    success: function(data) {
-                        if (data && data.code === 0) {
-                            $('.text-02').addClass('btn-disable').siblings('.text-03').removeClass('btn-disable');
-                            $('.phone-bg').show();
-                            $('.camera-bg').html('<img src="' + data.data.avatar_url + '">').show();
-                        }
+                _common.sendAjax(autarUrl, {}, 'jsonp', function(res) {
+                    if (res.code === 0) {
+                        $('.text-02').addClass('btn-disable').siblings('.text-03').removeClass('btn-disable');
+                        $('.phone-bg').show();
+                        $('.camera-bg').html('<img src="' + res.data.avatar_url + '">').show();
+                    } else {
+                        return false;
                     }
                 });
             } else {
@@ -304,16 +256,13 @@ function summaryDraw() {
         $('.text-03').addClass('btn-disable').siblings('.text-04').removeClass('btn-disable');
         getscore();
 
-        $.ajax({
-            url: weibopic,
-            dataType: 'jsonp',
-            jsonp: 'jsonpcallback',
-            success: function(data) {
-                if (data && data.code === 0) {
-                    shareWeibo({
-                        pic: data.data.share_url
-                    });
-                }
+        _common.sendAjax(weibopic, {}, 'jsonp', function(res) {
+            if (res.code === 0) {
+                shareWeibo({
+                    pic: res.data.share_url
+                });
+            } else {
+                return false;
             }
         });
         return false;
@@ -327,10 +276,3 @@ function summaryDraw() {
         return false;
     });
 }
-
-jQuery(document).ready(function() {
-    lazyload();
-    navEvent();
-    modalInfor();
-    //   summaryDraw();
-});
