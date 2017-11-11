@@ -69,6 +69,10 @@
 }
 
 $imgUrl: '/public/img/hd_v05/';
+[v-cloak] {
+    display: none;
+}
+
 body {
     min-width: 1226px;
     font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;

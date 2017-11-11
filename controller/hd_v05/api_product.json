@@ -1,0 +1,187 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "banner": [{
+            "title": "小米电视43英寸",
+            "image": "mitv43-bg.jpg",
+            "buy_url": "//www.mi.com/mitv3s/43/",
+            "slot": true
+        }, {
+            "title": "小米电视48英寸",
+            "image": "mitv48-bg.jpg",
+            "buy_url": "//www.mi.com/mitv3s/48/",
+            "slot": false
+        }, {
+            "title": "小米电视55英寸",
+            "image": "mitv55-bg.jpg",
+            "buy_url": "//www.mi.com/mitv3/55/",
+            "slot": false
+        }, {
+            "title": "小米电视60英寸",
+            "image": "mitv60-bg.jpg",
+            "buy_url": "//www.mi.com/mitv3/60/",
+            "slot": false
+        }, {
+            "title": "小米电视65英寸",
+            "image": "mitv65-bg.jpg",
+            "buy_url": "//www.mi.com/mitv3s/65/",
+            "slot": false
+        }, {
+            "title": "小米电视70英寸",
+            "image": "mitv70-bg.jpg",
+            "buy_url": "//www.mi.com/mitv3/70/",
+            "slot": false
+        }],
+        "mitv": [{
+            "title": "小米电视3 55英寸",
+            "desc": "原装真4K屏，主机、屏幕可独立升级",
+            "price": "3299",
+            "market_price": "3999",
+            "buy_url": "//www.mi.com/mitv3/55/",
+            "image": "mitv55.jpg",
+            "icon": true
+        }, {
+            "title": "小米电视3S 43英寸",
+            "desc": "小尺寸高端旗舰，超薄金属机身设计",
+            "price": "1499",
+            "market_price": "1799",
+            "buy_url": "//www.mi.com/mitv3s/43/",
+            "image": "mitv43.jpg",
+            "icon": true
+        }, {
+            "title": "小米电视3 60英寸",
+            "desc": "4K分体电视新选择，广色域、不拖影",
+            "price": "4299",
+            "market_price": "4999",
+            "buy_url": "//www.mi.com/mitv3/60/",
+            "image": "",
+            "icon": true
+        }, {
+            "title": "小米电视3S 48英寸",
+            "desc": "三星原装液晶屏，特殊图像增强技术",
+            "price": "1999",
+            "market_price": "1999",
+            "buy_url": "//www.mi.com/mitv3s/48/",
+            "image": "mitv48.jpg",
+            "icon": false
+        }, {
+            "title": "小米电视3S 65英寸",
+            "desc": "超薄 4K 曲面屏，各角度都不失真",
+            "price": "8999",
+            "market_price": "8999",
+            "buy_url": "//www.mi.com/mitv3s/65/",
+            "image": "mitv65.jpg",
+            "icon": false
+        }, {
+            "title": "小米电视3 70英寸",
+            "desc": "日本夏普原装 4K 屏，大屏大震撼",
+            "price": "9999",
+            "market_price": "9999",
+            "buy_url": "//www.mi.com/mitv3/70/",
+            "image": "mitv70.jpg",
+            "icon": false
+        }],
+        "bigScreen": [{
+            "title": "小米手机Max",
+            "desc": "6.44\"黄金尺寸大屏， 看什么都震撼 ",
+            "desc1": "4850mAh 大电量，享受赛事不断电",
+            "price": "1499",
+            "market_price": "1499",
+            "buy_url": "//www.mi.com/mimax/",
+            "slot": false,
+            "btn": false
+        }, {
+            "title": "小米平板 2",
+            "desc": "7.9 英寸视网膜屏幕，画质明锐清晰",
+            "desc1": "全金属机身持握好手感，可选 Windows 版本",
+            "price": "999",
+            "market_price": "999",
+            "buy_url": "//www.mi.com/mipad2/",
+            "slot": false,
+            "btn": true
+        }],
+        "hezi": [{
+            "title": "小米盒子3",
+            "desc": "全新升级 64位 4K网络机顶盒",
+            "desc1": "追剧神器，热门电影在家也能看",
+            "price": "249",
+            "market_price": "299",
+            "image": "",
+            "buy_url": "//www.mi.com/hezi3/",
+            "slot": false,
+            "icon": true
+        }, {
+            "title": "小米盒子mini版",
+            "desc": "全高清网络机顶盒",
+            "desc1": "仅插座大小，家庭影院小帮手",
+            "price": "179",
+            "market_price": "199",
+            "image": "hezi-mini.jpg",
+            "buy_url": "//www.mi.com/hezimini/",
+            "slot": false,
+            "icon": true
+        }, {
+            "title": "小米盒子3 增强版",
+            "desc": "高端 4K 网络机顶盒",
+            "desc1": "超强6核处理器，玩游戏也没问题",
+            "price": "399",
+            "market_price": "399",
+            "image": "hezi3s.jpg",
+            "buy_url": "//www.mi.com/hezi3s/",
+            "slot": false,
+            "icon": false
+        }],
+        "radio": [{
+            "title": "小米网络收音机",
+            "desc": "WiFi 直连，精彩赛事直接听",
+            "desc1": "2 英寸扬声器，音场通透宽阔",
+            "price": "129",
+            "market_price": "129",
+            "image": "",
+            "buy_url": "//www.mi.com/radio/",
+            "slot": false,
+            "icon": false
+        }, {
+            "title": "小米圈铁耳机",
+            "desc": "双发声单元，还原音乐细节",
+            "desc1": "",
+            "price": "99",
+            "market_price": "99",
+            "image": "erji.jpg",
+            "buy_url": "//www.mi.com/quantie/",
+            "slot": false,
+            "icon": false
+        }, {
+            "title": "小米蓝牙音箱",
+            "desc": "能装进口袋的好音箱",
+            "desc1": "",
+            "price": "199",
+            "market_price": "199",
+            "image": "yinxiang.jpg",
+            "buy_url": "//www.mi.com/pocketaudio/",
+            "slot": false,
+            "icon": false
+        }, {
+            "title": "小米家庭音响 金属版",
+            "desc": "震撼好声音，全金属材质",
+            "desc1": "",
+            "price": "899",
+            "market_price": "899",
+            "image": "taozhuang1.jpg",
+            "buy_url": "//item.mi.com/1160800073.html",
+            "slot": false,
+            "icon": false
+        }, {
+            "title": "主机低音炮套装",
+            "desc": "无需换屏，轻松升级你的电视",
+            "desc1": "",
+            "price": "1398",
+            "market_price": "1598",
+            "image": "taozhuang2.jpg",
+            "buy_url": "//item.mi.com/1161200065.html",
+            "slot": false,
+            "icon": false
+        }]
+    }
+}
