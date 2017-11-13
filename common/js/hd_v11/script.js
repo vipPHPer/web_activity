@@ -49,7 +49,6 @@ _common.sendAjax(apiMijia, {}, 'json', function(response) {
 });
 
 var mjBrandDays = {
-
     /* 懒加载 */
     lazyload: function() {
         var $visibleWatcher = $('.mijia-home');
