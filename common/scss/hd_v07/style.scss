@@ -69,6 +69,10 @@
     position: relative;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 $imgUrl: '/public/img/hd_v07/';
 body {
     min-width: 1230px;

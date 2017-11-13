@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>小米电视会员免费送 - 小米商城</title>
     <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/hd_v07/style.min.css?v=6e5587c">
+    <link rel="stylesheet" href="../../public/css/hd_v07/style.min.css?v=db498b9">
 </head>
 
-<body id="J_visibleWatcher">
+<body id="J_visibleWatcher" v-cloak>
     <div class="section mitv-vip-header">
         <div class="container">
             <a href="//www.mi.com/index.html" target="_black" class="logo"></a>
@@ -18,8 +18,8 @@
                 <a href="//www.mi.com/index.html" target="_black">返回小米网 &gt;</a>
             </div>
             <div class="content" id="J_mitv_privilege">
-                <a href="javascript:void(0);" class="links">小米电视会员免费送</a>
-                <p>4月30日-5月2日 买电视 送小米电视会员季卡＋爱奇艺VIP会员 (3个月)</p>
+                <a href="javascript:void(0);" class="links">{{headerTitle}}</a>
+                <p>{{headerDesc}}</p>
                 <div class="btn" id="js-NavBtn">
                     <a class="vip-privilege btn1 J_privilege_btn" href="javascript:void(0)" data-target="#privilege"><em>了解会员特权</em></a>
                     <a class="btn2 J_mitv_btn" href="javascript:void(0)" data-target="#mitv">挑电视</a>
@@ -30,11 +30,11 @@
     <div class="section mitv-vip-privilege" id="privilege">
         <div class="container">
             <div class="text">
-                <h2 class="webfont">一个会员，双重特权</h2>
-                <p>成为小米电视会员，将同时享受小米电视会员及爱奇艺VIP的全部特权。</p>
+                <h2>{{mitvVipTitle}}</h2>
+                <p>{{mitvVipDesc}}</p>
                 <span class="mitv-privilege-con">
-                <img data-src="../../public/img/hd_v07/mitv-vip-logo.png?v=6b14b05">
-            </span>
+                    <img data-src="../../public/img/hd_v07/mitv-vip-logo.png?v=6b14b05">
+                </span>
             </div>
             <ul class="container">
                 <li class="list-li-01">
@@ -95,8 +95,8 @@
                 </li>
             </ul>
             <span class="qiy-privilege-con">
-            <img data-src="../../public/img/hd_v07/qiy-vip-logo.png?v=747d515">
-        </span>
+                <img data-src="../../public/img/hd_v07/qiy-vip-logo.png?v=747d515">
+            </span>
             <ul class="container qiy-mitv-privilege">
                 <li class="list-li-07">
                     <div class="section-7 mitv-text">
@@ -151,268 +151,139 @@
     <div class="section mitv-parts" id="mitv">
         <div class="container">
             <div class="content">
-                <h2 class="webfont">买电视送会员，好剧大片免费看</h2>
-                <p>4月30日-5月2日 全系尺寸，买即赠小米电视会员季卡+爱奇艺VIP会员（3个月）。<a href="//bbs.xiaomi.cn/t-12867994" target="_black" class="liaojie">了解活动规则 &gt;</a></p>
+                <h2>{{mitvTitle}}</h2>
+                <p>{{mitvDesc}}
+                    <a href="//bbs.xiaomi.cn/t-12867994" target="_black" class="liaojie">了解活动规则 &gt;</a>
+                </p>
                 <span class="mitv-parts-logo">
-                <img data-src="../../public/img/hd_v07/mitv-big-logo.png?v=0fac21f">
-            </span>
+                    <img v-bind:data-src="mitvPartsLogo">
+                </span>
             </div>
             <ul class="container">
-                <li class="mitv-list-01">
-                    <a href="//www.mi.com/mitv3/70/" target="_black">
-                        <img data-src="../../public/img/hd_v07/mitv70-img.jpg?v=bf3b0f6">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/mitv3/70/" target="_black">小米电视<em>3</em>70英寸</a>
-                            </h2>
-                            <p class="text">原装进口夏普真 4K 屏 金属机身</p>
-                            <p class="price">9,999<em>元</em></p>
-                            <a data-url="//www.mi.com/mitv3/70/" class="J_buyBtn">
-                                <span class="buy-btn">正在加载中...</span>
-                                <i class="iconfont"></i>
-                            </a>
-                            <span class="start">12月10日0点活动开始</span>
+                <template v-for="(index, todo) in mitv_70_65_60_55">
+                    <li class="mitv-list-0{{index + 1}}">
+                        <a href="{{todo.url}}" target="_blank">
+                            <img v-bind:src="'/public/img/hd_v07/' + todo.image" alt="{{todo.title}}">
+                        </a>
+                        <div class="box">
+                            <div>
+                                <h2>
+                                    <a href="{{todo.url}}" target="_blank">{{todo.mitv_name}}<em>{{todo.mitv_type}}</em>{{todo.mitv_chicun}}</a>
+                                </h2>
+                                <p class="text">{{todo.desc}}</p>
+                                <p class="price">{{todo.price}}
+                                    <em v-if="todo.slot == '元'">元</em>
+                                    <em v-if="todo.slot == '元起'">元起</em>
+                                </p>
+                                <a data-url="{{todo.url}}" class="J_buyBtn">
+                                    <span class="buy-btn">{{todo.loading}}</span>
+                                    <i class="iconfont"></i>
+                                </a>
+                                <span class="start">{{todo.start_time}}</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mitv-list-02">
-                    <a href="//www.mi.com/mitv3s/65/" target="_black">
-                        <img data-src="../../public/img/hd_v07/mitv65-img.jpg?v=fb29633">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/mitv3s/65/" target="_black">小米电视<em>3S</em>65英寸曲面</a>
-                            </h2>
-                            <p class="text">最美的小米电视 震撼如IMAX</p>
-                            <p class="price">8,999<em>元</em></p>
-                            <a data-url="//www.mi.com/mitv3s/65/" data-mark="mitv65" class="J_buyBtn">
-                                <span class="buy-btn">正在加载中...</span>
-                                <i class="iconfont"></i>
-                            </a>
-                            <span class="start">12月10日0点活动开始</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="mitv-list-03">
-                    <a href="//www.mi.com/mitv3/60/" target="_black">
-                        <img data-src="../../public/img/hd_v07/mitv60-img.jpg?v=30582e9">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/mitv3/60/" target="_black">小米电视<em>3</em>60英寸</a>
-                            </h2>
-                            <p class="text">原装 LG 真 4K 屏 金属机身</p>
-                            <p class="price">4,999<em>元起</em></p>
-                            <a data-url="//www.mi.com/mitv3/60/" class="J_buyBtn">
-                                <span class="buy-btn">正在加载中...</span>
-                                <i class="iconfont"></i>
-                            </a>
-                            <span class="start">12月10日0点活动开始</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="mitv-list-04">
-                    <a href="//www.mi.com/mitv3/55/" target="_black">
-                        <img data-src="../../public/img/hd_v07/mitv55-img.jpg?v=6784b73">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/mitv3/55/" target="_black">小米电视<em>3</em>55英寸</a>
-                            </h2>
-                            <p class="text">三星 / LG真4K屏 金属机身</p>
-                            <p class="price">3,999<em>元起</em></p>
-                            <a data-url="//www.mi.com/mitv3/55/" class="J_buyBtn">
-                                <span class="buy-btn">正在加载中...</span>
-                                <i class="iconfont"></i>
-                            </a>
-                            <span class="start">12月10日0点活动开始</span>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </template>
             </ul>
             <span class="mitv-parts-header">
-            <img data-src="../../public/img/hd_v07/mitv-small-logo.png?v=ea12e5d">
-        </span>
+                <img v-bind:data-src="mitvPartsHeader">
+            </span>
             <ul class="container">
-                <li class="mitv-list-05">
-                    <a href="//www.mi.com/mitv3s/48/" target="_black">
-                        <img data-src="../../public/img/hd_v07/mitv48-img.jpg?v=ef4305b">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/mitv3s/48/" target="_black">小米电视<em>3S</em>48英寸</a>
-                            </h2>
-                            <p class="text">黄金尺寸 高端旗舰</p>
-                            <p class="price">1,999<em>元</em></p>
-                            <a data-url="//www.mi.com/mitv3s/48/" data-mark="mitv48" class="J_buyBtn">
-                                <span class="buy-btn">正在加载中...</span>
-                                <i class="iconfont"></i>
-                            </a>
-                            <span class="start">12月10日0点活动开始</span>
+                <template v-for="(index, todo) in mitv_48_43">
+                    <li class="mitv-list-0{{index + 5}}">
+                        <a href="{{todo.url}}" target="_blank">
+                            <img v-bind:src="'/public/img/hd_v07/' + todo.image" alt="{{todo.title}}">
+                        </a>
+                        <div class="box">
+                            <div>
+                                <h2>
+                                    <a href="{{todo.url}}" target="_blank">{{todo.mitv_name}}<em>{{todo.mitv_type}}</em>{{todo.mitv_chicun}}</a>
+                                </h2>
+                                <p class="text">{{todo.desc}}</p>
+                                <p class="price">{{todo.price}}
+                                    <em v-if="todo.slot == '元'">元</em>
+                                    <em v-if="todo.slot == '元起'">元起</em>
+                                </p>
+                                <a data-url="{{todo.url}}" class="J_buyBtn">
+                                    <span class="buy-btn">{{todo.loading}}</span>
+                                    <i class="iconfont"></i>
+                                </a>
+                                <span class="start">{{todo.start_time}}</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="mitv-list-06">
-                    <a href="//www.mi.com/mitv3s/43/" target="_black">
-                        <img data-src="../../public/img/hd_v07/mitv43-img.jpg?v=87abe1c">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/mitv3s/43/" target="_black">小米电视<em>3S</em>43英寸</a>
-                            </h2>
-                            <p class="text">小尺寸高端旗舰</p>
-                            <p class="price">1,799<em>元</em></p>
-                            <a data-url="//www.mi.com/mitv3s/43/" data-mark="mitv43" class="J_buyBtn">
-                                <span class="buy-btn">正在加载中...</span>
-                                <i class="iconfont"></i>
-                            </a>
-                            <span class="start">12月10日0点活动开始</span>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section mitv-hezi" id="hezi">
         <div class="container">
             <div class="content">
-                <h2 class="webfont">送家人朋友一款追剧神器</h2>
+                <h2>{{heziTitle}}</h2>
             </div>
             <ul class="container">
-                <li class="hezi-list-01">
-                    <a href="//www.mi.com/hezi3s/" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/hezi3s.jpg?v=cc24ac4">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont"><a href="//www.mi.com/hezi3s/" target="_black">小米盒子3 增强版</a></h2>
-                            <p class="text">高清 4K 网络机顶盒</p>
-                            <p class="price">399<em>元</em></p>
-                            <a href="//www.mi.com/hezi3s/" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
+                <template v-for="(index, todo) in hezi">
+                    <li class="hezi-list-0{{index + 1}}">
+                        <a href="{{todo.url}}" target="_blank" class="figue-img">
+                            <img :src="'/public/img/hd_v07/' + todo.image" alt="{{todo.title}}">
+                        </a>
+                        <div class="box">
+                            <div>
+                                <h2>
+                                    <a href="{{todo.url}}" target="_blank">{{todo.title}}</a>
+                                </h2>
+                                <p class="text">{{todo.desc}}</p>
+                                <p class="price">{{todo.price}}<em>元</em></p>
+                                <a href="{{todo.url}}" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="hezi-list-02">
-                    <a href="//www.mi.com/hezi3/" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/hezi3.jpg?v=2772c31">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/hezi3/" target="_black">小米盒子3</a>
-                            </h2>
-                            <p class="text">全新升级 64位 4K网络机顶盒</p>
-                            <p class="price">299<em>元</em></p>
-                            <a href="//www.mi.com/hezi3/" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="hezi-list-03">
-                    <a href="//www.mi.com/hezimini/" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/hezi-mini.jpg?v=2471b55">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/hezimini/" target="_black">小米盒子mini版</a>
-                            </h2>
-                            <p class="text">全高清网络机顶盒，海量内容</p>
-                            <p class="price">199<em>元</em></p>
-                            <a href="//www.mi.com/hezimini/" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </template>
             </ul>
             <ul class="mitv-hezi-parts">
-                <li class="hezi-list-04">
-                    <a href="//item.mi.com/1154200029.html" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/mitv-ykq.jpg?v=0c2915a">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//item.mi.com/1154200029.html" target="_black">小米语音体感遥控器</a>
-                            </h2>
-                            <p class="text">能用语音搜索大片 还能玩体感游戏</p>
-                            <p class="price">99<em>元</em></p>
-                            <a href="//item.mi.com/1154200029.html" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
+                <template v-for="(index, todo) in heizParts">
+                    <li class="hezi-list-0{{index + 4}}">
+                        <a href="{{todo.url}}" target="_blank" class="figue-img">
+                            <img :src="'/public/img/hd_v07/' + todo.image" alt="{{todo.title}}">
+                        </a>
+                        <div class="box">
+                            <div>
+                                <h2>
+                                    <a href="{{todo.url}}" target="_blank">{{todo.title}}</a>
+                                </h2>
+                                <p class="text">{{todo.desc}}</p>
+                                <p class="price">{{todo.price}}<em>元</em></p>
+                                <a href="{{todo.url}}" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="hezi-list-05">
-                    <a href="//www.mi.com/tvzj/" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/mitv-zhuji.jpg?v=9100ef1">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//www.mi.com/tvzj/" target="_black">小米电视主机</a>
-                            </h2>
-                            <p class="text">次世代智能电视主机 内置独立音响</p>
-                            <p class="price">999<em>元</em></p>
-                            <a href="//www.mi.com/tvzj/" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section mitv-yinxiang" id="yinxiang">
         <div class="container">
             <div class="content">
-                <h2 class="webfont">给你的大片一点好声音</h2>
+                <h2>{{yinxiangTitle}}</h2>
             </div>
             <ul class="container">
-                <li class="yinxiang-list-01">
-                    <a href="//item.mi.com/1160800073.html?cfrom=list" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/yinxiang01.jpg?v=ec78b9e">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//item.mi.com/1160800073.html?cfrom=list" target="_black">小米家庭音响<em>金属版</em></a>
-                            </h2>
-                            <p class="text">全金属机身，震撼好声音</p>
-                            <p class="price">899<em>元</em></p>
-                            <a href="//item.mi.com/1160800073.html?cfrom=list" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
+                <template v-for="(index, todo) in yinxiang">
+                    <li class="yinxiang-list-0{{index +1}}">
+                        <a href="{{todo.url}}" target="_blank" class="figue-img">
+                            <img :src="'/public/img/hd_v07/' + todo.image" alt="{{todo.title}}">
+                        </a>
+                        <div class="box">
+                            <div>
+                                <h2>
+                                    <a href="{{todo.url}}" target="_black">{{todo.yinxiang_name}}<em v-if="todo.yinxiang_em != ''">{{todo.yinxiang_em}}</em></a>
+                                </h2>
+                                <p class="text">{{todo.desc}}</p>
+                                <p class="price">{{todo.price}}<em>元</em></p>
+                                <a href="{{todo.url}}" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="yinxiang-list-02">
-                    <a href="//item.mi.com/1160800074.html?cfrom=list" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/yinxiang02.jpg?v=8e8fcfa">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont">
-                                <a href="//item.mi.com/1160800074.html?cfrom=list" target="_black">小米家庭音响<em>标准版</em></a>
-                            </h2>
-                            <p class="text">8扬声器Soundbar 支持蓝牙连接</p>
-                            <p class="price">699<em>元</em></p>
-                            <a href="//item.mi.com/1160800074.html?cfrom=list" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="yinxiang-list-03">
-                    <a href="//item.mi.com/1154100018.html" target="_black" class="figue-img">
-                        <img data-src="../../public/img/hd_v07/yinxiang03.jpg?v=a2c4f9b">
-                    </a>
-                    <div class="box">
-                        <div>
-                            <h2 class="webfont"><a href="//item.mi.com/1154100018.html" target="_black">小米低音炮</a></h2>
-                            <p class="text">全金属机身 低音震撼</p>
-                            <p class="price">599<em>元</em></p>
-                            <a href="//item.mi.com/1154100018.html" target="_black" class="btn btn-buy">立即购买<i class="iconfont"></i></a>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
@@ -425,7 +296,7 @@
     </div>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/hd_v07/script.min.js?v=7a9b114"></script>
+    <script src="../../public/js/hd_v07/script.min.js?v=b25d24a"></script>
 </body>
 
 </html>

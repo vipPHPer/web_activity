@@ -1,0 +1,164 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "mitv_70_65_60_55": [{
+            "mitv_name": "小米电视",
+            "mitv_type": "3",
+            "mitv_chicun": "70英寸",
+            "desc": "原装进口夏普真 4K 屏 金属机身",
+            "price": "9,999",
+            "market_price": "9,999",
+            "loading": "正在加载中...",
+            "image": "mitv70-img.jpg",
+            "url": "//www.mi.com/mitv3/70/",
+            "start_time": "12月10日0点活动开始",
+            "slot": "元",
+            "sale_sign": ""
+        }, {
+            "mitv_name": "小米电视",
+            "mitv_type": "3s",
+            "mitv_chicun": "65英寸曲面",
+            "desc": "最美的小米电视 震撼如IMAX",
+            "price": "8,999",
+            "market_price": "8,999",
+            "loading": "正在加载中...",
+            "image": "mitv65-img.jpg",
+            "url": "//www.mi.com/mitv3s/65/",
+            "start_time": "12月10日0点活动开始",
+            "slot": "元",
+            "sale_sign": ""
+        }, {
+            "mitv_name": "小米电视",
+            "mitv_type": "3",
+            "mitv_chicun": "60英寸",
+            "desc": "原装 LG 真 4K 屏 金属机身",
+            "price": "4,999",
+            "market_price": "4,999",
+            "loading": "正在加载中...",
+            "image": "mitv60-img.jpg",
+            "url": "//www.mi.com/mitv3/60/",
+            "start_time": "12月10日0点活动开始",
+            "slot": "元起",
+            "sale_sign": ""
+        }, {
+            "mitv_name": "小米电视",
+            "mitv_type": "3",
+            "mitv_chicun": "55英寸",
+            "desc": "三星 / LG真4K屏 金属机身",
+            "price": "3,999",
+            "market_price": "3,999",
+            "loading": "正在加载中...",
+            "image": "mitv55-img.jpg",
+            "url": "//www.mi.com/mitv3/55/",
+            "start_time": "12月10日0点活动开始",
+            "slot": "元起",
+            "sale_sign": ""
+        }],
+        "mitv_48_43": [{
+            "mitv_name": "小米电视",
+            "mitv_type": "3S",
+            "mitv_chicun": "48英寸",
+            "desc": "黄金尺寸 高端旗舰",
+            "price": "1,999",
+            "market_price": "1,999",
+            "loading": "正在加载中...",
+            "image": "mitv48-img.jpg",
+            "url": "//www.mi.com/mitv3s/48/",
+            "start_time": "12月10日0点活动开始",
+            "slot": "元",
+            "sale_sign": ""
+        }, {
+            "mitv_name": "小米电视",
+            "mitv_type": "3S",
+            "mitv_chicun": "43英寸",
+            "desc": "小尺寸高端旗舰",
+            "price": "1,799",
+            "market_price": "1,799",
+            "loading": "正在加载中...",
+            "image": "mitv43-img.jpg",
+            "url": "//www.mi.com/mitv3s/43/",
+            "start_time": "12月10日0点活动开始",
+            "slot": "元",
+            "sale_sign": ""
+        }],
+        "hezi": [{
+            "title": "小米盒子3 增强版",
+            "desc": "高清 4K 网络机顶盒",
+            "price": "399",
+            "market_price": "399",
+            "image": "hezi3s.jpg",
+            "url": "//www.mi.com/hezi3s/",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "小米盒子3",
+            "desc": "全新升级 64位 4K网络机顶盒",
+            "price": "299",
+            "market_price": "299",
+            "image": "hezi3.jpg",
+            "url": "//www.mi.com/hezi3/",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "小米盒子mini版",
+            "desc": "全高清网络机顶盒，海量内容",
+            "price": "199",
+            "market_price": "199",
+            "image": "hezi-mini.jpg",
+            "url": "//www.mi.com/hezimini/",
+            "slot": "",
+            "sale_sign": ""
+        }],
+        "heizParts": [{
+            "title": "小米语音体感遥控器",
+            "desc": "能用语音搜索大片 还能玩体感游戏",
+            "price": "99",
+            "market_price": "99",
+            "image": "mitv-ykq.jpg",
+            "url": "//item.mi.com/1154200029.html",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "小米电视主机",
+            "desc": "次世代智能电视主机 内置独立音响",
+            "price": "999",
+            "market_price": "999",
+            "image": "mitv-zhuji.jpg",
+            "url": "//www.mi.com/tvzj/",
+            "slot": "",
+            "sale_sign": ""
+        }],
+        "yinxiang": [{
+            "yinxiang_name": "小米家庭音响",
+            "yinxiang_em": "金属版",
+            "desc": "全金属机身，震撼好声音",
+            "price": "899",
+            "market_price": "899",
+            "image": "yinxiang01.jpg",
+            "url": "//item.mi.com/1160800073.html?cfrom=list",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "yinxiang_name": "小米家庭音响",
+            "yinxiang_em": "标准版",
+            "desc": "8扬声器Soundbar 支持蓝牙连接",
+            "price": "699",
+            "market_price": "699",
+            "image": "yinxiang02.jpg",
+            "url": "//item.mi.com/1160800074.html?cfrom=list",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "yinxiang_name": "小米低音炮",
+            "yinxiang_em": "",
+            "desc": "全金属机身 低音震撼",
+            "price": "599",
+            "market_price": "599",
+            "image": "yinxiang03.jpg",
+            "url": "//item.mi.com/1154100018.html",
+            "slot": "",
+            "sale_sign": ""
+        }]
+    }
+}
