@@ -8,6 +8,10 @@
 @import '../../../static/scss/_reset.scss';
 @import '../../../static/scss/_modal.scss';
 //Your style Code
+[v-cloak] {
+    display: none;
+}
+
 $imgUrl: '/public/img/hd_v11/';
 .container {
     width: 1280px;

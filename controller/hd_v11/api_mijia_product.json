@@ -1,0 +1,64 @@
+{
+    "code": "result",
+    "msg": "",
+    "data": {
+        "wrap3_nav": [{
+            "title": "小米空气净化器 2",
+            "desc": "10分钟，客厅空气焕然一新",
+            "price": "699",
+            "market_price": "699",
+            "image": "img1.jpg",
+            "slot": "first",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米家空气净化器 Pro",
+            "desc": "更强大的净化能力，1月10日早 10点开售",
+            "price": "1499",
+            "market_price": "1499",
+            "image": "img2.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "防雾霾口罩",
+            "desc": "过滤 99.97% PM2.5 颗粒物",
+            "price": "69",
+            "market_price": "69",
+            "image": "img3.jpg",
+            "slot": "first",
+            "sale_sign": ""
+        }, {
+            "title": "智米除菌加湿器",
+            "desc": "紫外线除菌技术，提供健康湿润的空气",
+            "price": "799",
+            "market_price": "799",
+            "image": "img4.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }],
+        "wrap4_nav": [{
+            "title": "米家恒温电水壶",
+            "desc": "设定水温自动保持，喝水更方便",
+            "price": "199",
+            "market_price": "199",
+            "image": "img9.jpg",
+            "slot": "first",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "小米智能家庭礼品装",
+            "desc": "预设场景，让智能设备自动工作",
+            "price": "299",
+            "market_price": "299",
+            "image": "img10.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米家小白智能摄像机",
+            "desc": "能通过语音控制家中的智能设备",
+            "price": "399",
+            "market_price": "399",
+            "image": "img11.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }]
+    }
+}

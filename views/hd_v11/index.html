@@ -5,10 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>米家品牌日 -- 小米商城</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
     <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/hd_v11/style.min.css?v=9b2afbb">
+    <link rel="stylesheet" href="../../public/css/hd_v11/style.min.css?v=527a83c">
     <script>
         var UA = navigator.userAgent;
         var search = location.search;
@@ -19,14 +17,14 @@
     </script>
 </head>
 
-<body class="mijia-home">
+<body class="mijia-home" id="mijia" v-cloak>
     <div class="section sec-wrap1">
         <div class="container">
             <div class="nav-top">
                 <a href="javascript:void(0);" class="J_rule">活动规则</a>
                 <a href="//www.mi.com/index.html" target="_blank">返回小米商城 &gt;</a>
             </div>
-            <h1>品牌日优惠券疯狂送，0点、10点、12点、14点、18点、20点 开抢！</h1>
+            <h1>{{wrap1H1}}</h1>
             <div class="quan-con">
                 <ul class="quan-nav clearfix" id="J_lottery">
                     <li class="quan-bg1 quan-fifty" data-code="fifty">
@@ -61,8 +59,8 @@
     <div class="section sec-wrap3">
         <div class="container">
             <div class="top-icon top-icon1"></div>
-            <h2 class="tit">健康舒适的环境</h2>
-            <div class="desc">从雾霾天回家，应该呼吸清新湿润的空气</div>
+            <h2 class="tit">{{wrap3Title}}</h2>
+            <div class="desc">{{wrap3Desc}}</div>
             <div class="product-box">
                 <div class="pro-top clearfix J_videoSec is-visible">
                     <div class="pro-video pro-video1 fl">
@@ -72,48 +70,23 @@
                         </video>
                     </div>
                     <div class="pro-text fr">
-                        <h3 class="sub-tit">自由呼吸的全自动解决方案</h3>
+                        <h3 class="sub-tit">{{wrap3H3}}</h3>
                         <div class="line"></div>
-                        <div class="sub-desc">
-                            客厅的霾表可以随时监测空气质量并自动控制净化器的开关和运转模式，加湿器也能根据环境自动调整加湿方案。一回家就能呼吸到仿佛置身森林般的新鲜空气，湿润而又洁净。
-                        </div>
+                        <div class="sub-desc">{{wrap3H3Desc}}</div>
                     </div>
                 </div>
                 <ul class="pro-nav clearfix">
-                    <li class="first">
-                        <a class="pro-link" href="javascript:void(0);" target="_blank">
-                            <img data-src="../../public/img/hd_v11/img1.jpg?v=f1589c1">
-                            <span class="pop pop1"></span>
-                        </a>
-                        <h3 class="pro-tit">小米空气净化器 2</h3>
-                        <p class="pro-info">10分钟，客厅空气焕然一新</p>
-                        <p class="price price-font">¥<span>699</span></p>
-                    </li>
-                    <li>
-                        <a class="pro-link" href="javascript:void(0);" target="_blank">
-                            <img data-src="../../public/img/hd_v11/img2.jpg?v=e745f63">
-                        </a>
-                        <h3 class="pro-tit">米家空气净化器 Pro</h3>
-                        <p class="pro-info">更强大的净化能力，1月10日早 10点开售</p>
-                        <p class="price price-font">¥<span>1499</span></p>
-                    </li>
-                    <li class="first">
-                        <a class="pro-link" href="javascript:void(0);" target="_blank">
-                            <img data-src="../../public/img/hd_v11/img3.jpg?v=ac8edd8">
-                        </a>
-                        <h3 class="pro-tit">防雾霾口罩</h3>
-                        <p class="pro-info">过滤 99.97% PM2.5 颗粒物</p>
-                        <p class="price price-font">¥<span>69</span></p>
-                    </li>
-                    <li>
-                        <a class="pro-link" href="javascript:void(0);" target="_blank">
-                            <img data-src="../../public/img/hd_v11/img4.jpg?v=c6a6bfa">
-                            <span class="pop pop1"></span>
-                        </a>
-                        <h3 class="pro-tit">智米除菌加湿器</h3>
-                        <p class="pro-info">紫外线除菌技术，提供健康湿润的空气</p>
-                        <p class="price price-font">¥<span>799</span></p>
-                    </li>
+                    <template v-for="(index, todo) in wrap3_nav">
+                        <li :class="todo.slot == 'first'?'first':''">
+                            <a href="javascript:void(0);" target="_blank" class="pro-link">
+                                <img :src="'/public/img/hd_v11/' + todo.image" alt="{{todo.title}}">
+                                <span class="pop pop1" v-if="todo.sale_sign != ''"></span>
+                            </a>
+                            <h3 class="pro-tit">{{todo.title}}</h3>
+                            <p class="pro-info">{{todo.desc}}</p>
+                            <p class="price price-font">￥<span>{{todo.price}}</span></p>
+                        </li>
+                    </template>
                 </ul>
                 <div class="pro-spe clearfix">
                     <div class="pro-item fl">
@@ -158,16 +131,14 @@
     <div class="section sec-wrap4">
         <div class="container">
             <div class="top-icon top-icon2"></div>
-            <h2 class="tit">享受慵懒的时光</h2>
-            <div class="desc">其实很多生活琐事都不需亲自动手的 </div>
+            <h2 class="tit">{{wrap4Title}}</h2>
+            <div class="desc">{{wrap4Desc}}</div>
             <div class="product-box">
                 <div class="pro-top clearfix J_videoSec is-visible">
                     <div class="pro-text fl">
-                        <h3 class="sub-tit">居家生活更轻松的小秘诀</h3>
+                        <h3 class="sub-tit">{{wrap4SubTit}}</h3>
                         <div class="line"></div>
-                        <div class="sub-desc">
-                            喜欢在一个阳光午后蜷在沙发，端起恒温水壶泡茶慢品。我对小白说：“开始扫地！”它便帮我唤醒扫地机器人，将每一块地板打扫干净。这时的我俨然成为了家里的“国王”。
-                        </div>
+                        <div class="sub-desc">{{wrap4SubDesc}}</div>
                     </div>
                     <div class="pro-video pro-video2 fr">
                         <video class="video" loop="" data-autoplay="true" preload="none">
@@ -189,34 +160,17 @@
                         </div>
                     </div>
                     <ul class="pro-nav clearfix">
-                        <li class="first">
-                            <a class="pro-link" href="javascript:void(0);" target="_blank">
-                                <img data-src="../../public/img/hd_v11/img9.jpg?v=4a736bf">
-                                <span class="pop pop1"></span>
-                            </a>
-                            <h3 class="pro-tit">米家恒温电水壶</h3>
-                            <p class="pro-info">设定水温自动保持，喝水更方便</p>
-                            <p class="price price-font">¥<span>199</span></p>
-                        </li>
-                        <li class="">
-                            <a class="pro-link" href="javascript:void(0);" target="_blank">
-                                <img data-src="../../public/img/hd_v11/img10.jpg?v=f2036e2">
-                                <span class="pop pop1"></span>
-                            </a>
-                            <h3 class="pro-tit">小米智能家庭礼品装</h3>
-                            <p class="pro-info">预设场景，让智能设备自动工作</p>
-                            <p class="price price-font">¥<span>299</span></p>
-                        </li>
-                        <li class="">
-                            <a class="pro-link" href="javascript:void(0);" target="_blank">
-                                <img data-src="../../public/img/hd_v11/img11.jpg?v=752203c">
-                                <span class="pop pop1"></span>
-                                <span class="pop pop2"></span>
-                            </a>
-                            <h3 class="pro-tit">米家小白智能摄像机</h3>
-                            <p class="pro-info">能通过语音控制家中的智能设备</p>
-                            <p class="price price-font">¥<span>399</span></p>
-                        </li>
+                        <template v-for="(index, todo) in wrap4_nav">
+                            <li :class="todo.slot == 'first'?'first':''">
+                                <a href="javascript:void(0);" target="_blank" class="pro-link">
+                                    <img :src="'/public/img/hd_v11/' + todo.image" alt="{{todo.title}}">
+                                    <span class="pop pop1" v-if="todo.sale_sign != ''"></span>
+                                </a>    
+                                <h3 class="pro-tit">{{todo.title}}</h3>
+                                <p class="pro-info">{{todo.desc}}</p>
+                                <p class="price price-font">￥<span>{{todo.price}}</span></p>
+                            </li>
+                        </template>
                     </ul>
                 </div>
                 <div class="pro-spe clearfix">
@@ -422,7 +376,7 @@
     </div>
     <div class="section sec-wrap7">
         <div class="container">
-            <h2 class="tit">米家精选,享受高品质生活 </h2>
+            <h2 class="tit">米家精选,享受高品质生活</h2>
             <div class="desc">打造居家美学，做美好生活的设计师</div>
             <div class="pull-box clearfix">
                 <div class="pull-row pull-col3">
@@ -856,7 +810,7 @@
     </script>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/hd_v11/script.min.js?v=672fb5e"></script>
+    <script src="../../public/js/hd_v11/script.min.js?v=d394674"></script>
 </body>
 
 </html>
