@@ -147,8 +147,8 @@
         </div>
         <div class="section section-life" id="J_life">
             <div class="container">
-                <h1>新年生活更健康</h1>
-                <p class="desc-text">用智能家居提升生活品质</p>
+                <h1>{{lifeTitle}}</h1>
+                <p class="desc-text">{{lifeDesc}}</p>
                 <div class="type-guide clearfix">
                     <a href="javascript:void(0);" class="guide-a active">
                         <em></em>厨上式
@@ -159,57 +159,71 @@
                 </div>
                 <div class="daliyuse-wrap group-link">
                     <div class="daliyuse-group daliyuse-a clearfix">
-                        <div class="left">
-                            <a href="javascript:void(0);" class="pic"></a>
-                            <div class="content">
-                                <h3 class="title">小米净水器 厨上式</h3>
-                                <p>大流量直出净水，健康家庭必备</p>
-                                <p class="price">
-                                    <span class="price-num">1299</span>元
-                                </p>
-                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                        <template v-for="(index, todo) in jingoshuiqiUpList">
+                            <div :class="todo.sale_sign == 'left'? 'left' : 'right'">
+                                <a href="javascript:void(0);" class="pic"></a>
+                                <div class="content">
+                                    <h3 class="title">{{todo.title}}</h3>
+                                    <p>{{todo.desc}}</p>
+                                    <p class="price">
+                                        <span class="price-num">{{todo.price}}</span>元
+                                        <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                                    </p>
+                                    <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="right">
-                            <a href="javascript:void(0);" class="pic"></a>
-                            <div class="content">
-                                <h3 class="title">小米净水器PP棉滤芯</h3>
-                                <p>按时更换滤芯，保证饮水品质</p>
-                                <p class="price">
-                                    <span class="price-num">59</span>元
-                                </p>
-                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                            </div>
-                        </div>
+                        </template>
                     </div>
                     <div class="daliyuse-group daliyuse-b clearfix hide">
-                        <div class="left">
-                            <a href="javascript:void(0);" class="pic"></a>
-                            <div class="content">
-                                <h3 class="title">小米净水器 厨下式</h3>
-                                <p>隐藏安装节省空间，灯光水龙头</p>
-                                <p class="price">
-                                    <span class="price-num">1999</span>元
-                                </p>
-                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                        <template v-for="(index, todo) in jingoshuiqiDownList">
+                            <div :class="todo.sale_sign == 'left'? 'left' : 'right'">
+                                <a href="javascript:void(0);" class="pic"></a>
+                                <div class="content">
+                                    <h3 class="title">{{todo.title}}</h3>
+                                    <p>{{todo.desc}}</p>
+                                    <p class="price">
+                                        <span class="price-num">{{todo.price}}</span>元
+                                        <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                                    </p>
+                                    <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="right">
-                            <a href="javascript:void(0);" class="pic"></a>
-                            <div class="content">
-                                <h3 class="title">小米净水器活性炭滤芯</h3>
-                                <p>按时更换滤芯，保证饮水品质</p>
-                                <p class="price">
-                                    <span class="price-num">69</span>元
-                                </p>
-                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                            </div>
-                        </div>
+                        </template>
                     </div>
                 </div>
-                <h2>呼吸健康空气，抗霾必备</h2>
-                <!-- doT.js -->
-                <div class="group-link" id="J_hangmai"> </div>
+                <h2>{{lifeH2}}</h2>
+                <div class="group-link" id="J_hangmai">
+                    <ul class="group-col4-list group-list clearfix">
+                        <template v-for="(index, todo) in f2_lifeList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                <div class="tag" v-if="todo.sale_sign == '新品'">
+                                    新品
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '一件包邮'">
+                                    一件<br />包邮
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '10元券'">
+                                    可用<br/>10元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '20元券'">
+                                    可用<br/>20元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '5元券'">
+                                    可用<br/>5元券
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
                 <a href="https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/829a69c575a1.html?2&needValidHost=false" target="_blank" class="group-link home-links fingerpost">
                     <div class="content">
                         <h3>身体更健康 2017生存法则</h3>
@@ -220,8 +234,8 @@
         </div>
         <div class="section section-home" id="J_home">
             <div class="container">
-                <h1>新年居家更舒适</h1>
-                <p class="desc-text">用智能产品开启新的生活方式</p>
+                <h1>{{homeTitle}}</h1>
+                <p class="desc-text">{{homeDesc}}</p>
                 <div class="type-guide home-guide clearfix">
                     <a href="javascript:void(0);" class="guide-a active">
                         <em></em>环境
@@ -238,103 +252,71 @@
                 </div>
                 <div class="group-link" id="J_homeList">
                     <ul class="group-col2-list group-list homeuse-list clearfix first">
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828256692199_dahTp.jpg?v=7157bc4">
-                            </a>
-                            <h3 class="title">米家扫地机器人</h3>
-                            <p>智商高，扫得干净扫得快</p>
-                            <p class="price">
-                                <span class="price-num">1699</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828257345683_zxsrD.jpg?v=b0029d6">
-                            </a>
-                            <h3 class="title">智米除菌加湿器</h3>
-                            <p>紫外线除菌，上注水设计</p>
-                            <p class="price">
-                                <span class="price-num">799</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
+                        <template v-for="(index, todo) in jujiaHuanjingList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                            </li>
+                        </template>
                     </ul>
                     <ul class="group-col2-list group-list homeuse-list clearfix hide">
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828257488704_sMQid.jpg?v=c58db65">
-                            </a>
-                            <h3 class="title">米家IH电饭煲</h3>
-                            <p>多才多艺的智能电饭煲</p>
-                            <p class="price">
-                                <span class="price-num">399</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828257635067_CJkqo.jpg?v=5f60d59">
-                            </a>
-                            <h3 class="title">米家压力IH电饭煲</h3>
-                            <p>真智能的压力 IH 电饭煲</p>
-                            <p class="price">
-                                <span class="price-num">999</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
+                        <template v-for="(index, todo) in jujiaMeishiList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                            </li>
+                        </template>
                     </ul>
                     <ul class="group-col2-list group-list homeuse-list clearfix hide">
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828257838941_FPtAx.jpg?v=76e4fc6">
-                            </a>
-                            <h3 class="title">米家 LED 智能台灯</h3>
-                            <p>照明之上，光的艺术品</p>
-                            <p class="price">
-                                <span class="price-num">159</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828258012083_KoUFz.jpg?v=1f4ca14">
-                            </a>
-                            <h3 class="title">Yeelight床头灯</h3>
-                            <p>给卧室1600万种颜色</p>
-                            <p class="price">
-                                <span class="price-num">229</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
+                        <template v-for="(index, todo) in jujiaZhaomingList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                            </li>
+                        </template>
                     </ul>
                     <ul class="group-col2-list group-list homeuse-list clearfix hide">
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828258169689_ZsXnU.jpg?v=15d505b">
-                            </a>
-                            <h3 class="title">8H标准乳胶枕</h3>
-                            <p>天然好枕头 一晚好睡眠</p>
-                            <p class="price">
-                                <span class="price-num">139</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="pic">
-                                <img data-src="../../public/img/hd_v06/cms_14828258313428_YmAMO.jpg?v=55e604c">
-                            </a>
-                            <h3 class="title">8H护颈乳胶枕</h3>
-                            <p>多重新科技 升级好睡眠</p>
-                            <p class="price">
-                                <span class="price-num">239</span>元
-                            </p>
-                            <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                        </li>
+                        <template v-for="(index, todo) in jujiaShuimianList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}元</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                            </li>
+                        </template>
                     </ul>
                 </div>
-                <h2>新年要有好“看”的</h2>
+                <h2>{{homeH2}}</h2>
                 <div class="type-guide tv-guide clearfix">
                     <a href="javascript:void(0);" class="guide-a active">
                         <em></em>48"
@@ -398,8 +380,39 @@
                     </div>
                 </div>
                 <h2>更多居家好物</h2>
-                <!-- doT.js -->
-                <div class="group-link" id="J_jujiahaowu"></div>
+                <div class="group-link" id="J_jujiahaowu">
+                    <ul class="group-col4-list group-list clearfix">
+                        <template v-for="(index, todo) in jujiahaowuList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                <div class="tag" v-if="todo.sale_sign == '新品'">
+                                    新品
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '一件包邮'">
+                                    一件<br />包邮
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '10元券'">
+                                    可用<br/>10元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '20元券'">
+                                    可用<br/>20元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '5元券'">
+                                    可用<br/>5元券
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
                 <a href="https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/bc9c0ba629fe.html?2&needValidHost=false" target="_blank" class="group-link easyyear-tips fingerpost">
                     <div class="content">
                         <h3>生活更舒适 2017品质生活宝典</h3>
@@ -410,8 +423,8 @@
         </div>
         <div class="section section-trip" id="J_trip">
             <div class="container">
-                <h1>新年出行更时尚</h1>
-                <p class="desc-text">炫酷装备助您轻松出行</p>
+                <h1>{{tripTitle}}</h1>
+                <p class="desc-text">{{tripDesc}}</p>
                 <div class="ticket-list clearfix">
                     <a href="javascript:void(0);" class="ticket-group ticket-current">
                         <div class="icon-ling">领</div>
@@ -428,36 +441,59 @@
                         </div>
                     </a>
                 </div>
-                <p class="desc-text ticket-tips">每种优惠券每位用户限领两张</p>
+                <p class="desc-text ticket-tips">{{tripDesc1}}</p>
                 <div class="group-link daliyuse-wrap">
                     <div class="daliyuse-group clearfix">
-                        <div class="left">
-                            <a href="javascript:void(0);" class="pic"></a>
-                            <div class="content">
-                                <h3 class="title">小米米家电动滑板车</h3>
-                                <p>30公里超长续航，便携折叠</p>
-                                <p class="price">
-                                    <span class="price-num">1999</span>元
-                                </p>
-                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                        <template v-for="(index, todo) in f2_tripList">
+                            <div :class="todo.sale_sign == 'left' ? 'left' : 'right'">
+                                <a href="javascript:void(0);" class="pic"></a>
+                                <div class="content">
+                                    <h3 class="title">{{todo.title}}</h3>
+                                    <p>{{todo.desc}}</p>
+                                    <p class="price">
+                                        <span class="price-num">{{todo.price}}</span>元
+                                        <del v-if="todo.price != todo.market_price">{{todo.market_price}}</del>
+                                    </p>
+                                    <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="right">
-                            <a href="javascript:void(0);" class="pic"></a>
-                            <div class="content">
-                                <h3 class="title">九号平衡车</h3>
-                                <p>超长续航，3分钟轻松上手</p>
-                                <p class="price">
-                                    <span class="price-num">1999</span>元
-                                </p>
-                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
-                            </div>
-                        </div>
+                        </template>
                     </div>
                 </div>
-                <!-- doT.js -->
-                <div class="group-link" id="J_chuxing"></div>
-                <h2>运动也时尚</h2>
+                <div class="group-link" id="J_chuxing">
+                    <ul class="group-col4-list group-list clearfix">
+                        <template v-for="(index, todo) in chuxingList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                <div class="tag" v-if="todo.sale_sign == '新品'">
+                                    新品
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '一件包邮'">
+                                    一件<br />包邮
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '10元券'">
+                                    可用<br/>10元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '20元券'">
+                                    可用<br/>20元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '5元券'">
+                                    可用<br/>5元券
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <h2>{{tripH2}}</h2>
                 <a href="javascript:void(0);" class="group-link miwatch">
                     <div class="content">
                         <h3 class="title">手环2+腕带 套装</h3>
@@ -479,8 +515,8 @@
         </div>
         <div class="section section-fashion" id="J_fashion">
             <div class="container">
-                <h1>新年酷玩潮范儿足</h1>
-                <p class="desc-text">挑选一件酷玩具，让生活充满惊喜</p>
+                <h1>{{fashionTitle}}</h1>
+                <p class="desc-text">{{fashionDesc}}</p>
                 <div class="ticket-list clearfix">
                     <a href="javascript:void(0);" class="ticket-group ticket-current">
                         <div class="icon-ling">领</div>
@@ -504,8 +540,8 @@
                         </div>
                     </a>
                 </div>
-                <p class="desc-text ticket-tips">每种优惠券每位用户限领两张</p>
-                <h2>酷玩新品，限时开售</h2>
+                <p class="desc-text ticket-tips">{{fashionDesc1}}</p>
+                <h2>{{fashionH2}}</h2>
                 <div class="new-product">
                     <div class="items group-topblock">
                         <a href="javascript:void(0);" class="pic"></a>
@@ -542,11 +578,73 @@
                     </div>
                 </div>
                 <h2>新年要有好“听”的</h2>
-                <!-- doT.js -->
-                <div class="group-link" id="J_listen"></div>
+                <div class="group-link" id="J_listen">
+                    <ul class="group-col4-list group-list clearfix">
+                        <template v-for="(index, todo) in listenList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                <div class="tag" v-if="todo.sale_sign == '新品'">
+                                    新品
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '一件包邮'">
+                                    一件<br />包邮
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '10元券'">
+                                    可用<br/>10元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '20元券'">
+                                    可用<br/>20元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '5元券'">
+                                    可用<br/>5元券
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
                 <h2>更多酷玩好物</h2>
-                <!-- doT.js -->
-                <div class="group-link" id="J_kuwan"></div>
+                <div class="group-link" id="J_kuwan">
+                    <ul class="group-col4-list group-list clearfix">
+                        <template v-for="(index, todo) in kuwanList">
+                            <li>
+                                <a href="javascript:void(0);" class="pic">
+                                    <img v-bind:src="'/public/img/hd_v06/' + todo.image" alt="{{todo.title}}">
+                                </a>
+                                <h3 class="title">{{todo.title}}</h3>
+                                <p>{{todo.desc}}</p>
+                                <p class="price">
+                                    <span class="price-num">{{todo.price}}</span>元
+                                    <del v-if="todo.price != todo.market_price">{{todo.market_price}}</del>
+                                </p>
+                                <a href="javascript:void(0);" class="btn-primary">立即购买</a>
+                                <div class="tag" v-if="todo.sale_sign == '新品'">
+                                    新品
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '一件包邮'">
+                                    一件<br />包邮
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '10元券'">
+                                    可用<br/>10元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '20元券'">
+                                    可用<br/>20元券
+                                </div>
+                                <div class="tag" v-if="todo.sale_sign == '5元券'">
+                                    可用<br/>5元券
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
                 <a href="https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/e7402ff78e65.html?2&needValidHost=false" target="_blank" class="group-link mivr-tips fingerpost" id="J_mivr">
                     <div class="content">
                         <h3>玩法更洋气 2017最in科技潮品</h3>
@@ -560,57 +658,9 @@
             <br />京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号
         </div>
     </div>
-    <script id="J_listTemplateCol2" type="text/x-dot-template">
-        {{~it :value:index}}
-        <li>
-            <a class="pic" href="{{=value.image_url}}" target="_blank"><img data-src="{{=value.image}}" /></a>
-            <h3 title="{{=value.title}}" class="title">{{=value.title}}</h3>
-            <p>{{=value.brief}}</p>
-            <p class="price">
-                <span class="price-num">{{=value.price}}</span> {{if(value.price_unit === '1'){}} 元起{{} else{}}元 {{}}}
-            </p>
-            <a href="{{=value.image}}" class="btn-primary" target="_blank">立即购买</a> {{if(value.sale_sign) {}}
-            <div class="tag">
-                {{ if(value.sale_sign === "新品") { }}新品 {{ } else if(value.sale_sign === "一件包邮") { }}一件
-                <br/>包邮 {{ } else if(value.sale_sign === "10元券") { }}可用
-                <br/>10元券 {{ } else if(value.sale_sign === "20元券") { }}可用
-                <br/>20元券 {{ } else if(value.sale_sign === "5元券") { }}可用
-                <br/>5元券 {{ } else if(value.sale_sign === "3期免息") { }}3期
-                <br/>免息 {{ } else if(value.sale_sign === "6期免息") { }}6期
-                <br/>免息 {{ }}}
-            </div>
-            {{ }}}
-        </li>
-        {{~}}
-    </script>
-    <script type="text/x-dot-template" id="J_listTemplateCol4">
-        <ul class="group-col4-list group-list clearfix">
-            {{~it :value:index}}
-            <li>
-                <a href="{{=value.image_url}}" class="pic" target="_blank">
-                    <img data-src="{{=value.image}}" />
-                </a>
-                <h3 class="title">{{=value.title}}</h3>
-                <p>{{=value.brief}}</p>
-                <p class="price">
-                    <span class="price-num">{{=value.price}}</span> {{if(value.price_unit === '1'){}} 元起{{} else{}}元 {{}}}
-                </p>
-                <a href="javascript:void(0);" class="btn-primary">立即购买</a> {{if(value.sale_sign){}}
-                <div class="tag">
-                    {{ if(value.sale_sign === "新品") { }}新品 {{ } else if(value.sale_sign === "一件包邮") { }}一件
-                    <br/>包邮 {{ } else if(value.sale_sign === "10元券") { }}可用
-                    <br/>10元券 {{ } else if(value.sale_sign === "20元券") { }}可用
-                    <br/>20元券 {{ } else if(value.sale_sign === "5元券") { }}可用
-                    <br/>5元券 {{ }}}
-                </div>
-                {{ }}}
-            </li>
-            {{~}}
-        </ul>
-    </script>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/hd_v06/script.min.js?v=231167c"></script>
+    <script src="../../public/js/hd_v06/script.min.js?v=8de329c"></script>
 </body>
 
 </html>
