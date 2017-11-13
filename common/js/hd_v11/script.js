@@ -34,7 +34,8 @@ window.vm = new Vue({
         wrap4SubTit: '居家生活更轻松的小秘诀',
         wrap4SubDesc: '喜欢在一个阳光午后蜷在沙发，端起恒温水壶泡茶慢品。我对小白说：“开始扫地！”它便帮我唤醒扫地机器人，将每一块地板打扫干净。这时的我俨然成为了家里的“国王”。',
         wrap3_nav: [],
-        wrap4_nav: []
+        wrap4_nav: [],
+        wrap5_nav: [],
     }
 });
 
@@ -43,6 +44,7 @@ _common.sendAjax(apiMijia, {}, 'json', function(response) {
         var res = response.data;
         window.vm.wrap3_nav = res.wrap3_nav;
         window.vm.wrap4_nav = res.wrap4_nav;
+        window.vm.wrap5_nav = res.wrap5_nav;
     } else {
         return false;
     }
