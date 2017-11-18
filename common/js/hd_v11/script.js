@@ -33,9 +33,34 @@ window.vm = new Vue({
         wrap4Desc: '其实很多生活琐事都不需亲自动手的',
         wrap4SubTit: '居家生活更轻松的小秘诀',
         wrap4SubDesc: '喜欢在一个阳光午后蜷在沙发，端起恒温水壶泡茶慢品。我对小白说：“开始扫地！”它便帮我唤醒扫地机器人，将每一块地板打扫干净。这时的我俨然成为了家里的“国王”。',
+        wrap4TitleH3: '懒人必看：沙发生存指南',
+        wrap4TitleDesc: '闲暇的周末，你和她躺在沙发上，晒着冬日的阳光。米家扫地机器人早已将家里打扫干净，恒温水壶中保持着冲泡绿茶最合适的温度，厨房的阵阵香气飘进客厅…懒，或许就是最理想的幸福。',
+        wrap5Title: '体会陪伴的温馨',
+        wrap5SubTit: '给全家人带来快乐的好物',
+        wrap5SubDesc: '抱起孩子听首故事，一起组装积木机器人享受挑战双手的乐趣；或者陪另一伴拿起VR眼镜，体验震撼的全景视频；哪怕只是抱着抱枕和家人坐在一起傻笑，这就是我想要的温馨和幸福。',
+        wrap5Desc: '不只是“客”厅，更是陪伴家人的地方',
+        wrap5TitleH3: '499元 把客厅打造成亲子乐园',
+        wrap5TitleDesc: '家里的宝宝起床后就会扎进玩具堆里，他们喜欢彩色的图画、喜欢毛茸茸的娃娃、喜欢跟着音乐一起唱。但宝宝最喜欢的，是有你的陪伴。把客厅变成专属的亲子乐园，只需要你的用心和这些…… ',
+        wrap6Title: '震撼的智能影院',
+        wrap6Desc: '随时看一场震撼大片，或是听一场音乐会',
+        wrap6SubTit: '在家也能享受视听盛',
+        wrap6SubDesc: '休闲娱乐的时刻，无论是观影还是听音乐，都可以通过手机操作：打开电视，自动推荐内容并寻找片源，感官效果堪比亲临影院；智能音响也可以自动连网，播放爱听的音乐或电台。',
+        wrap6TitleH3: '老电视做不到的五件事儿',
+        wrap6TitleDesc: '家里的那台老电视陪伴我们度过了许多美好时光，但随着年岁渐长，它越来越不能满足我们的观影需要。细数老电视做不到的5件事儿，让一台理想的新电视给客厅换新装，也让新电视开启我们的新世界！',
+        wrap7Ttile: '米家精选，享受高品质生活',
+        wrap7Dese: '打造居家美学，做美好生活的设计师',
+        wrap8Ttile: '小米明星单品',
+        wrap8Dese: '体验智能的乐趣，享受科技生活',
         wrap3_nav: [],
         wrap4_nav: [],
         wrap5_nav: [],
+        wrap7_nav1: [],
+        wrap7_nav2: [],
+        wrap7_nav3: [],
+        wrap8_nav1: [],
+        wrap8_nav2: [],
+        wrap8_nav3: [],
+        wrap10_nav: [],
     }
 });
 
@@ -45,6 +70,13 @@ _common.sendAjax(apiMijia, {}, 'json', function(response) {
         window.vm.wrap3_nav = res.wrap3_nav;
         window.vm.wrap4_nav = res.wrap4_nav;
         window.vm.wrap5_nav = res.wrap5_nav;
+        window.vm.wrap7_nav1 = res.wrap7_nav1;
+        window.vm.wrap7_nav2 = res.wrap7_nav2;
+        window.vm.wrap7_nav3 = res.wrap7_nav3;
+        window.vm.wrap8_nav1 = res.wrap8_nav1;
+        window.vm.wrap8_nav2 = res.wrap8_nav2;
+        window.vm.wrap8_nav3 = res.wrap8_nav3;
+        window.vm.wrap10_nav = res.wrap10_nav;
     } else {
         return false;
     }

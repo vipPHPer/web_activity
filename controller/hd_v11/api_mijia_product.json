@@ -60,6 +60,185 @@
             "slot": "",
             "sale_sign": "可用劵"
         }],
-        "wrap5_nav": []
+        "wrap7_nav1": [{
+            "title": "小米净水器 厨上式",
+            "desc": "让全家人喝上纯净、健康的好水",
+            "price": "1299",
+            "market_price": "1299",
+            "image": "img25.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米家 LED 智能台灯",
+            "desc": "保护用眼健康的智能台灯",
+            "price": "169",
+            "market_price": "169",
+            "image": "img26.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米兔儿童手表Q",
+            "desc": "定位 + 通话，送孩子一份安全感",
+            "price": "299",
+            "market_price": "299",
+            "image": "img27.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }],
+        "wrap7_nav2": [{
+            "title": "米家压力 IH 电饭煲",
+            "desc": "吃自己煮的饭，是幸福的事，如果饭有微甜，那就是幸福的味道。如何做一碗有幸福味道的好米饭？你需要一台带压力的 IH 智能电饭煲",
+            "price": "999",
+            "market_price": "999",
+            "image": "img28.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米家 IH 电饭煲",
+            "desc": "每一次下厨都是一段旅程，像在画布上创作自己的完美作品，充满了乐趣。想要提高成功率？除了保持耐心，你还需要一个称心如意的好帮手",
+            "price": "399",
+            "market_price": "399",
+            "image": "img29.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }],
+        "wrap7_nav3": [{
+            "title": "小米净水器 厨下式",
+            "desc": "隐藏式安装，加大流量直出纯净水",
+            "price": "1999",
+            "market_price": "1999",
+            "image": "img30.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米家骑记电助力折叠自行车",
+            "desc": "让城市出行轻松有趣",
+            "price": "2999",
+            "market_price": "2999",
+            "image": "img31.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米家 iHealth 血压计",
+            "desc": "送一台智能血压仪，关爱父母健康",
+            "price": "399",
+            "market_price": "399",
+            "image": "img32.jpg",
+            "slot": "",
+            "sale_sign": "可用劵"
+        }],
+        "wrap8_nav1": [{
+            "title": "小米路由器 3",
+            "desc": "四天线设计，信号更快更强",
+            "price": "149",
+            "market_price": "149",
+            "image": "img33.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "小米米家电动滑板车",
+            "desc": "自由出行方式,看一路美景",
+            "price": "1999",
+            "market_price": "1999",
+            "image": "img34.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "小米自拍杆（线控版）",
+            "desc": "即插即用,拍出美美的照片",
+            "price": "49",
+            "market_price": "49",
+            "image": "img35.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }],
+        "wrap8_nav2": [{
+            "title": "小米手机 5s",
+            "desc": "存储更多丰富的细节与浓郁色彩， 即使暗光下，依然可以随手拍出一张颜色层次分明，光线明暗,细腻过渡的大作",
+            "price": "1899",
+            "market_price": "1899",
+            "image": "img36.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "红米4",
+            "desc": "金属机身工艺，带来难以置信的坚实质感。处理器再度升级,搭配4100mAh 大电池，续航时间更长，玩到停不下来",
+            "price": "699",
+            "market_price": "699",
+            "image": "img37.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }],
+        "wrap8_nav3": [{
+            "title": "小米体重秤",
+            "desc": "喝杯水都能感知的精准",
+            "price": "99",
+            "market_price": "99",
+            "image": "img38.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "90分旅行箱（新年限量版）",
+            "desc": "一个轻巧的箱子,新年陪你环游世界",
+            "price": "299",
+            "market_price": "299",
+            "image": "img39.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }, {
+            "title": "小米手环2",
+            "desc": "看的见的健康助手，两种色彩",
+            "price": "149",
+            "market_price": "149",
+            "image": "img40.jpg",
+            "slot": "",
+            "sale_sign": ""
+        }],
+        "wrap10_nav": [{
+            "title": "小米电视3s 55英寸",
+            "desc": "",
+            "price": "3699",
+            "market_price": "3699",
+            "image": "img45.jpg",
+            "slot": "first",
+            "class": "big",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "小米电视3s 65英寸曲面",
+            "desc": "",
+            "price": "8999",
+            "market_price": "8999",
+            "image": "img46.jpg",
+            "slot": "",
+            "class": "big",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米家扫地机器人",
+            "desc": "",
+            "price": "1699",
+            "market_price": "1699",
+            "image": "img47.jpg",
+            "slot": "first",
+            "class": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "小白智能摄像机",
+            "desc": "",
+            "price": "399",
+            "market_price": "399",
+            "image": "img48.jpg",
+            "slot": "",
+            "class": "",
+            "sale_sign": "可用劵"
+        }, {
+            "title": "米兔智能故事机",
+            "desc": "",
+            "price": "199",
+            "market_price": "199",
+            "image": "img49.jpg",
+            "slot": "",
+            "class": "",
+            "sale_sign": "可用劵"
+        }]
     }
 }
