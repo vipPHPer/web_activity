@@ -1,0 +1,47 @@
+{
+    "result": "success",
+    "msg": "",
+    "data": {
+        "clearLeft": [{
+            "name": "KOPIKO 可比克 白咖啡 印度尼西亚进口",
+            "price": "645.00",
+            "market_price": "899.00",
+            "image": "hot02.jpg",
+            "hot_img": "hot-yellow26.gif"
+        }, {
+            "name": "KOPIKO 可比克 白咖啡 印度尼西亚进口",
+            "price": "645.00",
+            "market_price": "899.00",
+            "image": "hot03.jpg",
+            "hot_img": "hot-yellow26.gif"
+        }, {
+            "name": "KOPIKO 可比克 白咖啡 印度尼西亚进口",
+            "price": "645.00",
+            "market_price": "899.00",
+            "image": "hot04.jpg",
+            "hot_img": "hot-yellow26.gif"
+        }, {
+            "name": "KOPIKO 可比克 白咖啡 印度尼西亚进口",
+            "price": "645.00",
+            "market_price": "899.00",
+            "image": "hot06.jpg",
+            "hot_img": "hot-yellow26.gif"
+        }],
+        "clearRight": [{
+            "name": "KOPIKO 可比克 白咖啡 印度尼西亚进口",
+            "price": "489.00",
+            "market_price": "6899.00",
+            "image": "clearance05.jpg"
+        }, {
+            "name": "KOPIKO 可比克 白咖啡 印度尼西亚进口",
+            "price": "489.00",
+            "market_price": "6899.00",
+            "image": "clearance06.jpg"
+        }, {
+            "name": "KOPIKO 可比克 白咖啡 印度尼西亚进口",
+            "price": "489.00",
+            "market_price": "6899.00",
+            "image": "clearance07.jpg"
+        }]
+    }
+}

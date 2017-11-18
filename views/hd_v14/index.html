@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>iCoding -- 小米商城</title>
     <link rel="shortcut icon" href="/common/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/hd_v14/style.min.css?v=88e3c22">
+    <link rel="stylesheet" href="../../public/css/hd_v14/style.min.css?v=0b464cf">
     <script>
         var UA = navigator.userAgent;
         var search = location.search;
@@ -17,7 +17,7 @@
     </script>
 </head>
 
-<body class="bd">
+<body class="bd" id="web" v-cloak>
     <div class="section section-campaign-poster">
         <div class="campaign-poster container">
             <a href="javascript:void(0);" class="close"></a>
@@ -4022,56 +4022,17 @@
                 <!-- left -->
                 <div class="clearance-left">
                     <ul class="clearfix">
-                        <li>
+                        <li v-for="(index, todo) in clearanceLeftList">
                             <a href="javascript:void(0);" class="img">
-                                <img data-src="/public/img/hd_v14/clearance/hot02.jpg?v=7ae119c">
+                                <img v-bind:data-src="'../../public/img/hd_v14/clearance/' + todo.image" alt="{{todo.name}}">
                             </a>
                             <div class="li-clearance-explain">
-                                <a href="javascript:void(0);" class="name">KOPIKO 可比克 白咖啡 印度尼西亚进口</a>
-                                <p class="price">￥645.00</p>
-                                <del>￥899.00</del>
+                                <a href="javascript:void(0);" class="name">{{todo.name}}</a>
+                                <p class="price">￥{{todo.price}}</p>
+                                <del v-if="todo.price != todo.market_price">￥{{todo.market_price}}</del>
                             </div>
                             <span class="hot-pic">
-                                <img data-src="/public/img/hd_v14/clearance/hot-yellow26.gif?v=38f21ce">
-                            </span>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="img">
-                                <img data-src="/public/img/hd_v14/clearance/hot03.jpg?v=22478ea">
-                            </a>
-                            <div class="li-clearance-explain">
-                                <a href="javascript:void(0);" class="name">KOPIKO 可比克 白咖啡 印度尼西亚进口</a>
-                                <p class="price">￥645.00</p>
-                                <del>￥899.00</del>
-                            </div>
-                            <span class="hot-pic">
-                                <img data-src="/public/img/hd_v14/clearance/hot-yellow26.gif?v=38f21ce">
-                            </span>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="img">
-                                <img data-src="/public/img/hd_v14/clearance/hot04.jpg?v=46bd1e4">
-                            </a>
-                            <div class="li-clearance-explain">
-                                <a href="javascript:void(0);" class="name">KOPIKO 可比克 白咖啡 印度尼西亚进口</a>
-                                <p class="price">￥645.00</p>
-                                <del>￥899.00</del>
-                            </div>
-                            <span class="hot-pic">
-                                <img data-src="/public/img/hd_v14/clearance/hot-yellow26.gif?v=38f21ce">
-                            </span>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="img">
-                                <img data-src="/public/img/hd_v14/clearance/hot06.jpg?v=db2f9ed">
-                            </a>
-                            <div class="li-clearance-explain">
-                                <a href="javascript:void(0);" class="name">KOPIKO 可比克 白咖啡 印度尼西亚进口</a>
-                                <p class="price">￥645.00</p>
-                                <del>￥899.00</del>
-                            </div>
-                            <span class="hot-pic">
-                                <img data-src="/public/img/hd_v14/clearance/hot-yellow26.gif?v=38f21ce">
+                                <img v-bind:data-src="'../../public/img/hd_v14/clearance/' + todo.hot_img" alt="{{todo.name}}">
                             </span>
                         </li>
                     </ul>
@@ -4079,39 +4040,19 @@
                 <!-- right -->
                 <div class="clearance-right">
                     <ul class="clearfix">
-                        <li>
-                            <a href="javascript:void(0);" class="img">
-                                <img data-src="/public/img/hd_v14/clearance/clearance05.jpg?v=5048ba4">
-                            </a>
-                            <div class="li-item-explain">
-                                <a href="javascript:void(0);" class="name">KOPIKO 可比克 白咖啡 印度尼西亚进口</a>
-                                <p class="price">￥489.00</p>
-                                <del>￥6889.00</del>
-                                <a href="javascript:void(0);" class="btn-primary">抢购</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="img">
-                                <img data-src="/public/img/hd_v14/clearance/clearance06.jpg?v=1612a2e">
-                            </a>
-                            <div class="li-item-explain">
-                                <a href="javascript:void(0);" class="name">KOPIKO 可比克 白咖啡 印度尼西亚进口</a>
-                                <p class="price">￥489.00</p>
-                                <del>￥6889.00</del>
-                                <a href="javascript:void(0);" class="btn-primary">抢购</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="img">
-                                <img data-src="/public/img/hd_v14/clearance/clearance07.jpg?v=7aa9f93">
-                            </a>
-                            <div class="li-item-explain">
-                                <a href="javascript:void(0);" class="name">KOPIKO 可比克 白咖啡 印度尼西亚进口</a>
-                                <p class="price">￥489.00</p>
-                                <del>￥6889.00</del>
-                                <a href="javascript:void(0);" class="btn-primary">抢购</a>
-                            </div>
-                        </li>
+                        <template v-for="(index, todo) in clearanceRightList">
+                            <li>
+                                <a href="javascript:void(0);" class="img">
+                                    <img v-bind:data-src="'../../public/img/hd_v14/clearance/' + todo.image" alt="{{todo.name}}">
+                                </a>
+                                <div class="li-item-explain">
+                                    <a href="javascript:void(0);" class="name">{{todo.name}}</a>
+                                    <p class="price">￥{{todo.price}}</p>
+                                    <del v-if="todo.price != todo.market_price">￥{{todo.market_price}}</del>
+                                    <a href="javascript:void(0);" class="btn-primary">抢购</a>
+                                </div>
+                            </li>
+                        </template>
                     </ul>
                 </div>
             </div>
@@ -4120,86 +4061,27 @@
     <div class="section section-footer">
         <div class="container">
             <ul class="clearfix">
-                <li>
-                    <i class="icon icon-1"></i>
-                    <span class="service-infor">正品保障</span>
-                </li>
-                <li>
-                    <i class="icon icon-2"></i>
-                    <span class="service-infor">七天无理由退货</span>
-                </li>
-                <li>
-                    <i class="icon icon-3"></i>
-                    <span class="service-infor">好评如潮</span>
-                </li>
-                <li>
-                    <i class="icon icon-4"></i>
-                    <span class="service-infor">闪电发货</span>
-                </li>
-                <li>
-                    <i class="icon icon-5"></i>
-                    <span class="service-infor">权威荣誉</span>
-                </li>
+                <template v-for="(index, todo) in footerService">
+                    <li>
+                        <i class="icon icon-{{index + 1}}"></i>
+                        <span class="service-infor">{{todo.name}}</span>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
     <div class="section section-footer2">
         <div class="container">
             <ul class="clearfix">
-                <li>
-                    <h3>新手上路</h3>
-                    <div class="li-infor">
-                        <a href="javascript:void(0);">售后流程</a>
-                        <a href="javascript:void(0);">购物流程</a>
-                        <a href="javascript:void(0);">订购方式</a>
-                        <a href="javascript:void(0);">隐私声明</a>
-                    </div>
-                </li>
-                <li>
-                    <h3>手机常识 </h3>
-                    <div class="li-infor">
-                        <a href="javascript:void(0);">如何分辨原装电池</a>
-                        <a href="javascript:void(0);">如何分辨水货手机</a>
-                        <a href="javascript:void(0);">如何享受全国联保</a>
-                        <a href="javascript:void(0);">如何查询正版手机</a>
-                    </div>
-                </li>
-                <li>
-                    <h3>配送支付</h3>
-                    <div class="li-infor">
-                        <a href="javascript:void(0);">货到付款区域</a>
-                        <a href="javascript:void(0);">配送支付智能查询</a>
-                        <a href="javascript:void(0);">支付方式说明</a>
-                        <a href="javascript:void(0);">配送支付智能</a>
-                    </div>
-                </li>
-                <li>
-                    <h3>会员中心</h3>
-                    <div class="li-infor">
-                        <a href="javascript:void(0);">个人资料</a>
-                        <a href="javascript:void(0);">资金管理</a>
-                        <a href="javascript:void(0);">我的收藏</a>
-                        <a href="javascript:void(0);">我的订单</a>
-                    </div>
-                </li>
-                <li>
-                    <h3>服务保障</h3>
-                    <div class="li-infor">
-                        <a href="javascript:void(0);">退换货规则</a>
-                        <a href="javascript:void(0);">售后服务保障</a>
-                        <a href="javascript:void(0);">产品质量保障</a>
-                        <a href="javascript:void(0);">相关下载</a>
-                    </div>
-                </li>
-                <li>
-                    <h3>联系我们</h3>
-                    <div class="li-infor">
-                        <a href="javascript:void(0);">新浪微博</a>
-                        <a href="javascript:void(0);">官方微信</a>
-                        <a href="javascript:void(0);">投诉与建议</a>
-                        <a href="javascript:void(0);">常见问题处理</a>
-                    </div>
-                </li>
+                <template v-for="(index, todo) in footerGuideList">
+                    <li>
+                        <h3>{{todo.title}}</h3>
+                        <a href="javascript:void(0);">{{todo.desc1}}</a>
+                        <a href="javascript:void(0);">{{todo.desc2}}</a>
+                        <a href="javascript:void(0);">{{todo.desc3}}</a>
+                        <a href="javascript:void(0);">{{todo.desc4}}</a>
+                    </li>
+                </template>
             </ul>
             <div class="footer-index">
                 <div class="items-1">
@@ -4238,7 +4120,7 @@
     </div>
     <script src="/static/js/libs/jquery.min.js?v1.11.3"></script>
     <script src="/static/js/libs/vue.min.js?v1.0.26"></script>
-    <script src="../../public/js/hd_v14/script.min.js?v=4f05e62"></script>
+    <script src="../../public/js/hd_v14/script.min.js?v=469ae6a"></script>
 </body>
 
 </html>
