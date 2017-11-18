@@ -69,6 +69,10 @@
     position: relative;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 body {
     min-width: 1280px;
     color: #333;
@@ -424,7 +428,7 @@ $imgUrl: '/public/img/hd_v12/';
             width: 307px;
             height: 376px;
             margin-left: 30px;
-            &.li-items-b {
+            &.li-items-2 {
                 .product-box {
                     margin: 20px 0 0 42px
                 }
@@ -455,6 +459,9 @@ $imgUrl: '/public/img/hd_v12/';
                     }
                     .btnBuy {
                         @include btn;
+                    }
+                    em {
+                        font-size: 14px;
                     }
                 }
             }
@@ -497,7 +504,7 @@ $imgUrl: '/public/img/hd_v12/';
             width: 333px - 30px;
             height: 313px;
             margin-left: 30px;
-            &.list-a {
+            &.list-1 {
                 img {
                     margin: -20px 0 0 10px;
                 }
@@ -519,6 +526,9 @@ $imgUrl: '/public/img/hd_v12/';
                 }
                 .btnBuy {
                     @include btn;
+                }
+                em {
+                    font-size: 14px;
                 }
             }
         }
@@ -567,12 +577,12 @@ $imgUrl: '/public/img/hd_v12/';
                 height: 150px;
                 padding-top: 40px;
             }
-            &.li-list-a {
+            &.li-list-1 {
                 img {
                     margin: -102px 0 0 0;
                 }
             }
-            &.li-list-d {
+            &.li-list-4 {
                 margin-left: 0;
             }
             img {
@@ -596,6 +606,9 @@ $imgUrl: '/public/img/hd_v12/';
             }
             .btnBuy {
                 @include btn;
+            }
+            em {
+                font-size: 14px;
             }
         }
     }
@@ -636,13 +649,13 @@ $imgUrl: '/public/img/hd_v12/';
             width: 340px;
             height: 314px - 60px;
             margin-bottom: 60px;
-            &.li-list-a {
+            &.li-list-1 {
                 margin-left: 0;
                 img {
                     margin-top: -80px;
                 }
             }
-            &.li-list-b {
+            &.li-list-2 {
                 .product-box {
                     margin-top: 0;
                 }
@@ -650,9 +663,9 @@ $imgUrl: '/public/img/hd_v12/';
                     margin: 18px 0 20px 0;
                 }
             }
-            &.li-list-b,
-            &.li-list-c,
-            &.li-list-d {
+            &.li-list-2,
+            &.li-list-3,
+            &.li-list-4 {
                 width: 240px;
                 margin-left: 100px;
             }
@@ -677,6 +690,9 @@ $imgUrl: '/public/img/hd_v12/';
             }
             .link {
                 margin-top: 10px;
+            }
+            em {
+                font-size: 14px;
             }
         }
     }
@@ -757,6 +773,9 @@ $imgUrl: '/public/img/hd_v12/';
         .btnBuy {
             @include btn;
         }
+        em {
+            font-size: 14px;
+        }
     }
     .box3 {
         margin-left: 72px;
@@ -833,6 +852,9 @@ $imgUrl: '/public/img/hd_v12/';
         del {
             font-size: 12px;
             color: #5e5f5f;
+        }
+        em {
+            font-size: 14px;
         }
     }
 }
